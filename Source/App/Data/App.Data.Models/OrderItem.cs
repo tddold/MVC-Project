@@ -2,7 +2,7 @@
 {
     using Common.Models;
 
-    public class OrderItem: BaseModel<int>
+    public class OrderItem : BaseModel<int>
     {
         public int OrderId { get; set; }
 

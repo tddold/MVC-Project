@@ -78,6 +78,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\App.Common\App.Common.csproj">
+      <Project>{e00edf00-096f-431c-a990-f56bf41b2599}</Project>
+      <Name>App.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\App.Data.Common\App.Data.Common.csproj">
       <Project>{4603eca7-7dc2-480b-9281-ff3f93dc42b0}</Project>
       <Name>App.Data.Common</Name>
@@ -97,6 +101,11 @@
     <EmbeddedResource Include="Migrations\201602140010116_ModifyModels.resx">
       <DependentUpon>201602140010116_ModifyModels.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\..\packages\StyleCop.Analyzers.1.0.0\analyzers\dotnet\cs\Newtonsoft.Json.dll" />
+    <Analyzer Include="..\..\packages\StyleCop.Analyzers.1.0.0\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />
+    <Analyzer Include="..\..\packages\StyleCop.Analyzers.1.0.0\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -10,6 +10,6 @@
 
         public string PageTitle { get; set; }
 
-        public string  PageContent { get; set; }
+        public string PageContent { get; set; }
     }
 }

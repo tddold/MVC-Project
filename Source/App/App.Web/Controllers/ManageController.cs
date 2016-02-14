@@ -4,13 +4,15 @@
     using System.Threading.Tasks;
     using System.Web;
     using System.Web.Mvc;
+
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.Owin;
     using Microsoft.Owin.Security;
+
     using App.Web.ViewModels.Manage;
 
     [Authorize]
-    public class ManageController : Controller
+    public class ManageController : BaseController
     {
         // Used for XSRF protection when adding external logins
         private const string XsrfKey = "XsrfId";

@@ -6,8 +6,13 @@
 
     using Autofac;
     using Autofac.Integration.Mvc;
+
+    using Controllers;
+
     using Data;
     using Data.Common;
+
+    using Services.Web;
 
     public static class AutofacConfig
     {
@@ -45,24 +50,23 @@
                .As<DbContext>()
                .InstancePerRequest();
 
-            builder.RegisterGeneric(typeof(DbRepository<>))
-                .As(typeof(IDbRepository<>))
-                .InstancePerRequest();
+            builder.Register(x => new HttpCacheService())
+               .As<ICacheService>()
+               .InstancePerRequest();
 
-            // builder.Register(x => new HttpCacheService())
-            //    .As<ICacheService>()
-            //    .InstancePerRequest();
-            // builder.Register(x => new IdentifierProvider())
-            //    .As<IIdentifierProvider>()
-            //    .InstancePerRequest();
+            builder.Register(x => new IdentifierProvider())
+               .As<IIdentifierProvider>()
+               .InstancePerRequest();
 
             // var servicesAssembly = Assembly.GetAssembly(typeof(IJokesService));
             // builder.RegisterAssemblyTypes(servicesAssembly).AsImplementedInterfaces();
 
+            builder.RegisterGeneric(typeof(DbRepository<>))
+              .As(typeof(IDbRepository<>))
+              .InstancePerRequest();
 
-
-            // builder.RegisterAssemblyTypes(Assembly.GetExecutingAssembly())
-            //    .AssignableTo<BaseController>().PropertiesAutowired();
+            builder.RegisterAssemblyTypes(Assembly.GetExecutingAssembly())
+               .AssignableTo<BaseController>().PropertiesAutowired();
         }
     }
 }

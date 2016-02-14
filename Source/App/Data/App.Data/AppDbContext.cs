@@ -14,11 +14,6 @@
         {
         }
 
-        public static AppDbContext Create()
-        {
-            return new AppDbContext();
-        }
-
         public IDbSet<Product> Products { get; set; }
 
         public IDbSet<Category> Categories { get; set; }
@@ -34,6 +29,11 @@
         public IDbSet<Promotion> Promotions { get; set; }
 
         public IDbSet<PromotionItem> PromotionItems { get; set; }
+
+        public static AppDbContext Create()
+        {
+            return new AppDbContext();
+        }
 
         public override int SaveChanges()
         {

@@ -7,7 +7,7 @@
     using Data.Common;
     using Data.Models;
     using ViewModels.Home;
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         private IDbRepository<Product> products;
         private IDbRepository<Category> categories;

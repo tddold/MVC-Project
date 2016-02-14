@@ -2,11 +2,11 @@
 {
     using App.Data.Common.Models;
 
-    public class PromotionItem: BaseModel<int>
+    public class PromotionItem : BaseModel<int>
     {
         public int PromotionId { get; set; }
 
-        public virtual Promotion Propmotion { get; set; }
+        public virtual Promotion Promotion { get; set; }
 
         public int ProductId { get; set; }
 

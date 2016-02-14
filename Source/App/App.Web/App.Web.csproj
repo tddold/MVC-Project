@@ -54,6 +54,10 @@
       <HintPath>..\packages\Autofac.Mvc5.3.3.4\lib\net45\Autofac.Integration.Mvc.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="AutoMapper, Version=4.2.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.4.2.0\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Glimpse.Ado, Version=1.7.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Glimpse.Ado.1.7.3\lib\net45\Glimpse.Ado.dll</HintPath>
       <Private>True</Private>
@@ -199,6 +203,7 @@
     <Compile Include="App_Start\SmsService.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="App_Start\GlimpseSecurityPolicy.cs" />
@@ -282,6 +287,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Base\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -297,6 +303,14 @@
     <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.0\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\App.Common\App.Common.csproj">
+      <Project>{e00edf00-096f-431c-a990-f56bf41b2599}</Project>
+      <Name>App.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\App.Web.Infrastructure\App.Web.Infrastructure.csproj">
+      <Project>{50ad23c7-6098-4af8-a60f-eac807506fdb}</Project>
+      <Name>App.Web.Infrastructure</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Data\App.Data.Common\App.Data.Common.csproj">
       <Project>{4603eca7-7dc2-480b-9281-ff3f93dc42b0}</Project>
       <Name>App.Data.Common</Name>
@@ -308,6 +322,10 @@
     <ProjectReference Include="..\Data\App.Data\App.Data.csproj">
       <Project>{b3f32de1-71cb-42a5-a719-94690295d335}</Project>
       <Name>App.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services\App.Services.Web\App.Services.Web.csproj">
+      <Project>{ea74e642-6916-4edb-81c0-49c7259605a9}</Project>
+      <Name>App.Services.Web</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

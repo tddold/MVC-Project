@@ -1,9 +1,8 @@
 ﻿namespace App.Data.Models
 {
     using Common.Models;
-    using System;
 
-    public class Order: BaseModel<int>
+    public class Order : BaseModel<int>
     {
         public bool Status { get; set; }
 
