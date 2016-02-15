@@ -3,8 +3,7 @@
     using System.Web.Mvc;
     using AutoMapper;
     using Infrastructure.Mapping;
-    using App.Services.Web;
-
+    using Services.Web.Contracts;
     public class BaseController : Controller
     {
         public ICacheService Cache { get; set; }

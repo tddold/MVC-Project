@@ -70,7 +70,12 @@
     <Compile Include="Migrations\201602140010116_ModifyModels.Designer.cs">
       <DependentUpon>201602140010116_ModifyModels.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602142212157_EditModels.cs" />
+    <Compile Include="Migrations\201602142212157_EditModels.Designer.cs">
+      <DependentUpon>201602142212157_EditModels.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Migrations\SeedData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -100,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201602140010116_ModifyModels.resx">
       <DependentUpon>201602140010116_ModifyModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602142212157_EditModels.resx">
+      <DependentUpon>201602142212157_EditModels.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

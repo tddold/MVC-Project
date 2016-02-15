@@ -1,7 +1,7 @@
 ﻿namespace App.Data.Models
 {
-    using System.ComponentModel.DataAnnotations;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
 
     using Common.Models;
 
@@ -14,12 +14,15 @@
             this.images = new HashSet<Image>();
         }
 
+        [Required]
+        [MinLength(2)]
+        [MaxLength(100)]
         public string Name { get; set; }
 
-        [MaxLength(100)]
+        [MaxLength(2000)]
         public string Description { get; set; }
 
-        [MaxLength(40)]
+        [MaxLength(500)]
         public string ShortDecription { get; set; }
 
         public decimal Price { get; set; }

@@ -1,9 +1,11 @@
 ﻿namespace App.Data.Models
 {
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+
     using Common.Models;
 
-    public class Category: BaseModel<int>
+    public class Category : BaseModel<int>, IListedItem
     {
         private ICollection<Category> categories;
         private ICollection<Product> products;
@@ -14,10 +16,15 @@
             this.products = new HashSet<Product>();
         }
 
+        [Required]
+        [MinLength(2)]
+        [MaxLength(100)]
         public string Name { get; set; }
 
+        [MaxLength(250)]
         public string ImagePath { get; set; }
 
+        [MaxLength(500)]
         public string Description { get; set; }
 
         public int? ParentCategoryId { get; set; }

@@ -30,9 +30,29 @@
 
         public IDbSet<PromotionItem> PromotionItems { get; set; }
 
+        public IDbSet<Address> Addresses { get; set; }
+
+        public IDbSet<City> Cities { get; set; }
+
+        public IDbSet<Country> Countries { get; set; }
+
+        public IDbSet<DeliveryAdress> DeliveryAdresses { get; set; }
+
+        public IDbSet<ShoppingCart> ShoppingCarts { get; set; }
+
+        public IDbSet<Wishlist> Wishlists { get; set; }
+
+
+
         public static AppDbContext Create()
         {
             return new AppDbContext();
+        }
+
+        public new IDbSet<T> Set<T>()
+           where T : class
+        {
+            return base.Set<T>();
         }
 
         public override int SaveChanges()

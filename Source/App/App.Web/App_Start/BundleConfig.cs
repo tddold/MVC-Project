@@ -21,6 +21,11 @@
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/theme").Include(
+                   "~/Content/Theme/js/*.js",
+                   "~/Content/Theme/js/libs/*.js",
+                   "~/Content/Theme/js/plugins/*.js"));
         }
 
         private static void RegisterStyles(BundleCollection bundles)
@@ -28,6 +33,12 @@
             bundles.Add(new StyleBundle("~/Content/css").Include(
                      "~/Content/bootstrap.css",
                      "~/Content/site.css"));
+
+            bundles.Add(new StyleBundle("~/styleBundles/theme")
+               .Include("~/Content/Theme/css/*.css")
+               .Include("~/Content/Theme/css/styles.css")
+               .Include("~/Content/Theme/css/colors/*.css")
+               .Include("~/Content/Theme/css/uncompressed/*.css"));
         }
     }
 }

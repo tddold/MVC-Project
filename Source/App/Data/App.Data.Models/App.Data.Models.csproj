@@ -57,7 +57,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Address.cs" />
     <Compile Include="Category.cs" />
+    <Compile Include="City.cs" />
+    <Compile Include="Country.cs" />
+    <Compile Include="DeliveryAdress.cs" />
     <Compile Include="Image.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="OrderItem.cs" />
@@ -66,7 +70,9 @@
     <Compile Include="Promotion.cs" />
     <Compile Include="PromotionItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShoppingCart.cs" />
     <Compile Include="User.cs" />
+    <Compile Include="Wishlist.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

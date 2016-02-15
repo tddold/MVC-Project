@@ -1,8 +1,10 @@
 ﻿namespace App.Data.Common
 {
+    using System;
     using System.Linq;
+    using System.Linq.Expressions;
 
-    using App.Data.Common.Models;
+    using Data.Common.Models;
 
     public interface IDbRepository<T> : IDbRepository<T, int>
         where T : BaseModel<int>
@@ -16,7 +18,11 @@
 
         IQueryable<T> AllWithDeleted();
 
+        IQueryable<T> Include(Expression<Func<T, object>> expression);
+
         T GetById(TKey id);
+
+        T GetById(object id);
 
         void Add(T entity);
 

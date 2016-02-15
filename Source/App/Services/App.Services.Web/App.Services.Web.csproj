@@ -30,7 +30,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
@@ -41,11 +58,51 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddressService.cs" />
+    <Compile Include="CitiesService.cs" />
+    <Compile Include="Contracts\IAdministrationService.cs" />
+    <Compile Include="Contracts\ICitiesService.cs" />
+    <Compile Include="Contracts\ICountriesService.cs" />
+    <Compile Include="Contracts\IImagesService.cs" />
+    <Compile Include="Contracts\IOrderService.cs" />
+    <Compile Include="Contracts\IAddressService.cs" />
+    <Compile Include="Contracts\IProductService.cs" />
+    <Compile Include="Contracts\IPromotionService.cs" />
+    <Compile Include="Contracts\IService.cs" />
+    <Compile Include="CountriesService.cs" />
     <Compile Include="HttpCacheService.cs" />
-    <Compile Include="ICacheService.cs" />
+    <Compile Include="Contracts\ICacheService.cs" />
     <Compile Include="IdentifierProvider.cs" />
-    <Compile Include="IIdentifierProvider.cs" />
+    <Compile Include="Contracts\IIdentifierProvider.cs" />
+    <Compile Include="Contracts\IUserService.cs" />
+    <Compile Include="ImagesService.cs" />
+    <Compile Include="OrderService.cs" />
+    <Compile Include="ProductService.cs" />
+    <Compile Include="PromotionService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\App.Common\App.Common.csproj">
+      <Project>{e00edf00-096f-431c-a990-f56bf41b2599}</Project>
+      <Name>App.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data\App.Data.Common\App.Data.Common.csproj">
+      <Project>{4603eca7-7dc2-480b-9281-ff3f93dc42b0}</Project>
+      <Name>App.Data.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data\App.Data.Models\App.Data.Models.csproj">
+      <Project>{0e9f676c-75ab-4c63-a774-2ba954e5fa10}</Project>
+      <Name>App.Data.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data\App.Data\App.Data.csproj">
+      <Project>{b3f32de1-71cb-42a5-a719-94690295d335}</Project>
+      <Name>App.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

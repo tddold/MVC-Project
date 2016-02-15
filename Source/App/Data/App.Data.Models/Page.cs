@@ -2,7 +2,7 @@
 {
     using App.Data.Common.Models;
 
-    public class Page: BaseModel<int>
+    public class Page : BaseModel<int>
     {
         public string Link { get; set; }
 

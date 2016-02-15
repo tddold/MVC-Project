@@ -3,6 +3,7 @@
     using System;
     using System.Data.Entity;
     using System.Linq;
+    using System.Linq.Expressions;
 
     using App.Data.Common.Models;
 
@@ -35,9 +36,19 @@
             return this.DbSet;
         }
 
+        public IQueryable<T> Include(Expression<Func<T, object>> expression)
+        {
+            return this.DbSet.Include(expression);
+        }
+
         public T GetById(int id)
         {
             return this.All().FirstOrDefault(x => x.Id == id);
+        }
+
+        public T GetById(object id)
+        {
+            return this.DbSet.Find(id);
         }
 
         public void Add(T entity)
@@ -48,7 +59,7 @@
         public void Delete(T entity)
         {
             entity.IsDeleted = true;
-            entity.DeletedOn = DateTime.Now;
+            entity.DeletedOn = DateTime.UtcNow;
         }
 
         public void HardDelete(T entity)
