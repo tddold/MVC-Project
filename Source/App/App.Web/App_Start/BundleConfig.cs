@@ -22,23 +22,48 @@
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+            // Javascript(jQuery) Libraries and Plugins for Theme
             bundles.Add(new ScriptBundle("~/bundles/theme").Include(
-                   "~/Content/Theme/js/*.js",
-                   "~/Content/Theme/js/libs/*.js",
-                   "~/Content/Theme/js/plugins/*.js"));
+                   "~/Content/Theme/js/libs/jquery-1.11.1.min.js",
+                   "~/Content/Theme/js/libs/jquery-ui-1.10.4.custom.min.js",
+                   "~/Content/Theme/js/libs/jquery.easing.min.js",
+                   "~/Content/Theme/js/plugins/bootstrap.min.js",
+                   "~/Content/Theme/js/plugins/smoothscroll.js",
+                   "~/Content/Theme/js/plugins/jquery.validate.min.js",
+                   "~/Content/Theme/js/plugins/icheck.min.js",
+                   "~/Content/Theme/js/plugins/jquery.placeholder.js",
+                   "~/Content/Theme/js/plugins/jquery.stellar.min.js",
+                   "~/Content/Theme/js/plugins/jquery.touchSwipe.min.js",
+                   "~/Content/Theme/js/plugins/jquery.shuffle.min.js",
+                   "~/Content/Theme/js/plugins/lightGallery.min.js",
+                   "~/Content/Theme/js/plugins/owl.carousel.min.js",
+                   "~/Content/Theme/js/plugins/masterslider.min.js"
+                   ));
+
+            bundles.Add(new ScriptBundle("~/bundles/theme-mailer").Include(
+                    "~/Content/Theme/mailer/mailer.js",
+                   "~/Content/Theme/js/scripts.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/theme-modernizr").Include(
+                     "~/Content/Theme/js/libs/modernizr.custom.js"));
+
+            //bundles.Add(new ScriptBundle("~/bundles/theme-shuffle").Include(
+            //        "~/Content/Theme/js/plugins/jquery.shuffle.min.js"));
         }
 
         private static void RegisterStyles(BundleCollection bundles)
         {
-            bundles.Add(new StyleBundle("~/Content/css").Include(
+            bundles.Add(new StyleBundle("~/Content/admin").Include(
                      "~/Content/bootstrap.css",
+                     "~/Content/admin.css"));
+
+            bundles.Add(new StyleBundle("~/Content/css").Include(
+                     //"~/Content/bootstrap.css",
                      "~/Content/site.css"));
 
             bundles.Add(new StyleBundle("~/styleBundles/theme")
-               .Include("~/Content/Theme/css/*.css")
-               .Include("~/Content/Theme/css/styles.css")
-               .Include("~/Content/Theme/css/colors/*.css")
-               .Include("~/Content/Theme/css/uncompressed/*.css"));
+               .Include("~/Content/Theme/masterslider/style/masterslider.css")
+               .Include("~/Content/Theme/css/styles.css"));
         }
     }
 }

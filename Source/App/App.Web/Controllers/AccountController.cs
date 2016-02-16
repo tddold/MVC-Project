@@ -63,6 +63,14 @@
             return this.View();
         }
 
+        [AllowAnonymous]
+        [ChildActionOnly]
+        public ActionResult _LoginPartial(string returnUrl)
+        {
+            this.ViewBag.ReturnUrl = returnUrl;
+            return this.PartialView();
+        }
+
         // POST: /Account/Login
         [HttpPost]
         [AllowAnonymous]

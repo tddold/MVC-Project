@@ -1,5 +1,7 @@
 ﻿namespace App.Data.Models
 {
+    using System.ComponentModel.DataAnnotations;
+
     using Common.Models;
 
     public class Address : BaseModel<int>
@@ -17,5 +19,8 @@
         public double Latitude { get; set; }
 
         public double Longitude { get; set; }
+
+        [MaxLength(2000)]
+        public string Description { get; set; }
     }
 }

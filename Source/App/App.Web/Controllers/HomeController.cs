@@ -3,10 +3,11 @@
     using System;
     using System.Linq;
     using System.Web.Mvc;
-    using Data;
+
     using Data.Common;
     using Data.Models;
-    using ViewModels.Home;
+    using ViewModels.Products;
+
     public class HomeController : BaseController
     {
         private IDbRepository<Product> products;
@@ -25,7 +26,7 @@
             var products = this.products.All()
                  .OrderBy(x => Guid.NewGuid())
                  .Take(3)
-                 .Select(x => new ProductViewModel() { Name = x.Name })
+                 .Select(x => new ProductDetailsViewModel() { Name = x.Name })
                  .ToList();
 
             return this.View(products);

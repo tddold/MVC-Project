@@ -1,5 +1,6 @@
 ﻿namespace App.Services.Web.Contracts
 {
+    using Contracts;
     using System;
 
     public interface ICacheService : IService

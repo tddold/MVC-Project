@@ -21,7 +21,6 @@
         [MaxLength(100)]
         public string Name { get; set; }
 
-        [MaxLength(250)]
         public string ImagePath { get; set; }
 
         [MaxLength(500)]
