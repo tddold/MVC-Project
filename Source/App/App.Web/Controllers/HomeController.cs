@@ -7,29 +7,32 @@
     using Data.Common;
     using Data.Models;
     using ViewModels.Products;
-
+    using Services.Web.Contracts;
+    using Infrastructure.Mapping;
+    using ViewModels.Home;
     public class HomeController : BaseController
     {
-        private IDbRepository<Product> products;
-        private IDbRepository<Category> categories;
+        private IProductService products;
+        //private IDbRepository<Category> categories;
 
+        //IDbRepository<Category> categories
         public HomeController(
-            IDbRepository<Product> products,
-            IDbRepository<Category> categories)
+            IProductService products)
         {
             this.products = products;
-            this.categories = categories;
+            //this.categories = categories;
         }
 
         public ActionResult Index()
         {
-            var products = this.products.All()
-                 .OrderBy(x => Guid.NewGuid())
-                 .Take(3)
-                 .Select(x => new ProductDetailsViewModel() { Name = x.Name })
-                 .ToList();
+            var homeViewModel = new HomeViewModel();
 
-            return this.View(products);
+            homeViewModel.TopProducts = this.products
+                .GetRandomProducts(5)
+                .To<ProductDetailsViewModel>()
+                .ToList();
+
+            return this.View(homeViewModel);
         }
 
         public ActionResult About()

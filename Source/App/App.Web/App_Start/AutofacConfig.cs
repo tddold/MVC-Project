@@ -55,10 +55,13 @@
                .As<ICacheService>()
                .InstancePerRequest();
 
+            var servicesAssembly = Assembly.GetAssembly(typeof(IProductService));
+            builder.RegisterAssemblyTypes(servicesAssembly).AsImplementedInterfaces();
+
             builder.Register(x => new IdentifierProvider())
                .As<IIdentifierProvider>()
                .InstancePerRequest();
-        
+
             builder.RegisterGeneric(typeof(DbRepository<>))
               .As(typeof(IDbRepository<>))
               .InstancePerRequest();

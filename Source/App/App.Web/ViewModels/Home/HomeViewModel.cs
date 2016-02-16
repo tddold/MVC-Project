@@ -4,8 +4,8 @@
 
     using Products;
 
-    public class HometViewModel
+    public class HomeViewModel
     {
-        //public IEnumerable<ProductDetailsViewModel> TopProducts { get; set; }
+        public ICollection<ProductDetailsViewModel> TopProducts { get; set; }
     }
 }

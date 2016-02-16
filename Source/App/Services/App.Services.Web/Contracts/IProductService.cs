@@ -9,5 +9,7 @@
         IQueryable<Product> GetAllProducts();
 
         Product GetById(int id);
+
+        IQueryable<Product> GetRandomProducts(int count);
     }
 }

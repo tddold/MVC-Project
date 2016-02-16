@@ -1,8 +1,13 @@
-﻿@*@model IEnumerable<App.Web.ViewModels.Home.HometViewModel>*@
+﻿@model App.Web.ViewModels.Home.HomeViewModel
 
+<!--Hero Slider-->
 <section class="hero-slider">
     <div class="master-slider" id="hero-slider">
-
+        <h1>TestTest</h1>
+        @foreach (var product in Model.TopProducts)
+        {
+            <div>@product.Name -> @product.CategoryName</div>
+        }
         <!--Slide 1-->
         <div class="ms-slide" data-delay="7">
             <div class="overlay"></div>
@@ -32,6 +37,7 @@
 
     </div>
 </section><!--Hero Slider Close-->
+
 <!--Categories-->
 <section class="cat-tiles">
     <div class="container">

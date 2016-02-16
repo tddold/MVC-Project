@@ -26,13 +26,10 @@
     @Styles.Render("~/Content/css")
     @Styles.Render("~/styleBundles/theme")
     @Scripts.Render("~/bundles/theme-modernizr")
-
-
 </head>
 
 <!--Body-->
 <body>
-
     <!--Login Modal-->
     @{ Html.RenderAction("_LoginPartial", "Account"); }
 
@@ -232,7 +229,7 @@
     </header><!--Header Close-->
     <!--Page Content-->
 
-    <div class="page-content">
+    @*<div class="page-content">
 
         <!--Hero Slider-->
         <section class="hero-slider">
@@ -267,7 +264,7 @@
 
             </div>
         </section><!--Hero Slider Close-->
-    </div>
+    </div>*@
 
     <!--Catalog Grid Close-->
     <!--Tabs Widget-->
