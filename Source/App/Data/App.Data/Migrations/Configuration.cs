@@ -9,6 +9,7 @@ namespace App.Data.Migrations
     using App.Common;
     using Models;
     using System.Collections.Generic;
+
     public sealed class Configuration : DbMigrationsConfiguration<AppDbContext>
     {
         public Configuration()
@@ -44,11 +45,8 @@ namespace App.Data.Migrations
 
                 // Assign user to admin role
                 userManager.AddToRole(user.Id, GlobalConstants.AdministratorRoleName);
-            }
 
-
-            if (!context.Users.Any(u => u.UserName != "admin"))
-            {
+                // Create user role
                 var store = new UserStore<User>(context);
                 var manager = new UserManager<User>(store);
                 manager.PasswordValidator = new PasswordValidator
@@ -60,16 +58,18 @@ namespace App.Data.Migrations
                     RequireUppercase = false,
                 };
 
+                // Create users
                 for (int i = 1; i <= 5; i++)
                 {
-                    var user = new User
+                    var user1 = new User
                     {
                         UserName = "user" + i + "@site.com",
                         Email = "user@site.com",
                     };
 
-                    manager.Create(user, "user" + i);
-                    users.Add(user);
+                    // Assign user to role
+                    manager.Create(user1, "user" + i);
+                    users.Add(user1);
                 }
 
                 context.SaveChanges();
@@ -83,6 +83,10 @@ namespace App.Data.Migrations
             var seed = new SeedData(users);
 
             seed.Products.ForEach(x => context.Products.Add(x));
+            seed.Promotions.ForEach(x => context.Promotions.Add(x));
+            seed.Countries.ForEach(x => context.Countries.Add(x));
+            seed.Cities.ForEach(x => context.Cities.Add(x));
+            seed.Addresss.ForEach(x => context.Addresses.Add(x));
 
             context.SaveChanges();
         }

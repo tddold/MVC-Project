@@ -509,6 +509,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Administration\Models\" />
     <Folder Include="Areas\Administration\Views\Home\" />
+    <Folder Include="Content\Images\SeedImages\" />
     <Folder Include="Views\Base\" />
   </ItemGroup>
   <ItemGroup>

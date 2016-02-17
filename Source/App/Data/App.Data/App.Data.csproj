@@ -74,6 +74,10 @@
     <Compile Include="Migrations\201602142212157_EditModels.Designer.cs">
       <DependentUpon>201602142212157_EditModels.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602171748370_InserPictures.cs" />
+    <Compile Include="Migrations\201602171748370_InserPictures.Designer.cs">
+      <DependentUpon>201602171748370_InserPictures.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\SeedData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -108,6 +112,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201602142212157_EditModels.resx">
       <DependentUpon>201602142212157_EditModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602171748370_InserPictures.resx">
+      <DependentUpon>201602171748370_InserPictures.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

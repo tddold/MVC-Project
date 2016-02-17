@@ -1,14 +1,11 @@
-﻿using App.Services.Web.Contracts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using App.Data.Models;
-using App.Data.Common;
-
-namespace App.Services.Web
+﻿namespace App.Services.Web
 {
+    using App.Services.Web.Contracts;
+    using System;
+    using System.Linq;
+    using App.Data.Models;
+    using App.Data.Common;
+
     public class CategoriesService : ICategoriesService
     {
         private IDbRepository<Category> categories;

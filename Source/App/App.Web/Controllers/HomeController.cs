@@ -10,27 +10,47 @@
     using Services.Web.Contracts;
     using Infrastructure.Mapping;
     using ViewModels.Home;
+    using ViewModels.Categories;
     public class HomeController : BaseController
     {
         private IProductService products;
+        private ICategoriesService categories;
         //private IDbRepository<Category> categories;
 
         //IDbRepository<Category> categories
         public HomeController(
-            IProductService products)
+            IProductService products,
+            ICategoriesService categories)
         {
             this.products = products;
-            //this.categories = categories;
+            this.categories = categories;
         }
 
         public ActionResult Index()
         {
-            var homeViewModel = new HomeViewModel();
+           
 
-            homeViewModel.TopProducts = this.products
+            var topProducts = this.products
                 .GetRandomProducts(5)
                 .To<ProductDetailsViewModel>()
                 .ToList();
+            var cacheCategories = this.Cache
+                .Get("categories", () => this.categories
+                        .GetAll().
+                        To<CategoryViewModel>()
+                        .ToList(),
+                    30 * 60);
+
+            //homeViewModel.Categories = this.categories
+            //    .GetAll()
+            //    .To<CategoryViewModel>()
+            //    .ToList();
+
+            var homeViewModel = new HomeViewModel
+            {
+                    TopProducts = topProducts,
+                    Categories = cacheCategories
+            };
 
             return this.View(homeViewModel);
         }

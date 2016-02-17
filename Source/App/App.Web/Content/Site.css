@@ -22,3 +22,10 @@ select,
 textarea {
     max-width: 280px;
 }
+
+/*Slide 1*/
+.ms-slide h2 .ms-layer {
+    width: 456px;
+    left: 110px;
+    top: 110px;
+}
