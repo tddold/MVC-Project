@@ -1,23 +1,20 @@
 ﻿namespace App.Web.Controllers
 {
-    using System;
     using System.Linq;
     using System.Web.Mvc;
 
-    using Data.Common;
-    using Data.Models;
+    using Infrastructure.Mapping;
+
     using ViewModels.Products;
     using Services.Web.Contracts;
-    using Infrastructure.Mapping;
     using ViewModels.Home;
     using ViewModels.Categories;
+
     public class HomeController : BaseController
     {
         private IProductService products;
         private ICategoriesService categories;
-        //private IDbRepository<Category> categories;
 
-        //IDbRepository<Category> categories
         public HomeController(
             IProductService products,
             ICategoriesService categories)
@@ -28,23 +25,23 @@
 
         public ActionResult Index()
         {
-           
-
             var topProducts = this.products
-                .GetRandomProducts(5)
+                .GetRandomProducts(10)
                 .To<ProductDetailsViewModel>()
                 .ToList();
+
+            // no Cache
+            // var cacheCategories = this.categories
+            //          .GetAll().
+            //          To<CategoryViewModel>()
+            //          .ToList();
+
             var cacheCategories = this.Cache
                 .Get("categories", () => this.categories
                         .GetAll().
                         To<CategoryViewModel>()
                         .ToList(),
                     30 * 60);
-
-            //homeViewModel.Categories = this.categories
-            //    .GetAll()
-            //    .To<CategoryViewModel>()
-            //    .ToList();
 
             var homeViewModel = new HomeViewModel
             {

@@ -4,7 +4,7 @@
 
     using Common.Models;
 
-    public class Image: BaseModel<int>
+    public class Image : BaseModel<int>
     {
 
         [Required]

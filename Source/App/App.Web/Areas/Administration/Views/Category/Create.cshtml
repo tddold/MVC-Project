@@ -6,7 +6,7 @@
 
 <h2>Create</h2>
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm("Create", "Category", FormMethod.Post, htmlAttributes: new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
     
@@ -23,10 +23,9 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.ImagePath, htmlAttributes: new { @class = "control-label col-md-2" })
+            <label class="control-label col-md-2" name="photo" for="photo">Picture</label>
             <div class="col-md-10">
-                @Html.EditorFor(model => model.ImagePath, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.ImagePath, "", new { @class = "text-danger" })
+                <input type="file" name="photo" id="photo" />
             </div>
         </div>
 
@@ -49,3 +48,7 @@
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+

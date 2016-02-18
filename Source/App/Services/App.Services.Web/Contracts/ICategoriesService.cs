@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace App.Services.Web.Contracts
 {
-    public interface ICategoriesService : IService<Category>
+    public interface ICategoriesService : IService<Category>, IImagesService
     {
        
     }

@@ -26,6 +26,7 @@ namespace App.Web.ViewModels.Categories
 
         [MaxLength(500)]
         [Display(Name = "Description")]
+        [DataType(DataType.MultilineText)]
         public string Description { get; set; }
     }
 }

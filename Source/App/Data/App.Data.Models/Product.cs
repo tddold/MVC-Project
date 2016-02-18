@@ -29,6 +29,8 @@
 
         public int Quantity { get; set; }
 
+        public string ImagePath { get; set; }
+
         public double Whidth { get; set; }
 
         public double Heigth { get; set; }
@@ -43,10 +45,10 @@
 
         public virtual Category Category { get; set; }
 
-        public virtual ICollection<Image> Images
-        {
-            get { return this.images; }
-            set { this.images = value; }
-        }
+        //public virtual ICollection<Image> Images
+        //{
+        //    get { return this.images; }
+        //    set { this.images = value; }
+        //}
     }
 }

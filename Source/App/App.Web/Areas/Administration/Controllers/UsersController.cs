@@ -10,7 +10,8 @@
 
     public class UsersController : BaseController
     {
-         private AppDbContext db = new AppDbContext();
+        private User users;
+        private AppDbContext db = new AppDbContext();
 
         // GET: Administration/Users
         public ActionResult Index()

@@ -8,18 +8,15 @@
 
     public class ImagesService : IImagesService
     {
-        public void SaveImages(IEnumerable<HttpPostedFileBase> files)
+        public void SaveImage(HttpPostedFileBase file, object instance,string absolutePath, string relativePath)
         {
-            foreach (var file in files)
+            if (file.ContentLength > 0)
             {
-                if (file.ContentLength > 0)
-                {
-                    var fileName = Path.GetFileName(file.FileName);
-                    var path = Path.Combine(
-                        HttpContext.Current.Server.MapPath("~/App_Data/"),
-                        fileName);
-                    file.SaveAs(path);
-                }
+                var fileName = Path.GetFileName(file.FileName);
+                var path = Path.Combine(
+                    HttpContext.Current.Server.MapPath("~/App_Data/"),
+                    fileName);
+                file.SaveAs(path);
             }
         }
     }

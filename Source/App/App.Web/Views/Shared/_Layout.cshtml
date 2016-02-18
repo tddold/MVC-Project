@@ -53,7 +53,7 @@
         <div class="right-bg"></div>
 
         <div class="container">
-            <a class="logo" href="index.html"><img src="img/logo.png" alt="Bushido" /></a>
+            <a class="logo" href=@Url.Action("Index", "Home", new { area = string.Empty }, null)><img src="Content/Theme/img/logo.png" alt="Bushido" /></a>
 
             <!--Language / Currency Switchers-->
             <ul class="switchers">
@@ -82,8 +82,10 @@
             <nav class="menu">
                 <ul class="main">
                     <li class="has-submenu">
-                        <a href="index.html">Home<i class="fa fa-chevron-down"></i></a><!--Class "has-submenu" for proper highlighting and dropdown-->
+                        @Html.ActionLink("Home", "Index", "Home", new { area = string.Empty }, null)
+                        @*<a href="index.html">Home<i class="fa fa-chevron-down"></i></a><!--Class "has-submenu" for proper highlighting and dropdown-->*@
                         <ul class="submenu">
+                            
                             <li><a href="index.html">Home - Slideshow</a></li>
                             <li><a href="home-fullscreen.html">Home - Fullscreen Slider</a></li>
                             <li><a href="home-showcase.html">Home - Product Showcase</a></li>
@@ -165,7 +167,7 @@
                                     <p class="p-style2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                 </div>
                                 <div class="col-2">
-                                    <img src="img/offers/menu-drodown-offer.jpg" alt="Special Offer" />
+                                    <img src="Content/Theme/img/offers/menu-drodown-offer.jpg" alt="Special Offer" />
                                     <a class="btn btn-block" href="#"><span>584$</span>Special offer</a>
                                 </div>
                             </li>
@@ -238,7 +240,7 @@
                 <!--Slide 1-->
                 <div class="ms-slide" data-delay="7">
                     <div class="overlay"></div>
-                    <img src="masterslider/blank.gif" data-src="img/hero/slideshow/slide_1.jpg" alt="Nikon D4S" />
+                    <img src="masterslider/blank.gif" data-src="Content/Theme/img/hero/slideshow/slide_1.jpg" alt="Nikon D4S" />
                     <h2 style="width: 456px; left: 110px; top: 110px;" class="light-color ms-layer" data-effect="top(50,true)" data-duration="700" data-delay="250" data-ease="easeOutQuad">Nikon D4S</h2>
                     <p style="width: 456px; left: 110px; top: 210px;" class="light-color ms-layer" data-effect="back(500)" data-duration="700" data-delay="500" data-ease="easeOutQuad">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
                     <div style="left: 110px; top: 300px;" class="ms-layer button" data-effect="bottom(50,true)" data-duration="600" data-delay="950" data-ease="easeOutQuad"><a class="btn btn-primary" href="#"><span>1845$</span>Buy it now</a></div>
@@ -247,7 +249,7 @@
                 <!--Slide 2-->
                 <div class="ms-slide" data-delay="7">
                     <span class="overlay"></span>
-                    <img src="masterslider/blank.gif" data-src="img/hero/slideshow/slide_2.jpg" alt="Nest" />
+                    <img src="masterslider/blank.gif" data-src="Content/Theme/img/hero/slideshow/slide_2.jpg" alt="Nest" />
                     <h2 style="width: 456px; left: 110px; top: 110px;" class="light-color ms-layer" data-effect="bottom(50,true)" data-duration="700" data-delay="250" data-ease="easeOutQuad">Nest</h2>
                     <p style="width: 456px; left: 110px; top: 210px;" class="light-color ms-layer" data-effect="bottom(50,true)" data-duration="700" data-delay="500" data-ease="easeOutQuad">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
                     <div style="left: 110px; top: 300px;" class="ms-layer button" data-effect="rotatebottom(30|90,long,br,true)" data-duration="600" data-delay="950" data-ease="easeOutQuad"><a class="btn btn-primary" href="#"><span>1640$</span>Buy it now</a></div>
@@ -256,7 +258,7 @@
                 <!--Slide 3-->
                 <div class="ms-slide" data-delay="7">
                     <div class="overlay"></div>
-                    <img src="masterslider/blank.gif" data-src="img/hero/slideshow/slide_1.jpg" alt="3D Printer" />
+                    <img src="masterslider/blank.gif" data-src="Content/Theme/img/hero/slideshow/slide_1.jpg" alt="3D Printer" />
                     <h2 style="width: 456px; left: 110px; top: 110px;" class="light-color ms-layer" data-effect="left(50,true)" data-duration="700" data-delay="250" data-ease="easeOutQuad">3D Printer</h2>
                     <p style="width: 456px; left: 110px; top: 210px;" class="light-color ms-layer" data-effect="left(50,true)" data-duration="700" data-delay="500" data-ease="easeOutQuad">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
                     <div style="left: 110px; top: 300px;" class="ms-layer button" data-effect="left(50,true)" data-duration="600" data-delay="950" data-ease="easeOutQuad"><a class="btn btn-primary" href="#"><span>2500$</span>Buy it now</a></div>
@@ -283,7 +285,7 @@
                                         <div class="overlay">
                                             <div class="descr"><div>X-MAS LIGHT IPHONE LENS<span>$14.95</span></div></div>
                                         </div>
-                                        <img src="img/media/1.jpg" alt="1" />
+                                        <img src="Content/Theme/img/media/1.jpg" alt="1" />
                                     </a>
                                 </div>
                                 <div class="col-lg-5 col-md-5 col-sm-5">
@@ -291,7 +293,7 @@
                                         <div class="overlay">
                                             <div class="descr"><div>Hedadset for iPhone<span>$19.40</span></div></div>
                                         </div>
-                                        <img src="img/media/2.jpg" alt="2" />
+                                        <img src="Content/Theme/img/media/2.jpg" alt="2" />
                                     </a>
                                 </div>
                             </div>
@@ -301,7 +303,7 @@
                                         <div class="overlay">
                                             <div class="descr"><div>Product Name<span>$24.15</span></div></div>
                                         </div>
-                                        <img src="img/media/3.jpg" alt="3" />
+                                        <img src="Content/Theme/img/media/3.jpg" alt="3" />
                                     </a>
                                 </div>
                                 <div class="col-lg-5 col-md-5 col-sm-5">
@@ -309,7 +311,7 @@
                                         <div class="overlay">
                                             <div class="descr"><div>Product Name<span>$24.15</span></div></div>
                                         </div>
-                                        <img src="img/media/4.jpg" alt="4" />
+                                        <img src="Content/Theme/img/media/4.jpg" alt="4" />
                                     </a>
                                 </div>
                                 <div class="col-lg-3 col-md-3 col-sm-3">
@@ -317,7 +319,7 @@
                                         <div class="overlay">
                                             <div class="descr"><div>Product Name<span>$24.15</span></div></div>
                                         </div>
-                                        <img src="img/media/5.jpg" alt="5" />
+                                        <img src="Content/Theme/img/media/5.jpg" alt="5" />
                                     </a>
                                 </div>
                             </div>
@@ -331,7 +333,7 @@
                                         <div class="overlay">
                                             <div class="descr"><div>X-MAS LIGHT IPHONE LENS<span>$14.95</span></div></div>
                                         </div>
-                                        <img src="img/media/6.jpg" alt="1" />
+                                        <img src="Content/Theme/img/media/6.jpg" alt="1" />
                                     </a>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6">
@@ -339,7 +341,7 @@
                                         <div class="overlay">
                                             <div class="descr"><div>Hedadset for iPhone<span>$19.40</span></div></div>
                                         </div>
-                                        <img src="img/media/6.jpg" alt="2" />
+                                        <img src="Content/Theme/img/media/6.jpg" alt="2" />
                                     </a>
                                 </div>
                             </div>
@@ -349,7 +351,7 @@
                                         <div class="overlay">
                                             <div class="descr"><div>Product Name<span>$24.15</span></div></div>
                                         </div>
-                                        <img src="img/media/6.jpg" alt="3" />
+                                        <img src="Content/Theme/img/media/6.jpg" alt="3" />
                                     </a>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6">
@@ -357,7 +359,7 @@
                                         <div class="overlay">
                                             <div class="descr"><div>Product Name<span>$24.15</span></div></div>
                                         </div>
-                                        <img src="img/media/6.jpg" alt="4" />
+                                        <img src="Content/Theme/img/media/6.jpg" alt="4" />
                                     </a>
                                 </div>
                             </div>
@@ -380,7 +382,7 @@
                                     <!--Post-->
                                     <div class="post row">
                                         <div class="col-lg-6 col-sm-6">
-                                            <a href="#"><img src="img/posts-widget/1.jpg" alt="1" /></a>
+                                            <a href="#"><img src="Content/Theme/img/posts-widget/1.jpg" alt="1" /></a>
                                         </div>
                                         <div class="col-lg-6 col-sm-6">
                                             <h3><a href="#">Another Title</a></h3>
@@ -392,7 +394,7 @@
                                     <!--Post-->
                                     <div class="post row">
                                         <div class="col-lg-6 col-sm-6">
-                                            <a href="#"><img src="img/posts-widget/1.jpg" alt="2" /></a>
+                                            <a href="#"><img src="Content/Theme/img/posts-widget/1.jpg" alt="2" /></a>
                                         </div>
                                         <div class="col-lg-6 col-sm-6">
                                             <h3><a href="#">Awesome Title</a></h3>
@@ -453,45 +455,45 @@
                     </div>
                     <div class="gallery-grid">
                         <!--Item-->
-                        <div class="gallery-item" data-groups='["camera"]' data-src="img/gallery-widget/1.jpg">
+                        <div class="gallery-item" data-groups='["camera"]' data-src="Content/Theme/img/gallery-widget/1.jpg">
                             <a href="img/gallery-widget/1.jpg">
                                 <div class="overlay"><span><i class="icon-expand"></i></span></div>
-                                <img src="img/gallery-widget/th_1.jpg" alt="1" />
+                                <img src="Content/Theme/img/gallery-widget/th_1.jpg" alt="1" />
                             </a>
                         </div>
                         <!--Item-->
-                        <div class="gallery-item" data-groups='["camera"]' data-src="img/gallery-widget/2.jpg">
+                        <div class="gallery-item" data-groups='["camera"]' data-src="Content/Theme/img/gallery-widget/2.jpg">
                             <a href="img/gallery-widget/2.jpg">
                                 <div class="overlay"><span><i class="icon-expand"></i></span></div>
-                                <img src="img/gallery-widget/th_1.jpg" alt="2" />
+                                <img src="Content/Theme/img/gallery-widget/th_1.jpg" alt="2" />
                             </a>
                         </div>
                         <!--Item-->
                         <div class="gallery-item" data-groups='["video"]' data-src="https://www.youtube.com/watch?v=hdEAWW7tZSA">
                             <a href="https://www.youtube.com/watch?v=hdEAWW7tZSA">
                                 <div class="overlay"><span><i class="icon-music-play"></i></span></div>
-                                <img src="img/gallery-widget/th_1.jpg" alt="3" />
+                                <img src="Content/Theme/img/gallery-widget/th_1.jpg" alt="3" />
                             </a>
                         </div>
                         <!--Item-->
-                        <div class="gallery-item" data-groups='["lenses"]' data-src="img/gallery-widget/4.jpg">
+                        <div class="gallery-item" data-groups='["lenses"]' data-src="Content/Theme/img/gallery-widget/4.jpg">
                             <a href="img/gallery-widget/3.jpg">
                                 <div class="overlay"><span><i class="icon-expand"></i></span></div>
-                                <img src="img/gallery-widget/th_1.jpg" alt="4" />
+                                <img src="Content/Theme/img/gallery-widget/th_1.jpg" alt="4" />
                             </a>
                         </div>
                         <!--Item-->
-                        <div class="gallery-item" data-groups='["flash"]' data-src="img/gallery-widget/5.jpg">
+                        <div class="gallery-item" data-groups='["flash"]' data-src="Content/Theme/img/gallery-widget/5.jpg">
                             <a href="img/gallery-widget/4.jpg">
                                 <div class="overlay"><span><i class="icon-expand"></i></span></div>
-                                <img src="img/gallery-widget/th_1.jpg" alt="5" />
+                                <img src="Content/Theme/img/gallery-widget/th_1.jpg" alt="5" />
                             </a>
                         </div>
                         <!--Item-->
-                        <div class="gallery-item" data-groups='["flash"]' data-src="img/gallery-widget/6.jpg">
+                        <div class="gallery-item" data-groups='["flash"]' data-src="Content/Theme/img/gallery-widget/6.jpg">
                             <a href="img/gallery-widget/5.jpg">
                                 <div class="overlay"><span><i class="icon-expand"></i></span></div>
-                                <img src="img/gallery-widget/th_1.jpg" alt="6" />
+                                <img src="Content/Theme/img/gallery-widget/th_1.jpg" alt="6" />
                             </a>
                         </div>
                     </div>
@@ -502,13 +504,13 @@
                 <div class="container">
                     <h2>Brands in our shop</h2>
                     <div class="inner">
-                        <a class="item" href="#"><img src="img/brands/1.png" alt="1" /></a>
-                        <a class="item" href="#"><img src="img/brands/1.png" alt="1" /></a>
-                        <a class="item" href="#"><img src="img/brands/1.png" alt="1" /></a>
-                        <a class="item" href="#"><img src="img/brands/1.png" alt="1" /></a>
-                        <a class="item" href="#"><img src="img/brands/1.png" alt="1" /></a>
-                        <a class="item" href="#"><img src="img/brands/1.png" alt="1" /></a>
-                        <a class="item" href="#"><img src="img/brands/1.png" alt="1" /></a>
+                        <a class="item" href="#"><img src="Content/Theme/img/brands/1.png" alt="1" /></a>
+                        <a class="item" href="#"><img src="Content/Theme/img/brands/1.png" alt="1" /></a>
+                        <a class="item" href="#"><img src="Content/Theme/img/brands/1.png" alt="1" /></a>
+                        <a class="item" href="#"><img src="Content/Theme/img/brands/1.png" alt="1" /></a>
+                        <a class="item" href="#"><img src="Content/Theme/img/brands/1.png" alt="1" /></a>
+                        <a class="item" href="#"><img src="Content/Theme/img/brands/1.png" alt="1" /></a>
+                        <a class="item" href="#"><img src="Content/Theme/img/brands/1.png" alt="1" /></a>
                     </div>
                 </div>
             </section><!--Brands Carousel Close-->
@@ -579,7 +581,7 @@
             <div class="row">
                 <div class="col-lg-5 col-md-5 col-sm-5">
                     <div class="info">
-                        <a class="logo" href="index.html"><img src="img/logo.png" alt="Bushido" /></a>
+                        <a class="logo" href="index.html"><img src="Content/Theme/img/logo.png" alt="Bushido" /></a>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
                         <div class="social">
                             <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
@@ -618,11 +620,11 @@
                     </div>
                     <div class="col-lg-5 col-md-5 col-sm-5">
                         <div class="payment">
-                            <img src="img/payment/visa.png" alt="Visa" />
-                            <img src="img/payment/paypal.png" alt="PayPal" />
-                            <img src="img/payment/master.png" alt="Master Card" />
-                            <img src="img/payment/discover.png" alt="Discover" />
-                            <img src="img/payment/amazon.png" alt="Amazon" />
+                            <img src="Content/Theme/img/payment/visa.png" alt="Visa" />
+                            <img src="Content/Theme/img/payment/paypal.png" alt="PayPal" />
+                            <img src="Content/Theme/img/payment/master.png" alt="Master Card" />
+                            <img src="Content/Theme/img/payment/discover.png" alt="Discover" />
+                            <img src="Content/Theme/img/payment/amazon.png" alt="Amazon" />
                         </div>
                     </div>
                 </div>

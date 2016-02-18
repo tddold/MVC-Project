@@ -23,6 +23,8 @@
 
         public int Quantity { get; set; }
 
+        public string ImagePath { get; set; }
+
         public double Whidth { get; set; }
 
         public double Heigth { get; set; }
@@ -32,6 +34,8 @@
         public double Lenght { get; set; }
 
         public string CategoryName { get; set; }
+
+        public int CategoryId { get; set; }
 
         public void CreateMappings(IMapperConfiguration configuration)
         {

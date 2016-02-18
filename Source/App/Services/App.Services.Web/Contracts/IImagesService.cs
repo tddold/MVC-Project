@@ -5,6 +5,6 @@
 
     public interface IImagesService
     {
-        void SaveImages(IEnumerable<HttpPostedFileBase> files);
+        void SaveImage(HttpPostedFileBase photo, object instance,string absolutePath,string relativePath);
     }
 }
