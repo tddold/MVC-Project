@@ -11,8 +11,8 @@
     using App.Web.Areas.Administration.AdminViewModels;
     using App.Web.Infrastructure.Mapping;
     using System.Diagnostics.Contracts;
-
-    public class KendoProductsController : Controller
+    using Web.Controllers;
+    public class KendoProductsController : BaseController
     {
         private AppDbContext db = new AppDbContext();
         private IService<Product> productsService;
