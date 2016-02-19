@@ -1,8 +1,7 @@
-﻿using App.Data.Models;
-using System.Linq;
-
-namespace App.Services.Web.Contracts
+﻿namespace App.Services.Web.Contracts
 {
+    using System.Linq;
+
     public interface IService<T>
     {
         IQueryable<T> GetAll();
@@ -14,5 +13,7 @@ namespace App.Services.Web.Contracts
         void Delete(T model);
 
         T Update(T model);
+
+        //void Save();
     }
 }

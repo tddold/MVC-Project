@@ -31,7 +31,7 @@
                 .ToList();
 
             var allProducts = this.products
-                .GetAllProducts()
+                .GetAll()
                 .Where(x => x.CategoryId == id)
                 .To<ProductDetailsViewModel>()
                 .ToList();

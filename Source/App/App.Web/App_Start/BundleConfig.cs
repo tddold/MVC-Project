@@ -14,7 +14,8 @@
         private static void RegisterScripts(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                       "~/Scripts/jquery-{version}.js"));
+                 //"~/Content/Theme/js/libs/jquery-1.11.1.min.js",
+                 "~/Scripts/jquery-{version}.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
@@ -47,6 +48,10 @@
             bundles.Add(new ScriptBundle("~/bundles/theme-modernizr").Include(
                      "~/Content/Theme/js/libs/modernizr.custom.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/kendo").Include(
+                   "~/Scripts/KendoUI/kendo.all.min.js",
+                   "~/Scripts/KendoUI/kendo.aspnetmvc.min.js"));
+
             //bundles.Add(new ScriptBundle("~/bundles/theme-shuffle").Include(
             //        "~/Content/Theme/js/plugins/jquery.shuffle.min.js"));
         }
@@ -64,6 +69,10 @@
             bundles.Add(new StyleBundle("~/styleBundles/theme")
                .Include("~/Content/Theme/masterslider/style/masterslider.css")
                .Include("~/Content/Theme/css/styles.css"));
+
+            bundles.Add(new StyleBundle("~/Content/kendo").Include(
+                    "~/Content/KendoUI/kendo.common.min.css",
+                    "~/Content/KendoUI/kendo.default.min.css"));
         }
     }
 }

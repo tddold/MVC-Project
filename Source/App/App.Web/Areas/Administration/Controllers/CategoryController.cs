@@ -28,8 +28,8 @@
         public ActionResult Index()
         {
             var cacheCategories = this.categoriesService
-                      .GetAll().
-                      To<CategoryViewModel>()
+                      .GetAll()
+                      .To<CategoryViewModel>()
                       .ToList();
 
             var viewModel = new HomeViewModel

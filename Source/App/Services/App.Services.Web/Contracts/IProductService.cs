@@ -4,10 +4,8 @@
 
     using App.Data.Models;
 
-    public interface IProductService : IService
+    public interface IProductService : IService<Product>, IImagesService
     {
-        IQueryable<Product> GetAllProducts();
-
         Product GetById(int id);
 
         IQueryable<Product> GetRandomProducts(int count);

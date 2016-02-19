@@ -1,13 +1,14 @@
 ﻿namespace App.Services.Web
 {
-    using App.Services.Web.Contracts;
     using System;
-    using System.Linq;
-    using App.Data.Models;
-    using App.Data.Common;
-    using System.Collections.Generic;
-    using System.Web;
     using System.IO;
+    using System.Linq;
+    using System.Web;
+
+    using App.Data.Common;
+    using App.Data.Models;
+    using App.Services.Web.Contracts;
+
     public class CategoriesService : ICategoriesService
     {
         private IDbRepository<Category> categories;
@@ -37,6 +38,11 @@
         public IQueryable<Category> GetAll()
         {
             return this.categories.All();
+        }
+
+        public void Save()
+        {
+            throw new NotImplementedException();
         }
 
         public void SaveImage(HttpPostedFileBase photo, Object instance,string absolutePath, string relativePath)

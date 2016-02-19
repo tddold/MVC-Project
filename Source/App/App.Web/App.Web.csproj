@@ -78,6 +78,9 @@
       <HintPath>..\packages\Glimpse.Mvc5.1.5.3\lib\net45\Glimpse.Mvc5.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Kendo.Mvc">
+      <HintPath>Libreries\Kendo.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -203,8 +206,12 @@
     <Compile Include="App_Start\SmsService.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Administration\AdministrationAreaRegistration.cs" />
+    <Compile Include="Areas\Administration\AdminViewModels\ProductInputViewModel.cs" />
+    <Compile Include="Areas\Administration\AdminViewModels\ProductViewModel.cs" />
     <Compile Include="Areas\Administration\Controllers\CategoryController.cs" />
     <Compile Include="Areas\Administration\Controllers\AdministrationController.cs" />
+    <Compile Include="Areas\Administration\Controllers\KendoProductsController.cs" />
+    <Compile Include="Areas\Administration\Controllers\ProductsController.cs" />
     <Compile Include="Areas\Administration\Controllers\UsersController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
@@ -536,9 +543,16 @@
     <Content Include="Areas\Administration\Views\Category\Edit.cshtml" />
     <Content Include="Areas\Administration\Views\Category\Index.cshtml" />
     <Content Include="Areas\Administration\Views\Shared\_AdminPartial.cshtml" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Areas\Administration\Views\Products\Create.cshtml" />
+    <Content Include="Areas\Administration\Views\Products\Delete.cshtml" />
+    <Content Include="Areas\Administration\Views\Products\Details.cshtml" />
+    <Content Include="Areas\Administration\Views\Products\Edit.cshtml" />
+    <Content Include="Areas\Administration\Views\Products\Index.cshtml" />
+    <Content Include="Areas\Administration\Views\KendoProducts\Index.cshtml" />
+    <None Include="Scripts\jquery-2.2.0.intellisense.js" />
+    <Content Include="Scripts\jquery-2.2.0.js" />
+    <Content Include="Scripts\jquery-2.2.0.min.js" />
+    <Content Include="Scripts\jquery-2.2.0.min.map" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
@@ -588,9 +602,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Administration\Models\" />
     <Folder Include="Areas\Administration\Views\Home\" />
     <Folder Include="Views\Base\" />
+    <Folder Include="Views\KendoProducts\" />
+    <Folder Include="Views\KendoProduct\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -598,7 +613,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.0\analyzers\dotnet\cs\Newtonsoft.Json.dll" />
