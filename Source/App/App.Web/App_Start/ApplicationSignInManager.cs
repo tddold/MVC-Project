@@ -2,10 +2,12 @@
 {
     using System.Security.Claims;
     using System.Threading.Tasks;
+
+    using Data.Models;
+
     using Microsoft.AspNet.Identity.Owin;
     using Microsoft.Owin;
     using Microsoft.Owin.Security;
-    using Data.Models;
 
     // Configure the application sign-in manager which is used in this application.
     public class ApplicationSignInManager : SignInManager<User, string>

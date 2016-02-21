@@ -35,13 +35,11 @@
             //          .GetAll().
             //          To<CategoryViewModel>()
             //          .ToList();
-
             var cacheCategories = this.Cache
                 .Get("categories", () => this.categories
                         .GetAll().
                         To<CategoryViewModel>()
-                        .ToList(),
-                    30 * 60);
+                        .ToList(), 30 * 60);
 
             var homeViewModel = new HomeViewModel
             {

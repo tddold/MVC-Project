@@ -1,17 +1,20 @@
 ﻿namespace App.Web.Areas.Administration.Controllers
 {
     using System;
+    using System.Diagnostics.Contracts;
     using System.Linq;
     using System.Web.Mvc;
+
     using Kendo.Mvc.Extensions;
     using Kendo.Mvc.UI;
-    using App.Data.Models;
+
     using App.Data;
+    using App.Data.Models;
     using App.Services.Web.Contracts;
-    using App.Web.Areas.Administration.AdminViewModels;
     using App.Web.Infrastructure.Mapping;
-    using System.Diagnostics.Contracts;
+    using App.Web.Areas.Administration.AdminViewModels;
     using Web.Controllers;
+
     public class KendoProductsController : BaseController
     {
         private AppDbContext db = new AppDbContext();
@@ -33,16 +36,14 @@
 
         public ActionResult Products_Read([DataSourceRequest]DataSourceRequest request)
         {
-
             DataSourceResult result = this.products.GetAll()
                 .To<ProductViewModel>()
                 .ToDataSourceResult(request);
 
             return this.Json(result, JsonRequestBehavior.AllowGet);
 
-
-            //IQueryable<Product> products = db.Products;
-            //DataSourceResult result = products.ToDataSourceResult(request, product => new {
+            // IQueryable<Product> products = db.Products;
+            // DataSourceResult result = products.ToDataSourceResult(request, product => new {
             //    Id = product.Id,
             //    Name = product.Name,
             //    Description = product.Description,
@@ -59,14 +60,15 @@
             //    ModifiedOn = product.ModifiedOn,
             //    IsDeleted = product.IsDeleted,
             //    DeletedOn = product.DeletedOn
-            //});
+            // });
 
-            //return Json(result);
+            // return Json(result);
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
         public ActionResult Products_Create([DataSourceRequest]DataSourceRequest request, ProductViewModel product)
         {
+            Contract.Ensures(Contract.Result<ActionResult>() != null);
             var newId = 0;
             if (this.ModelState.IsValid)
             {
@@ -87,7 +89,8 @@
                 };
 
                 this.products.Add(entity);
-                //this.products.Save();
+
+                // this.products.Save();
                 newId = entity.Id;
             }
 
@@ -124,7 +127,7 @@
                 entity.IsDeleted = product.IsDeleted;
                 entity.DeletedOn = product.DeletedOn;
 
-                //this.productsService.Save();
+                // this.productsService.Save();
             }
 
             var productToDisplay = this.products
@@ -138,8 +141,10 @@
         [AcceptVerbs(HttpVerbs.Post)]
         public ActionResult Products_Destroy([DataSourceRequest]DataSourceRequest request, Product product)
         {
-            //if (ModelState.IsValid)
-            //{
+            Contract.Ensures(Contract.Result<ActionResult>() != null);
+
+            // if (ModelState.IsValid)
+            // {
             //    var entity = new Product
             //    {
             //        Id = product.Id,
@@ -160,15 +165,13 @@
             //        DeletedOn = product.DeletedOn
             //    };
 
-            //    db.Products.Attach(entity);
+            // db.Products.Attach(entity);
             //    db.Products.Remove(entity);
             //    db.SaveChanges();
-
-            //  }
-
+            // }
             this.products.Delete(product);
-            //this.products.Save();
 
+            // this.products.Save();
             return this.Json(new[] { product }.ToDataSourceResult(request, this.ModelState));
         }
 
@@ -185,13 +188,13 @@
         {
             var fileContents = Convert.FromBase64String(base64);
 
-            return File(fileContents, contentType, fileName);
+            return this.File(fileContents, contentType, fileName);
         }
 
-        //protected override void Dispose(bool disposing)
-        //{
+        // protected override void Dispose(bool disposing)
+        // {
         //    this.db.Dispose();
         //    base.Dispose(disposing);
-        //}
+        // }
     }
 }

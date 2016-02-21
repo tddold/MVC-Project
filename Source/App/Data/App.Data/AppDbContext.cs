@@ -42,8 +42,6 @@
 
         public IDbSet<Wishlist> Wishlists { get; set; }
 
-
-
         public static AppDbContext Create()
         {
             return new AppDbContext();

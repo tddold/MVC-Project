@@ -14,39 +14,17 @@
         private IDbRepository<Category> categories;
 
         public CategoriesService(IDbRepository<Category> categories)
-            :base(categories)
+            : base(categories)
         {
             this.categories = categories;
         }
 
-        public void Add(Category category)
-        {
-            this.categories.Add(category);
-            this.categories.Save();
-        }
-
-        public void Delete(Category category)
-        {
-            this.categories.Delete(category);
-            this.categories.Save();
-        }
-
-        public Category Find(int id)
-        {
-            return this.categories.GetById(id);
-        }
-
-        public IQueryable<Category> GetAll()
-        {
-            return this.categories.All();
-        }
-
         public void Save()
         {
-            throw new NotImplementedException();
+            this.categories.Save();
         }
 
-        public void SaveImage(HttpPostedFileBase photo, Object instance,string absolutePath, string relativePath)
+        public void SaveImage(HttpPostedFileBase photo, Object instance, string absolutePath, string relativePath)
         {
             if (!(instance is Category))
             {
@@ -60,11 +38,6 @@
 
             category.ImagePath = relativePath + fileName;
             this.categories.Save();
-        }
-
-        public Category Update(Category category)
-        {
-            throw new NotImplementedException();
         }
 
         //private void UploadPicture(Category category, HttpPostedFileBase photo)

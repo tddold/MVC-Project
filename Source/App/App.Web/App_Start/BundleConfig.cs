@@ -14,7 +14,6 @@
         private static void RegisterScripts(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                 //"~/Content/Theme/js/libs/jquery-1.11.1.min.js",
                  "~/Scripts/jquery-{version}.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
@@ -38,8 +37,7 @@
                    "~/Content/Theme/js/plugins/jquery.shuffle.min.js",
                    "~/Content/Theme/js/plugins/lightGallery.min.js",
                    "~/Content/Theme/js/plugins/owl.carousel.min.js",
-                   "~/Content/Theme/js/plugins/masterslider.min.js"
-                   ));
+                   "~/Content/Theme/js/plugins/masterslider.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/theme-mailer").Include(
                     "~/Content/Theme/mailer/mailer.js",
@@ -52,7 +50,7 @@
                    "~/Scripts/KendoUI/kendo.all.min.js",
                    "~/Scripts/KendoUI/kendo.aspnetmvc.min.js"));
 
-            //bundles.Add(new ScriptBundle("~/bundles/theme-shuffle").Include(
+            // bundles.Add(new ScriptBundle("~/bundles/theme-shuffle").Include(
             //        "~/Content/Theme/js/plugins/jquery.shuffle.min.js"));
         }
 
@@ -63,7 +61,6 @@
                      "~/Content/admin.css"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                     //"~/Content/bootstrap.css",
                      "~/Content/site.css"));
 
             bundles.Add(new StyleBundle("~/styleBundles/theme")

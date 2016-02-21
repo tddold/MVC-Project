@@ -10,13 +10,12 @@
 
     public class UsersController : BaseController
     {
-        private User users;
         private AppDbContext db = new AppDbContext();
 
         // GET: Administration/Users
         public ActionResult Index()
         {
-            return View(db.Users.ToList());
+            return this.View(this.db.Users.ToList());
         }
 
         // GET: Administration/Users/Details/5
@@ -26,18 +25,20 @@
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            User user = db.Users.Find(id);
+
+            User user = this.db.Users.Find(id);
             if (user == null)
             {
-                return HttpNotFound();
+                return this.HttpNotFound();
             }
-            return View(user);
+
+            return this.View(user);
         }
 
         // GET: Administration/Users/Create
         public ActionResult Create()
         {
-            return View();
+            return this.View();
         }
 
         // POST: Administration/Users/Create
@@ -47,14 +48,14 @@
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id,Email,EmailConfirmed,PasswordHash,SecurityStamp,PhoneNumber,PhoneNumberConfirmed,TwoFactorEnabled,LockoutEndDateUtc,LockoutEnabled,AccessFailedCount,UserName")] User user)
         {
-            if (ModelState.IsValid)
+            if (this.ModelState.IsValid)
             {
-                db.Users.Add(user);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                this.db.Users.Add(user);
+                this.db.SaveChanges();
+                return this.RedirectToAction("Index");
             }
 
-            return View(user);
+            return this.View(user);
         }
 
         // GET: Administration/Users/Edit/5
@@ -64,12 +65,14 @@
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            User user = db.Users.Find(id);
+
+            User user = this.db.Users.Find(id);
             if (user == null)
             {
-                return HttpNotFound();
+                return this.HttpNotFound();
             }
-            return View(user);
+
+            return this.View(user);
         }
 
         // POST: Administration/Users/Edit/5
@@ -79,13 +82,14 @@
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "Id,Email,EmailConfirmed,PasswordHash,SecurityStamp,PhoneNumber,PhoneNumberConfirmed,TwoFactorEnabled,LockoutEndDateUtc,LockoutEnabled,AccessFailedCount,UserName")] User user)
         {
-            if (ModelState.IsValid)
+            if (this.ModelState.IsValid)
             {
-                db.Entry(user).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                this.db.Entry(user).State = EntityState.Modified;
+                this.db.SaveChanges();
+                return this.RedirectToAction("Index");
             }
-            return View(user);
+
+            return this.View(user);
         }
 
         // GET: Administration/Users/Delete/5
@@ -95,31 +99,35 @@
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            User user = db.Users.Find(id);
+
+            User user = this.db.Users.Find(id);
             if (user == null)
             {
-                return HttpNotFound();
+                return this.HttpNotFound();
             }
-            return View(user);
+
+            return this.View(user);
         }
 
         // POST: Administration/Users/Delete/5
-        [HttpPost, ActionName("Delete")]
+        [HttpPost]
+        [ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
-            User user = db.Users.Find(id);
-            db.Users.Remove(user);
-            db.SaveChanges();
-            return RedirectToAction("Index");
+            User user = this.db.Users.Find(id);
+            this.db.Users.Remove(user);
+            this.db.SaveChanges();
+            return this.RedirectToAction("Index");
         }
 
         protected override void Dispose(bool disposing)
         {
             if (disposing)
             {
-                db.Dispose();
+                this.db.Dispose();
             }
+
             base.Dispose(disposing);
         }
     }

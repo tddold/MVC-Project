@@ -128,7 +128,8 @@
                 Name = "Galaxy S6",
                 Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
                 ShortDecription = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s .",
-                //Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
+
+                // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[0],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
                 Manufacturer = "Samsung",
@@ -139,7 +140,8 @@
                 Depht = 4,
                 Weight = 0.5,
                 ImagePath = "/Images/SeedImages/products/Galaxy/1.png"
-                //Images = new List<Image>() {
+
+                // Images = new List<Image>() {
                 //    new Image() { ImagePath = "/Images/SeedImages/products/Galaxy/1.png"},
                 //    new Image() { ImagePath = "/Images/SeedImages/products/Galaxy/2.png" },
                 //    new Image() { ImagePath = "/Images/SeedImages/products/Galaxy/3.png" }
@@ -150,7 +152,8 @@
                 Name = "Galaxy Edge",
                 Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
                 ShortDecription = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s .",
-                //Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
+
+                // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[0],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
                 Manufacturer = "Samsung",
@@ -161,19 +164,21 @@
                 Depht = 4,
                 Weight = 0.5,
                 ImagePath = "/Images/SeedImages/products/Edge/1.jpg"
-                //Images = new List<Image>()
-                //{
+
+                // Images = new List<Image>()
+                // {
                 //    new Image() { ImagePath = "/Images/SeedImages/products/Edge/1.jpg" },
                 //    new Image() { ImagePath = "/Images/SeedImages/products/Edge/2.jpg" },
                 //    new Image() { ImagePath = "/Images/SeedImages/products/Edge/3.jpg" }
-                //}
+                // }
             });
             this.Products.Add(new Product()
             {
                 Name = "XPERIA Z5",
                 Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
                 ShortDecription = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s .",
-                //Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
+
+                // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[0],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
                 Manufacturer = "Sony",
@@ -184,19 +189,21 @@
                 Depht = 4,
                 Weight = 0.5,
                 ImagePath = "/Images/SeedImages/products/Xperia/1.jpg"
-                //Images = new List<Image>()
-                //{
+
+                // Images = new List<Image>()
+                // {
                 //    new Image() { ImagePath = "/Images/SeedImages/products/Xperia/1.jpg" },
                 //    new Image() { ImagePath = "/Images/SeedImages/products/Xperia/2.jpg" },
                 //    new Image() { ImagePath = "/Images/SeedImages/products/Xperia/2.jpg" }
-                //}
+                // }
             });
             this.Products.Add(new Product()
             {
                 Name = "iPhone 6S",
                 Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
                 ShortDecription = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s .",
-                //Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
+
+                // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[0],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
                 Manufacturer = "Apple",
@@ -207,19 +214,21 @@
                 Depht = 4,
                 Weight = 0.5,
                 ImagePath = "/Images/SeedImages/products/iPhone/1.png"
-                //Images = new List<Image>()
-                //{
+
+                // Images = new List<Image>()
+                // {
                 //    new Image() { ImagePath = "/Images/SeedImages/products/iPhone/1.png" },
                 //    new Image() { ImagePath = "/Images/SeedImages/products/iPhone/2.png" },
                 //    new Image() { ImagePath = "/Images/SeedImages/products/iPhone/3.png" }
-                //}
+                // }
             });
             this.Products.Add(new Product()
             {
                 Name = "Microsoft Lumia 950 XL",
                 Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
                 ShortDecription = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s .",
-                //Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
+
+                // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[0],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
                 Manufacturer = "Nokia",
@@ -230,17 +239,19 @@
                 Depht = 4,
                 Weight = 0.5,
                 ImagePath = "/Images/SeedImages/products/Lumia/1.jpg"
-                //Images = new List<Image>()
-                //{
+
+                // Images = new List<Image>()
+                // {
                 //    new Image() { ImagePath = "/Images/SeedImages/products/Lumia/1.jpg" }
-                //}
+                // }
             });
             this.Products.Add(new Product()
             {
                 Name = "D5200",
                 Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
                 ShortDecription = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s .",
-                //Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
+
+                // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[1],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
                 Manufacturer = "Nikon",
@@ -251,19 +262,21 @@
                 Depht = 15,
                 Weight = 2,
                 ImagePath = "/Images/SeedImages/products/D5200/1.jpg"
-                //Images = new List<Image>()
-                //{
+
+                // Images = new List<Image>()
+                // {
                 //    new Image() { ImagePath = "/Images/SeedImages/products/D5200/1.jpg" },
                 //    new Image() { ImagePath = "/Images/SeedImages/products/D5200/2.jpg" },
                 //    new Image() { ImagePath = "/Images/SeedImages/products/D5200/3.jpg" }
-                //}
+                // }
             });
             this.Products.Add(new Product()
             {
                 Name = "D7200",
                 Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
                 ShortDecription = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s .",
-                //Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
+
+                // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[1],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
                 Manufacturer = "Nikon",
@@ -274,19 +287,21 @@
                 Depht = 15,
                 Weight = 2,
                 ImagePath = "/Images/SeedImages/products/D7200/1.jpg"
-                //Images = new List<Image>()
-                //{
+
+                // Images = new List<Image>()
+                // {
                 //    new Image() { ImagePath = "/Images/SeedImages/products/D7200/1.jpg" },
                 //    new Image() { ImagePath = "/Images/SeedImages/products/D7200/2.jpg" },
                 //    new Image() { ImagePath = "/Images/SeedImages/products/D7200/3.jpg" }
-                //}
+                // }
             });
             this.Products.Add(new Product()
             {
                 Name = "D3200",
                 Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
                 ShortDecription = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s .",
-                //Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
+
+                // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[1],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
                 Manufacturer = "Nikon",
@@ -297,19 +312,21 @@
                 Depht = 15,
                 Weight = 2,
                 ImagePath = "/Images/SeedImages/products/D3200/1.jpg"
-                //Images = new List<Image>()
-                //{
+
+                // Images = new List<Image>()
+                // {
                 //    new Image { ImagePath = "/Images/SeedImages/products/D3200/1.jpg" },
                 //    new Image { ImagePath = "/Images/SeedImages/products/D3200/2.jpg" },
                 //    new Image { ImagePath = "/Images/SeedImages/products/D3200/3.jpg" }
-                //}
+                // }
             });
             this.Products.Add(new Product()
             {
                 Name = "EOS-100D",
                 Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
                 ShortDecription = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s .",
-                //Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
+
+                // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[1],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
                 Manufacturer = "Canon",
@@ -320,19 +337,21 @@
                 Depht = 15,
                 Weight = 2,
                 ImagePath = "/Images/SeedImages/products/100d/1.jpg"
-                //Images = new List<Image>()
-                //{
+
+                // Images = new List<Image>()
+                // {
                 //    new Image { ImagePath = "/Images/SeedImages/products/100d/1.jpg" },
                 //    new Image { ImagePath = "/Images/SeedImages/products/100d/2.jpg" },
                 //    new Image { ImagePath = "/Images/SeedImages/products/100d/3.jpg" }
-                //}
+                // }
             });
             this.Products.Add(new Product()
             {
                 Name = "EOS-5D Mark III",
                 Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
                 ShortDecription = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s .",
-                //Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
+
+                // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[1],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
                 Manufacturer = "Canon",
@@ -343,19 +362,21 @@
                 Depht = 15,
                 Weight = 2,
                 ImagePath = "/Images/SeedImages/products/5d/1.jpg"
-                //Images = new List<Image>()
-                //{
+
+                // Images = new List<Image>()
+                // {
                 //    new Image { ImagePath = "/Images/SeedImages/products/5d/1.jpg" },
                 //    new Image { ImagePath = "/Images/SeedImages/products/5d/2.jpg" },
                 //    new Image { ImagePath = "/Images/SeedImages/products/5d/3.jpg" }
-                //}
+                // }
             });
             this.Products.Add(new Product()
             {
                 Name = "EOS-750D",
                 Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
                 ShortDecription = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s .",
-                //Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
+
+                // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[1],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
                 Manufacturer = "Canon",
@@ -366,19 +387,21 @@
                 Depht = 15,
                 Weight = 2,
                 ImagePath = "/Images/SeedImages/products/750d/1.jpg"
-                //Images = new List<Image>()
-                //{
+
+                // Images = new List<Image>()
+                // {
                 //    new Image { ImagePath = "/Images/SeedImages/products/750d/1.jpg" },
                 //    new Image { ImagePath = "/Images/SeedImages/products/750d/2.jpg" },
                 //    new Image { ImagePath = "/Images/SeedImages/products/750d/3.jpg" }
-                //}
+                // }
             });
             this.Products.Add(new Product()
             {
                 Name = "SAL-A58",
                 Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
                 ShortDecription = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s .",
-                //Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
+
+                // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[1],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
                 Manufacturer = "Sony",
@@ -389,19 +412,21 @@
                 Depht = 15,
                 Weight = 2,
                 ImagePath = "/Images/SeedImages/products/a58/1.jpg"
-                //Images = new List<Image>()
-                //{
+
+                // Images = new List<Image>()
+                // {
                 //    new Image { ImagePath = "/Images/SeedImages/products/a58/1.jpg" },
                 //    new Image { ImagePath = "/Images/SeedImages/products/a58/2.jpg" },
                 //    new Image { ImagePath = "/Images/SeedImages/products/a58/2.jpg" }
-                //}
+                // }
             });
             this.Products.Add(new Product()
             {
                 Name = "ILCA-77M2",
                 Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
                 ShortDecription = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s .",
-                //Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
+
+                // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[1],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
                 Manufacturer = "Sony",
@@ -412,19 +437,21 @@
                 Depht = 15,
                 Weight = 2,
                 ImagePath = "/Images/SeedImages/products/ilca77/1.jpg"
-                //Images = new List<Image>()
-                //{
+
+                // Images = new List<Image>()
+                // {
                 //    new Image { ImagePath = "/Images/SeedImages/products/ilca77/1.jpg" },
                 //    new Image { ImagePath = "/Images/SeedImages/products/ilca77/2.jpg" },
                 //    new Image { ImagePath = "/Images/SeedImages/products/ilca77/3.jpg" }
-                //}
+                // }
             });
             this.Products.Add(new Product()
             {
                 Name = "KDL-48W705",
                 Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
                 ShortDecription = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s .",
-                //Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
+
+                // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[4],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
                 Manufacturer = "Sony",
@@ -435,19 +462,21 @@
                 Depht = 35,
                 Weight = 20,
                 ImagePath = "/Images/SeedImages/products/48W705/1.png"
-                //Images = new List<Image>()
-                //{
+
+                // Images = new List<Image>()
+                // {
                 //    new Image { ImagePath = "/Images/SeedImages/products/48W705/1.png" },
                 //    new Image { ImagePath = "/Images/SeedImages/products/48W705/2.png" },
                 //    new Image { ImagePath = "/Images/SeedImages/products/48W705/3.png" }
-                //}
+                // }
             });
             this.Products.Add(new Product()
             {
                 Name = "KDL-43W809",
                 Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
                 ShortDecription = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s .",
-                //Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
+
+                // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[4],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
                 Manufacturer = "Sony",
@@ -458,19 +487,21 @@
                 Depht = 35,
                 Weight = 20,
                 ImagePath = "/Images/SeedImages/products/43W809/1.png"
-                //Images = new List<Image>()
-                //{
+
+                // Images = new List<Image>()
+                // {
                 //    new Image { ImagePath = "/Images/SeedImages/products/43W809/1.png" },
                 //    new Image { ImagePath = "/Images/SeedImages/products/43W809/2.png" },
                 //    new Image { ImagePath = "/Images/SeedImages/products/43W809/2.png" }
-                //}
+                // }
             });
             this.Products.Add(new Product()
             {
                 Name = "KD-49X8309C",
                 Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
                 ShortDecription = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s .",
-                //Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
+
+                // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[4],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
                 Manufacturer = "Sony",
@@ -481,18 +512,20 @@
                 Depht = 35,
                 Weight = 20,
                 ImagePath = "/Images/SeedImages/products/49X8309C/1.png"
-                //Images = new List<Image>()
-                //{
+
+                // Images = new List<Image>()
+                // {
                 //    new Image { ImagePath = "/Images/SeedImages/products/49X8309C/1.png" },
                 //    new Image { ImagePath = "/Images/SeedImages/products/49X8309C/2.png" }
-                //}
+                // }
             });
             this.Products.Add(new Product()
             {
                 Name = "KD-43X8307C",
                 Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
                 ShortDecription = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s .",
-                //Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
+
+                // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[4],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
                 Manufacturer = "Sony",
@@ -503,19 +536,21 @@
                 Depht = 35,
                 Weight = 20,
                 ImagePath = "/Images/SeedImages/products/43X8307C/1.png"
-                //Images = new List<Image>()
-                //{
+
+                // Images = new List<Image>()
+                // {
                 //    new Image { ImagePath = "/Images/SeedImages/products/43X8307C/1.png" },
                 //    new Image { ImagePath = "/Images/SeedImages/products/43X8307C/2.png" },
                 //    new Image { ImagePath = "/Images/SeedImages/products/43X8307C/3.png" },
-                //}
+                // }
             });
             this.Products.Add(new Product()
             {
                 Name = "KD-55S8005C",
                 Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
                 ShortDecription = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s .",
-                //Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
+
+                // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[4],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
                 Manufacturer = "Sony",
@@ -526,19 +561,21 @@
                 Depht = 35,
                 Weight = 20,
                 ImagePath = "/Images/SeedImages/products/55S8005C/1.png"
-                //Images = new List<Image>()
-                //{
+
+                // Images = new List<Image>()
+                // {
                 //    new Image { ImagePath = "/Images/SeedImages/products/55S8005C/1.png" },
                 //    new Image { ImagePath = "/Images/SeedImages/products/55S8005C/2.png" },
                 //    new Image { ImagePath = "/Images/SeedImages/products/55S8005C/3.png" }
-                //}
+                // }
             });
             this.Products.Add(new Product()
             {
                 Name = "KDL-50W809C",
                 Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
                 ShortDecription = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s .",
-                //Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
+
+                // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[4],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
                 Manufacturer = "Sony",
@@ -549,19 +586,21 @@
                 Depht = 35,
                 Weight = 20,
                 ImagePath = "/Images/SeedImages/products/50W809C/1.png"
-                //Images = new List<Image>()
-                //{
+
+                // Images = new List<Image>()
+                // {
                 //    new Image { ImagePath = "/Images/SeedImages/products/50W809C/1.png" },
                 //    new Image { ImagePath = "/Images/SeedImages/products/50W809C/2.png" },
                 //    new Image { ImagePath = "/Images/SeedImages/products/50W809C/3.png" }
-                //}
+                // }
             });
             this.Products.Add(new Product()
             {
                 Name = "KD-49X8005C",
                 Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
                 ShortDecription = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s .",
-                //Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
+
+                // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[4],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
                 Manufacturer = "Sony",
@@ -572,19 +611,21 @@
                 Depht = 35,
                 Weight = 20,
                 ImagePath = "/Images/SeedImages/products/49X8005C/1.png"
-                //Images = new List<Image>()
-                //{
+
+                // Images = new List<Image>()
+                // {
                 //    new Image { ImagePath = "/Images/SeedImages/products/49X8005C/1.png" },
                 //    new Image { ImagePath = "/Images/SeedImages/products/49X8005C/2.png" },
                 //    new Image { ImagePath = "/Images/SeedImages/products/49X8005C/3.png" }
-                //}
+                // }
             });
             this.Products.Add(new Product()
             {
                 Name = "Playstation 4",
                 Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
                 ShortDecription = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s .",
-                //Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
+
+                // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[3],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
                 Manufacturer = "Sony",
@@ -595,19 +636,21 @@
                 Depht = 15,
                 Weight = 5,
                 ImagePath = "/Images/SeedImages/products/PS4/1.jpg"
-                //Images = new List<Image>()
-                //{
+
+                // Images = new List<Image>()
+                // {
                 //    new Image { ImagePath = "/Images/SeedImages/products/PS4/1.jpg" },
                 //    new Image { ImagePath = "/Images/SeedImages/products/PS4/2.jpg" },
                 //    new Image { ImagePath = "/Images/SeedImages/products/PS4/3.jpg" }
-                //}
+                // }
             });
             this.Products.Add(new Product()
             {
                 Name = "Playstation Vita",
                 Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
                 ShortDecription = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s .",
-                //Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
+
+                // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[3],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
                 Manufacturer = "Sony",
@@ -618,19 +661,21 @@
                 Depht = 5,
                 Weight = 0.5,
                 ImagePath = "/Images/SeedImages/products/VITA/1.jpg"
-                //Images = new List<Image>()
-                //{
+
+                // Images = new List<Image>()
+                // {
                 //    new Image { ImagePath = "/Images/SeedImages/products/VITA/1.jpg" },
                 //    new Image { ImagePath = "/Images/SeedImages/products/VITA/2.jpg" },
                 //    new Image { ImagePath = "/Images/SeedImages/products/VITA/3.jpg" },
-                //}
+                // }
             });
             this.Products.Add(new Product()
             {
                 Name = "MacBook Pro",
                 Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
                 ShortDecription = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s .",
-                //Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
+
+                // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[2],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
                 Manufacturer = "Apple",
@@ -641,12 +686,13 @@
                 Depht = 5,
                 Weight = 0.5,
                 ImagePath = "/Images/SeedImages/products/MacBook/1.png"
-                //Images = new List<Image>()
-                //{
+
+                // Images = new List<Image>()
+                // {
                 //    new Image { ImagePath = "/Images/SeedImages/products/MacBook/1.png" },
                 //    new Image { ImagePath = "/Images/SeedImages/products/MacBook/2.png" },
                 //    new Image { ImagePath = "/Images/SeedImages/products/MacBook/3.png" },
-                //}
+                // }
             });
         }
 
