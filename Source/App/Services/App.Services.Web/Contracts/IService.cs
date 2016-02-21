@@ -12,7 +12,7 @@
 
         void Delete(T model);
 
-        T Update(T model);
+        void Update(T model);
 
         //void Save();
     }

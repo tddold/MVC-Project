@@ -79,7 +79,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Kendo.Mvc">
-      <HintPath>Libreries\Kendo.Mvc.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\ASP.NET-MVC-Template\Source\Web\MvcTemplate.Web\Libreries\Kendo.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
@@ -210,6 +210,7 @@
     <Compile Include="Areas\Administration\AdminViewModels\ProductViewModel.cs" />
     <Compile Include="Areas\Administration\Controllers\CategoryController.cs" />
     <Compile Include="Areas\Administration\Controllers\AdministrationController.cs" />
+    <Compile Include="Areas\Administration\Controllers\KendoProductController.cs" />
     <Compile Include="Areas\Administration\Controllers\KendoProductsController.cs" />
     <Compile Include="Areas\Administration\Controllers\ProductsController.cs" />
     <Compile Include="Areas\Administration\Controllers\UsersController.cs" />
@@ -505,6 +506,7 @@
     <Content Include="fonts\_notes\dwsync.xml" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Libraries\Kendo.Mvc.xml" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="App.Web.ruleset" />
@@ -549,6 +551,23 @@
     <Content Include="Areas\Administration\Views\Products\Edit.cshtml" />
     <Content Include="Areas\Administration\Views\Products\Index.cshtml" />
     <Content Include="Areas\Administration\Views\KendoProducts\Index.cshtml" />
+    <Content Include="Areas\Administration\Views\KendoProduct\Index.cshtml" />
+    <Content Include="Areas\Administration\Views\Shared\EditorTemplates\Currency.cshtml" />
+    <Content Include="Areas\Administration\Views\Shared\EditorTemplates\Date.cshtml" />
+    <Content Include="Areas\Administration\Views\Shared\EditorTemplates\DateTime.cshtml" />
+    <Content Include="Areas\Administration\Views\Shared\EditorTemplates\DropDownList.cshtml" />
+    <Content Include="Areas\Administration\Views\Shared\EditorTemplates\Email.cshtml" />
+    <Content Include="Areas\Administration\Views\Shared\EditorTemplates\EmailAddress.cshtml" />
+    <Content Include="Areas\Administration\Views\Shared\EditorTemplates\Enum.cshtml" />
+    <Content Include="Areas\Administration\Views\Shared\EditorTemplates\GridForeignKey.cshtml" />
+    <Content Include="Areas\Administration\Views\Shared\EditorTemplates\Integer.cshtml" />
+    <Content Include="Areas\Administration\Views\Shared\EditorTemplates\MultiLineText.cshtml" />
+    <Content Include="Areas\Administration\Views\Shared\EditorTemplates\Number.cshtml" />
+    <Content Include="Areas\Administration\Views\Shared\EditorTemplates\Password.cshtml" />
+    <Content Include="Areas\Administration\Views\Shared\EditorTemplates\SingleLineText.cshtml" />
+    <Content Include="Areas\Administration\Views\Shared\EditorTemplates\String.cshtml" />
+    <Content Include="Areas\Administration\Views\Shared\EditorTemplates\Time.cshtml" />
+    <Content Include="Areas\Administration\Views\Shared\EditorTemplates\Url.cshtml" />
     <None Include="Scripts\jquery-2.2.0.intellisense.js" />
     <Content Include="Scripts\jquery-2.2.0.js" />
     <Content Include="Scripts\jquery-2.2.0.min.js" />

@@ -8,7 +8,7 @@
 
     using Infrastructure.Mapping;
 
-    public class ProductViewModel : IMapFrom<Product>, IMapTo<Product>, IHaveCustomMappings
+    public class ProductViewModel : IMapFrom<Product>, IMapTo<Product>
     {
         [HiddenInput]
         [Key]
@@ -51,15 +51,7 @@
         public string Manufacturer { get; set; }
 
         [Required]
+        [UIHint("DropDownList")]
         public int CategoryId { get; set; }
-
-        [Display(Name = "Category Name")]
-        public string CategoryName { get; set; }
-
-        public void CreateMappings(IMapperConfiguration configuration)
-        {
-            configuration.CreateMap<Product, ProductViewModel>()
-                .ForMember(c => c.CategoryName, opt => opt.MapFrom(c => c.Category.Name));
-        }
     }
 }

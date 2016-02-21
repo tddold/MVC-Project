@@ -6,8 +6,6 @@
 
     public interface IProductService : IService<Product>, IImagesService
     {
-        Product GetById(int id);
-
         IQueryable<Product> GetRandomProducts(int count);
     }
 }

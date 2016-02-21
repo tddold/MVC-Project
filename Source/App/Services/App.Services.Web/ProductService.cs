@@ -9,42 +9,14 @@
     using Data.Common;
     using Data.Models;
 
-    public class ProductService : IProductService
+    public class ProductService : Service<Product>, IProductService
     {
         private IDbRepository<Product> products;
 
         public ProductService(IDbRepository<Product> products)
+            :base(products)
         {
             this.products = products;
-        }
-
-        public void Add(Product product)
-        {
-            this.products.Add(product);
-            this.products.Save();
-        }
-
-        public void Delete(Product product)
-        {
-            this.products.Delete(product);
-            this.products.Save();
-        }
-
-        public Product Find(int id)
-        {
-            return this.products.GetById(id);
-        }
-
-        public IQueryable<Product> GetAll()
-        {
-            return this.products.All();
-        }
-
-        public Product GetById(int id)
-        {
-            return this.products
-                .All()
-                .FirstOrDefault(p => p.Id == id);
         }
 
         public IQueryable<Product> GetRandomProducts(int count)
@@ -69,11 +41,6 @@
 
             product.ImagePath = relativePath + fileName;
             this.products.Save();
-        }
-
-        public Product Update(Product model)
-        {
-            throw new NotImplementedException();
         }
     }
 }

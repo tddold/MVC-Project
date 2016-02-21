@@ -1,0 +1,13 @@
+﻿@model int
+
+<div class="row">
+    <div class="col-md-5">
+        @(Html.Kendo().DropDownList()
+            .Name("CategoryId")
+            .DataTextField("Text")
+            .DataValueField("Value")
+            .BindTo((IEnumerable<SelectListItem>)ViewBag.ListItem)
+        )
+    </div>
+</div>
+<br />

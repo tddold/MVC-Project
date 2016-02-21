@@ -9,15 +9,15 @@
     using Services.Web.Contracts;
     using ViewModels.Home;
     using ViewModels.Categories;
-
+    using Data.Models;
     public class HomeController : BaseController
     {
         private IProductService products;
-        private ICategoriesService categories;
+        private IService<Category> categories;
 
         public HomeController(
             IProductService products,
-            ICategoriesService categories)
+            IService<Category> categories)
         {
             this.products = products;
             this.categories = categories;

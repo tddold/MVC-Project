@@ -9,11 +9,12 @@
     using App.Data.Models;
     using App.Services.Web.Contracts;
 
-    public class CategoriesService : ICategoriesService
+    public class CategoriesService : Service<Category>, ICategoriesService
     {
         private IDbRepository<Category> categories;
 
         public CategoriesService(IDbRepository<Category> categories)
+            :base(categories)
         {
             this.categories = categories;
         }

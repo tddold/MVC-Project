@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace App.Services.Web
 {
-    public class Service<T> : IService<T>
+    public abstract class Service<T> : IService<T>
         where T : BaseModel<int>
     {
         private IDbRepository<T> repository;
@@ -21,11 +21,13 @@ namespace App.Services.Web
         public void Add(T model)
         {
             repository.Add(model);
+            repository.Save();
         }
 
         public void Delete(T model)
         {
             repository.Delete(model);
+            repository.Save();
         }
 
         public T Find(int id)
@@ -38,14 +40,9 @@ namespace App.Services.Web
             return repository.All();
         }
 
-        public T Update(T model)
+        public void Update(T model)
         {
-            throw new NotImplementedException();
+            this.repository.Update(model);
         }
-
-        // public void Save()
-        //{
-        //    this.Context.SaveChanges();
-        //}
     }
 }

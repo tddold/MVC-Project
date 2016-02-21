@@ -65,7 +65,7 @@
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult Products_Create([DataSourceRequest]DataSourceRequest request, Product product)
+        public ActionResult Products_Create([DataSourceRequest]DataSourceRequest request, ProductViewModel product)
         {
             var newId = 0;
             if (this.ModelState.IsValid)
@@ -83,10 +83,7 @@
                     Depht = product.Depht,
                     Weight = product.Weight,
                     Manufacturer = product.Manufacturer,
-                    CreatedOn = product.CreatedOn,
-                    ModifiedOn = product.ModifiedOn,
-                    IsDeleted = product.IsDeleted,
-                    DeletedOn = product.DeletedOn
+                    CategoryId = product.Id
                 };
 
                 this.products.Add(entity);

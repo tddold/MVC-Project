@@ -1,0 +1,43 @@
+﻿
+@(Html.Kendo().Grid<App.Web.Areas.Administration.AdminViewModels.ProductViewModel>()
+      .Name("grid")
+      .Columns(columns =>
+      {
+        columns.Bound(c => c.Name);
+        columns.Bound(c => c.Description);
+        columns.Bound(c => c.ShortDecription);
+        columns.Bound(c => c.Price);
+        columns.Bound(c => c.Quantity);
+        columns.Bound(c => c.ImagePath);
+        columns.Bound(c => c.Whidth);
+        columns.Bound(c => c.Heigth);
+        columns.Bound(c => c.Depht);
+        columns.Bound(c => c.Weight);
+        columns.Bound(c => c.Manufacturer);
+        columns.Bound(c => c.CategoryId);
+        columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);
+      })
+      .ToolBar(toolbar => {
+            toolbar.Create();
+      })
+      .ColumnMenu()
+      .Editable(editable => editable.Mode(GridEditMode.PopUp))
+      .Pageable()
+      .Selectable(selectable => {
+            selectable.Mode(GridSelectionMode.Single);
+            selectable.Type(GridSelectionType.Row);
+      })
+      .Sortable(sortable => {
+          sortable.SortMode(GridSortMode.SingleColumn);
+      })
+      .Filterable()
+      .Scrollable()
+      .DataSource(dataSource => dataSource
+          .Ajax()
+          .Model(model => model.Id(p => p.Id))
+          .Read(read => read.Action("ProductViewModels_Read", "KendoProduct"))
+          .Create(create => create.Action("ProductViewModels_Create", "KendoProduct"))
+          .Update(update => update.Action("ProductViewModels_Update", "KendoProduct"))
+          .Destroy(destroy => destroy.Action("ProductViewModels_Destroy", "KendoProduct"))
+      )
+)
