@@ -1,21 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Net;
-using System.Web;
-using System.Web.Mvc;
-using Kendo.Mvc.Extensions;
-using Kendo.Mvc.UI;
-using App.Web.Areas.Administration.AdminViewModels;
-using App.Web.Controllers;
-using App.Services.Web.Contracts;
-using App.Web.Infrastructure.Mapping;
-using App.Data.Models;
-
-namespace App.Web.Areas.Administration.Controllers
+﻿namespace App.Web.Areas.Administration.Controllers
 {
+    using System.Collections.Generic;
+    using System.Web.Mvc;
+
+    using Kendo.Mvc.Extensions;
+    using Kendo.Mvc.UI;
+
+    using App.Data.Models;
+    using App.Services.Web.Contracts;
+    using App.Web.Infrastructure.Mapping;
+    using App.Web.Areas.Administration.AdminViewModels;
+    using App.Web.Controllers;
+
     public class KendoCategoriesController : BaseController
     {
         private ICategoriesService categoriesService;

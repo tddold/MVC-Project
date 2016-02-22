@@ -1,12 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace App.Web.Areas.Administration.AdminViewModels
+﻿namespace App.Web.Areas.Administration.AdminViewModels
 {
-    public class ManufacturerSelectViewModel
+    using Data.Models;
+    using Infrastructure.Mapping;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.Web.Mvc;
+
+    public class ManufacturerSelectViewModel: IMapFrom<Manufacturer>, IMapTo<Manufacturer>
     {
+        [HiddenInput(DisplayValue = false)]
+        public int Id { get; set; }
+
+        [Required]
+        [MinLength(2)]
+        [MaxLength(100)]
+        public string Name { get; set; }
+
         public List<string> SelectedManufacturers{ get; set; }
     }
 }

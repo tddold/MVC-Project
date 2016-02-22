@@ -1,0 +1,37 @@
+﻿
+@(Html.Kendo().Grid<App.Web.Areas.Administration.AdminViewModels.ManufacturerSelectViewModel>()
+      .Name("grid")
+      .Columns(columns =>
+      {
+          columns.Bound(c => c.Name);
+          columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);
+      })
+      .ToolBar(toolbar =>
+      {
+          toolbar.Create();
+          toolbar.Excel();
+          toolbar.Pdf();
+      })
+      .ColumnMenu()
+      .Editable(editable => editable.Mode(GridEditMode.PopUp))
+      .Pageable()
+      .Selectable(selectable =>
+      {
+          selectable.Mode(GridSelectionMode.Single);
+          selectable.Type(GridSelectionType.Row);
+      })
+      .Sortable(sortable =>
+      {
+          sortable.SortMode(GridSortMode.SingleColumn);
+      })
+      .Filterable()
+      .Scrollable()
+      .DataSource(dataSource => dataSource
+          .Ajax()
+          .Model(model => model.Id(p => p.Id))
+          .Read(read => read.Action("ManufacturerSelectViewModel_Read", "KendoManufacturers"))
+          .Create(create => create.Action("ManufacturerSelectViewModel_Create", "KendoManufacturers"))
+          .Update(update => update.Action("ManufacturerSelectViewModel_Update", "KendoManufacturers"))
+          .Destroy(destroy => destroy.Action("ManufacturerSelectViewModel_Destroy", "KendoManufacturers"))
+      )
+)

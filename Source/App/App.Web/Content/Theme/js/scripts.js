@@ -463,7 +463,7 @@ $(document).ready(function(e) {
 		categorySlider.control('thumblist' , {autohide:false ,dir:'h',align:'bottom', width:137, height:130, margin:15, space:0 , hideUnder:400});
 		categorySlider.setup('prod-gal' , {
 				width:550,
-				height:484,
+				height:324,
 				speed: 25,
 				preload:'all',
 				loop:true,

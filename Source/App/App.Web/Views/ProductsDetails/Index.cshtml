@@ -1,0 +1,224 @@
+﻿
+@model  App.Web.ViewModels.Products.ProductDetailsViewModel
+@{
+    ViewBag.Title = "Index";
+}
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+@*<section class="cat-tiles">
+        <div class="container">
+
+
+            <h2><strong>@Model.Name</strong></h2>
+
+            <div><h2>@Model.ShortDecription</h2></div>
+            <div class="row">
+                <!--Products by category-->
+
+                    <div class="category col-lg-2 col-md-2 col-sm-4 col-xs-6">
+                        <a href='@Url.Action("Index", "ProductsDetails",new { @id = Model.Id})'>
+                            <img src="@Model.ImagePath" alt="@Model.Name" />
+                            <p>@Model.Name</p>
+                        </a>
+                    </div>
+
+            </div>
+
+            <!--Tabs-->
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <h3 class="cs-heading">Tabs</h3>
+                <div class="tabs-widget">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#tab01" data-toggle="tab">Description</a></li>
+                        <li><a href="#tab02" data-toggle="tab">Specification</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" id="tab01">
+                            <p>@Model.Description</p>
+                        </div>
+                        <div class="tab-pane fade" id="tab02">
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Manufacturer.Name, new { @class = "col-md-2 control-label" })
+                                <div class="col-md-10">
+                                    @Html.TextBoxFor(m => m.Manufacturer.Name, new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Name, new { @class = "col-md-2 control-label" })
+                                <div class="col-md-10">
+                                    @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Whidth, new { @class = "col-md-2 control-label" })
+                                <div class="col-md-10">
+                                    @Html.TextBoxFor(m => m.Whidth, new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Lenght, new { @class = "col-md-2 control-label" })
+                                <div class="col-md-10">
+                                    @Html.TextBoxFor(m => m.Lenght, new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Depht, new { @class = "col-md-2 control-label" })
+                                <div class="col-md-10">
+                                    @Html.TextBoxFor(m => m.Depht, new { @class = "form-control" })
+                                </div>
+                            </div>
+                           <div class="form-group col-sm-6">
+                          <label for="api_first_name">First name</label>
+                          <input type="text" class="form-control" name="api_first_name" id="api_first_name" placeholder="First name" required="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!--Products by category Close-->*@
+
+<!--Catalog Single Item-->
+<section class="catalog-single">
+    <div class="container">
+        <div class="row">
+
+            <!--Product Gallery-->
+            <div class="col-lg-6 col-md-6">
+                <div class="prod-gal master-slider" id="prod-gal">
+                    <!--Slide1-->
+                    <div class="ms-slide">
+                       
+                            <img src="@Model.ImagePath" data-src="@Model.ImagePath" alt="@Model.Name" />
+                            <img class="ms-thumb" src="@Model.ImagePath" alt="thumb" />
+                    </div>
+                    @*<!--Slide2-->
+                    <div class="ms-slide">
+                        <img src="~/Content/Theme/masterslider/blank.gif" data-src="~/Content/Theme/img/catalog/product-gallery/1.jpg" alt="Lorem ipsum" />
+                        <img class="ms-thumb" src="~/Content/Theme/img/catalog/product-gallery/th_1.jpg" alt="thumb" />
+                    </div>
+                    <!--Slide3-->
+                    <div class="ms-slide">
+                        <img src="~/Content/Theme/masterslider/blank.gif" data-src="~/Content/Theme/img/catalog/product-gallery/1.jpg" alt="Lorem ipsum" />
+                        <img class="ms-thumb" src="~/Content/Theme/img/catalog/product-gallery/th_1.jpg" alt="thumb" />
+                    </div>
+                    <!--Slide4-->
+                    <div class="ms-slide">
+                        <img src="~/Content/Theme/masterslider/blank.gif" data-src="~/Content/Theme/img/catalog/product-gallery/1.jpg" alt="Lorem ipsum" />
+                        <img class="ms-thumb" src="~/Content/Theme/img/catalog/product-gallery/th_1.jpg" alt="thumb" />
+                    </div>
+                    <!--Slide5-->
+                    <div class="ms-slide">
+                        <img src="~/Content/Theme/masterslider/blank.gif" data-src="~/Content/Theme/img/catalog/product-gallery/1.jpg" alt="Lorem ipsum" />
+                        <img class="ms-thumb" src="~/Content/Theme/img/catalog/product-gallery/th_1.jpg" alt="thumb" />
+                    </div>*@
+                </div>
+            </div>
+
+            <!--Product Description-->
+            <div class="col-lg-6 col-md-6">
+                <h1>@Model.Manufacturer.Name</h1>
+                <h2><strong>@Model.Name</strong></h2>
+                <div class="rate">
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="old-price">815,00 $</div>
+                <div class="price">@Model.Price $</div>
+                <div class="buttons group">
+                    <div class="qnt-count">
+                        <a class="incr-btn" href="#">-</a>
+                        <input id="quantity" class="form-control" type="text" value="2">
+                        <a class="incr-btn" href="#">+</a>
+                    </div>
+                    <a class="btn btn-primary btn-sm" id="addItemToCart" href="#"><i class="icon-shopping-cart"></i>Add to cart</a>
+                    <a class="btn btn-success btn-sm" href="#"><i class="icon-heart"></i>Add to wishlist</a>
+                </div>
+                <p class="p-style2">@Model.ShortDecription</p>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-5">
+                        <h3>Tell friedns</h3>
+                        <div class="social-links">
+                            <a href="#"><i class="fa fa-tumblr-square"></i></a>
+                            <a href="#"><i class="fa fa-pinterest-square"></i></a>
+                            <a href="#"><i class="fa fa-facebook-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-7">
+                        <h3>Tags</h3>
+                        <div class="tags">
+                            <a href="#">@Model.Manufacturer.Name </a>
+                            <a href="#">camera, </a>
+                            <a href="#">hd video</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="promo-labels">
+                    <div data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."><span><i class="fa fa-truck"></i>Free delivery</span></div>
+                    <div data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."><i class="fa fa-space-shuttle"></i>Deliver even on Mars</div>
+                    <div data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."><i class="fa fa-shield"></i>Safe Buy</div>
+                </div>
+            </div>
+
+            <!--Tabs-->
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <h3 class="cs-heading">Tabs</h3>
+                <div class="tabs-widget">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#tab01" data-toggle="tab">Description</a></li>
+                        <li><a href="#tab02" data-toggle="tab">Specification</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" id="tab01">
+                            <p>@Model.Description</p>
+                        </div>
+                        <div class="tab-pane fade" id="tab02">
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Manufacturer.Name, new { @class = "col-md-2 control-label" })
+                                <div class="col-md-10">
+                                    @Html.TextBoxFor(m => m.Manufacturer.Name, new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Name, new { @class = "col-md-2 control-label" })
+                                <div class="col-md-10">
+                                    @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Whidth, new { @class = "col-md-2 control-label" })
+                                <div class="col-md-10">
+                                    @Html.TextBoxFor(m => m.Whidth, new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Lenght, new { @class = "col-md-2 control-label" })
+                                <div class="col-md-10">
+                                    @Html.TextBoxFor(m => m.Lenght, new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Depht, new { @class = "col-md-2 control-label" })
+                                <div class="col-md-10">
+                                    @Html.TextBoxFor(m => m.Depht, new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label for="api_first_name">First name</label>
+                                <input type="text" class="form-control" name="api_first_name" id="api_first_name" placeholder="First name" required="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section><!--Catalog Single Item Close-->

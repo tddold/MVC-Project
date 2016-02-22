@@ -5,3 +5,9 @@
     width: 600px;
     height: 130px;
 }
+
+a.logo img{
+    height:20px;
+    margin-top:15px;
+}
+

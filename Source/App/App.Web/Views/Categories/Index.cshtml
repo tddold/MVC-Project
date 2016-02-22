@@ -23,8 +23,9 @@
             @foreach (var product in Model.Products)
             {
                 <div class="category col-lg-2 col-md-2 col-sm-4 col-xs-6">
-                    <a href='@Url.Action("Index", "Product",new { @id = product.Id})'>
+                    <a href='@Url.Action("Index", "ProductsDetails",new { @id = product.Id})'>
                         <img src="@product.ImagePath" alt="@product.Name" />
+                        <p>@product.Manufacturer.Name</p>
                         <p>@product.Name</p>
                     </a>
                 </div>

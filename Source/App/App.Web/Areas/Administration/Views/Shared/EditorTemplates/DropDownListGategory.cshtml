@@ -8,12 +8,6 @@
             .DataValueField("Value")
             .BindTo((IEnumerable<SelectListItem>)ViewBag.ListItem)
         )
-        @(Html.Kendo().DropDownList()
-            .Name("ManufacturerId")
-            .DataTextField("Text")
-            .DataValueField("Value")
-            .BindTo((IEnumerable<SelectListItem>)ViewBag.ManufacturerListItems)
-        )
     </div>
 </div>
 <br />

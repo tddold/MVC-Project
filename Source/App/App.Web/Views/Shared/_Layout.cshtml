@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Dekom - HTML5 E-Commerce Template</title>
+    <title>Bushido Online Shop</title>
     <!--SEO Meta Tags-->
     <meta name="description" content="Responsive HTML5 E-Commerce Template" />
     <meta name="keywords" content="responsive html5 template, e-commerce, shop, bootstrap 3.0, css, jquery, flat, modern" />
@@ -23,9 +23,10 @@
       <script src="js/plugins/respond.js"></script>
     <![endif]-->
 
-    @Styles.Render("~/Content/css", "~/Content/kendo")
+    @Styles.Render("~/Content/kendo")
     @Styles.Render("~/styleBundles/theme")
     @Styles.Render("~/Content/css")
+
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/kendo")
     @Scripts.Render("~/bundles/theme-modernizr")
@@ -59,7 +60,7 @@
             <a class="logo" href=@Url.Action("Index", "Home", new { area = string.Empty }, null)><img src="~/Content/Theme/img/logo.png" alt="Bushido" /></a>
 
             <!--Language / Currency Switchers-->
-            <ul class="switchers">
+            @*<ul class="switchers">
                 <li>
                     $
                     <ul class="dropdown">
@@ -75,7 +76,7 @@
                         <li><a href="#">Gr</a></li>
                     </ul>
                 </li>
-            </ul>
+            </ul>*@
 
             <!--Mobile Menu Toggle-->
             <div class="menu-toggle"><i class="fa fa-list"></i></div>
@@ -85,140 +86,119 @@
             <nav class="menu">
                 <ul class="main">
                     <li class="has-submenu">
-                       @Html.ActionLink("Home", "Index", "Home", new { area = string.Empty }, null)
-                        @*<a href="index.html">Home<i class="fa fa-chevron-down"></i></a><!--Class "has-submenu" for proper highlighting and dropdown-->*@
-                        @*<ul class="menu">
-                                <li>@Html.ActionLink("Home", "Index", "Home", new { area = string.Empty }, null)</li>
-                                @*<li><a href="index.html">Home - Slideshow</a></li>
-                                <li><a href="home-fullscreen.html">Home - Fullscreen Slider</a></li>
-                                <li><a href="home-showcase.html">Home - Product Showcase</a></li>
-                                <li><a href="home-categories.html">Home - Categories Slider</a></li>
-                                <li><a href="home-offers.html">Home - Special Offers</a></li>
-                            </ul>*@
+                        @Html.ActionLink("Home", "Index", "Home", new { area = string.Empty }, null)
                     </li>
                     <li class="has-submenu">
                         @Html.ActionLink("Shop", "Index", "Shop", new { area = string.Empty }, null)
                     </li>
-                    @*<li class="has-submenu">
-                        @Html.ActionLink("Pages", "Index", "Blog", new { area = string.Empty }, null)
-                        <span class="label">NEW</span><i class="fa fa-chevron-down"></i>
-                        @*<ul class="submenu">
-                            <li><a href="register.html">Login / Registration</a></li>
-                            <li><a href="account-personal-info.html">Account: Personal Info<span class="label">NEW</span></a></li>
-                            <li><a href="account-addresses.html">Account: Addresses<span class="label">NEW</span></a></li>
-                            <li><a href="order-history.html">Orders History<span class="label">NEW</span></a></li>
-                            <li><a href="order-tracking.html">Order Tracking<span class="label">NEW</span></a></li>
-                            <li><a href="delivery-info.html">Delivery Info<span class="label">NEW</span></a></li>
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="contacts.html">Contacts</a></li>
-                            <li><a href="coming-soon.html">Coming Soon</a></li>
-                            <li><a href="404.html">404 Page</a></li>
-                            <li><a href="support.html">Support Page</a></li>
-                            <li><a href="cs-page.html">Components &amp; Styles</a></li>
-                        </ul>
-                    </li>*@
+
+                    @if (this.User.Identity.IsAuthenticated)
+                    {
+                        <li class="hide-sm">
+                            @Html.ActionLink("My Shop", "Index", "MyShop", new { area = string.Empty }, null)
+                        </li>
+                    }
 
                     @if (this.User.IsInRole("Administrator"))
                     {
                         <li class="hide-sm">
-                            @Html.ActionLink("Administration", "Index", "Category", new { area = "Administration" }, null)
+                            @Html.ActionLink("Administration", "Index", "KendoCategories", new { area = "Administration" }, null)
                         </li>
                     }
 
 
 
 
-
                     @*<li class="has-submenu">
-                                <a href="shop-filters-left-3cols.html">Shop<i class="fa fa-chevron-down"></i></a>
-                                <ul class="submenu">
-                                    <li><a href="shop-filters-left-3cols.html">Shop - Filters Left 3 Cols</a></li>
-                                    <li><a href="shop-filters-left-2cols.html">Shop - Filters Left 2 Cols</a></li>
-                                    <li><a href="shop-filters-right-3cols.html">Shop - Filters Right 3 Cols</a></li>
-                                    <li><a href="shop-filters-right-2cols.html">Shop - Filters Right 2 Cols</a></li>
-                                    <li><a href="shop-no-filters-4cols.html">Shop - No Filters 4 Cols</a></li>
-                                    <li><a href="shop-no-filters-3cols.html">Shop - No Filters 3 Cols</a></li>
-                                    <li><a href="shop-single-item-v1.html">Shop - Single Item Vers 1</a></li>
-                                    <li><a href="shop-single-item-v2.html">Shop - Single Item Vers 2</a></li>
-                                    <li><a href="shopping-cart.html">Shopping Cart</a></li>
-                                    <li><a href="checkout.html">Checkout Page</a></li>
-                                    <li><a href="wishlist.html">Wishlist</a></li>
-                                </ul>
-                            </li>
+                            <a href="shop-filters-left-3cols.html">Shop<i class="fa fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="shop-filters-left-3cols.html">Shop - Filters Left 3 Cols</a></li>
+                                <li><a href="shop-filters-left-2cols.html">Shop - Filters Left 2 Cols</a></li>
+                                <li><a href="shop-filters-right-3cols.html">Shop - Filters Right 3 Cols</a></li>
+                                <li><a href="shop-filters-right-2cols.html">Shop - Filters Right 2 Cols</a></li>
+                                <li><a href="shop-no-filters-4cols.html">Shop - No Filters 4 Cols</a></li>
+                                <li><a href="shop-no-filters-3cols.html">Shop - No Filters 3 Cols</a></li>
+                                <li><a href="shop-single-item-v1.html">Shop - Single Item Vers 1</a></li>
+                                <li><a href="shop-single-item-v2.html">Shop - Single Item Vers 2</a></li>
+                                <li><a href="shopping-cart.html">Shopping Cart</a></li>
+                                <li><a href="checkout.html">Checkout Page</a></li>
+                                <li><a href="wishlist.html">Wishlist</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu">
+                            <a href="blog-sidebar-right.html">Blog<i class="fa fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="blog-sidebar-left.html">Blog - Sidebar Left</a></li>
+                                <li><a href="blog-sidebar-right.html">Blog - Sidebar Right</a></li>
+                                <li><a href="blog-single.html">Blog - Single Post</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu">
+                            <a href="#">Pages<span class="label">NEW</span><i class="fa fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="register.html">Login / Registration</a></li>
+                                <li><a href="account-personal-info.html">Account: Personal Info<span class="label">NEW</span></a></li>
+                                <li><a href="account-addresses.html">Account: Addresses<span class="label">NEW</span></a></li>
+                                <li><a href="order-history.html">Orders History<span class="label">NEW</span></a></li>
+                                <li><a href="order-tracking.html">Order Tracking<span class="label">NEW</span></a></li>
+                                <li><a href="delivery-info.html">Delivery Info<span class="label">NEW</span></a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="contacts.html">Contacts</a></li>
+                                <li><a href="coming-soon.html">Coming Soon</a></li>
+                                <li><a href="404.html">404 Page</a></li>
+                                <li><a href="support.html">Support Page</a></li>
+                                <li><a href="cs-page.html">Components &amp; Styles</a></li>
+                            </ul>
+                        </li>
+                        <li class="hide-sm"><a href="support.html">Support</a></li>*@
+                </ul>
+
+                @*<ul class="catalog">*@
+                @Html.Action("_CategoryPartial", "Home")
+                @*@Html.Partial("_CategoryPartial")*@
+
+
+                @*<li class="has-submenu">
+                        <a href="shop-filters-left-3cols.html">Phones<i class="fa fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="#">Nokia</a></li>
                             <li class="has-submenu">
-                                <a href="blog-sidebar-right.html">Blog<i class="fa fa-chevron-down"></i></a>
-                                <ul class="submenu">
-                                    <li><a href="blog-sidebar-left.html">Blog - Sidebar Left</a></li>
-                                    <li><a href="blog-sidebar-right.html">Blog - Sidebar Right</a></li>
-                                    <li><a href="blog-single.html">Blog - Single Post</a></li>
+                                <a href="#">iPhone</a><!--Class "has-submenu" for adding carret and dropdown-->
+                                <ul class="sub-submenu">
+                                    <li><a href="#">iPhone 4</a></li>
+                                    <li><a href="#">iPhone 4s</a></li>
+                                    <li><a href="#">iPhone 5c</a></li>
+                                    <li><a href="#">iPhone 5s</a></li>
                                 </ul>
                             </li>
+                            <li><a href="#">HTC</a></li>
                             <li class="has-submenu">
-                                <a href="#">Pages<span class="label">NEW</span><i class="fa fa-chevron-down"></i></a>
-                                <ul class="submenu">
-                                    <li><a href="register.html">Login / Registration</a></li>
-                                    <li><a href="account-personal-info.html">Account: Personal Info<span class="label">NEW</span></a></li>
-                                    <li><a href="account-addresses.html">Account: Addresses<span class="label">NEW</span></a></li>
-                                    <li><a href="order-history.html">Orders History<span class="label">NEW</span></a></li>
-                                    <li><a href="order-tracking.html">Order Tracking<span class="label">NEW</span></a></li>
-                                    <li><a href="delivery-info.html">Delivery Info<span class="label">NEW</span></a></li>
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li><a href="contacts.html">Contacts</a></li>
-                                    <li><a href="coming-soon.html">Coming Soon</a></li>
-                                    <li><a href="404.html">404 Page</a></li>
-                                    <li><a href="support.html">Support Page</a></li>
-                                    <li><a href="cs-page.html">Components &amp; Styles</a></li>
+                                <a href="#">Samsung</a>
+                                <ul class="sub-submenu">
+                                    <li><a href="#">Galaxy Note 3</a></li>
+                                    <li><a href="#">Galaxy S5</a></li>
+                                    <li><a href="#">Galaxy S3 Neo</a></li>
+                                    <li><a href="#">Galaxy Gear</a></li>
+                                    <li><a href="#">Galaxy S Duos 2</a></li>
                                 </ul>
                             </li>
-                            <li class="hide-sm"><a href="support.html">Support</a></li>*@
+                            <li><a href="#">BlackBerry</a></li>
+                            <li class="offer">
+                                <div class="col-1">
+                                    <p class="p-style2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                                <div class="col-2">
+                                    <img src="~/Content/Theme/img/offers/menu-drodown-offer.jpg" alt="Special Offer" />
+                                    <a class="btn btn-block" href="#"><span>584$</span>Special offer</a>
+                                </div>
+                            </li>
                         </ul>
-
-                    @*<ul class="catalog">*@
-                        @Html.Action("_CategoryPartial", "Home");
-                        @*@Html.Partial("_CategoryPartial")*@
-
-
-                            @*<li class="has-submenu">
-                                <a href="shop-filters-left-3cols.html">Phones<i class="fa fa-chevron-down"></i></a>
-                                <ul class="submenu">
-                                    <li><a href="#">Nokia</a></li>
-                                    <li class="has-submenu">
-                                        <a href="#">iPhone</a><!--Class "has-submenu" for adding carret and dropdown-->
-                                        <ul class="sub-submenu">
-                                            <li><a href="#">iPhone 4</a></li>
-                                            <li><a href="#">iPhone 4s</a></li>
-                                            <li><a href="#">iPhone 5c</a></li>
-                                            <li><a href="#">iPhone 5s</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">HTC</a></li>
-                                    <li class="has-submenu">
-                                        <a href="#">Samsung</a>
-                                        <ul class="sub-submenu">
-                                            <li><a href="#">Galaxy Note 3</a></li>
-                                            <li><a href="#">Galaxy S5</a></li>
-                                            <li><a href="#">Galaxy S3 Neo</a></li>
-                                            <li><a href="#">Galaxy Gear</a></li>
-                                            <li><a href="#">Galaxy S Duos 2</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">BlackBerry</a></li>
-                                    <li class="offer">
-                                        <div class="col-1">
-                                            <p class="p-style2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                        </div>
-                                        <div class="col-2">
-                                            <img src="~/Content/Theme/img/offers/menu-drodown-offer.jpg" alt="Special Offer" />
-                                            <a class="btn btn-block" href="#"><span>584$</span>Special offer</a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a href="shop-filters-left-3cols.html">Cameras</a></li>
-                            <li><a href="shop-filters-left-3cols.html">Personal computers</a></li>
-                            <li><a href="shop-filters-left-3cols.html">Gaming consoles</a></li>
-                            <li><a href="shop-filters-left-3cols.html">TV sets</a></li>*@
-                        @*</ul>*@
+                    </li>
+                    <li><a href="shop-filters-left-3cols.html">Cameras</a></li>
+                    <li><a href="shop-filters-left-3cols.html">Personal computers</a></li>
+                    <li><a href="shop-filters-left-3cols.html">Gaming consoles</a></li>
+                    <li><a href="shop-filters-left-3cols.html">TV sets</a></li>*@
+                @*</ul>*@
             </nav>
 
             <!--Toolbar-->

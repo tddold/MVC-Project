@@ -213,16 +213,20 @@
     <Compile Include="Areas\Administration\Controllers\CategoryController.cs" />
     <Compile Include="Areas\Administration\Controllers\AdministrationController.cs" />
     <Compile Include="Areas\Administration\Controllers\KendoCategoriesController.cs" />
+    <Compile Include="Areas\Administration\Controllers\KendoManufacturersController.cs" />
     <Compile Include="Areas\Administration\Controllers\KendoProductController.cs" />
     <Compile Include="Areas\Administration\Controllers\KendoProductsController.cs" />
     <Compile Include="Areas\Administration\Controllers\ProductsController.cs" />
     <Compile Include="Areas\Administration\Controllers\UsersController.cs" />
+    <Compile Include="Areas\User\Controllers\WhishListController.cs" />
+    <Compile Include="Areas\User\UserAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="App_Start\GlimpseSecurityPolicy.cs" />
+    <Compile Include="Controllers\ProductsDetailsController.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="MvcApplication.asax.cs" />
     <Compile Include="ViewModels\Account\ExternalLoginConfirmationViewModel.cs" />
@@ -253,6 +257,7 @@
     <Compile Include="ViewModels\Manage\VerifyPhoneNumberViewModel.cs" />
     <Compile Include="ViewModels\Orders\OrderViewModel.cs" />
     <Compile Include="ViewModels\Products\ProductDetailsViewModel.cs" />
+    <Compile Include="ViewModels\Products\ProductViewModel.cs" />
     <Compile Include="ViewModels\Promotions\PromotionItemViewModel.cs" />
     <Compile Include="ViewModels\Promotions\PromotionViewModel.cs" />
   </ItemGroup>
@@ -509,7 +514,7 @@
     <Content Include="fonts\Slide-icons.svg" />
     <Content Include="fonts\_notes\dwsync.xml" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
+    <Content Include="Content\site.css" />
     <Content Include="Libraries\Kendo.Mvc.xml" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -574,6 +579,9 @@
     <Content Include="Areas\Administration\Views\Shared\EditorTemplates\Url.cshtml" />
     <Content Include="Areas\Administration\Views\Shared\EditorTemplates\DropDownListManufacturer.cshtml" />
     <Content Include="Areas\Administration\Views\KendoCategories\Index.cshtml" />
+    <Content Include="Areas\Administration\Views\KendoManufacturers\Index.cshtml" />
+    <Content Include="Areas\Administration\Views\Shared\EditorTemplates\DropDownListGategory.cshtml" />
+    <Content Include="Areas\User\Views\web.config" />
     <None Include="Scripts\jquery-2.2.0.intellisense.js" />
     <Content Include="Scripts\jquery-2.2.0.js" />
     <Content Include="Scripts\jquery-2.2.0.min.js" />
@@ -625,14 +633,16 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Categories\Index.cshtml" />
     <Content Include="Views\Shared\_CategoryPartial.cshtml" />
+    <Content Include="Views\ProductsDetails\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Administration\Views\Home\" />
+    <Folder Include="Areas\Administration\Views\WishList\" />
+    <Folder Include="Areas\User\Models\" />
+    <Folder Include="Areas\User\Views\Shared\" />
+    <Folder Include="Areas\User\Views\WhishList\" />
     <Folder Include="Views\Base\" />
-    <Folder Include="Views\KendoCategories\" />
-    <Folder Include="Views\KendoProducts\" />
-    <Folder Include="Views\KendoProduct\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

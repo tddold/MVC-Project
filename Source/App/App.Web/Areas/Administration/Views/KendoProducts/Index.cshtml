@@ -15,10 +15,6 @@
           columns.Bound(c => c.Depht);
           columns.Bound(c => c.Weight);
           columns.Bound(c => c.ManufacturerId);
-          //columns.Bound(c => c.CreatedOn);
-          //columns.Bound(c => c.ModifiedOn);
-          //columns.Bound(c => c.IsDeleted);
-          //columns.Bound(c => c.DeletedOn);
           columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);
       })
       .ToolBar(toolbar => {

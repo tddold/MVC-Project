@@ -3,21 +3,52 @@
     using System.ComponentModel.DataAnnotations;
 
     using AutoMapper;
+    using Infrastructure.Mapping;
 
     using Data.Models;
-    using Infrastructure.Mapping;
+    using Services.Web.Contracts;
+    using Services.Web;
 
     public class ProductDetailsViewModel : IMapFrom<Product>, IHaveCustomMappings
     {
+        private ISanitizer sanitaizer;
+
+        public ProductDetailsViewModel()
+        {
+            this.sanitaizer = new HtmlSanitizerAdapter();
+        }
+
         public int Id { get; set; }
 
+        [Required]
+        [MinLength(2)]
+        [MaxLength(100)]
+        [Display(Name = "Model")]
         public string Name { get; set; }
 
-        [MaxLength(100)]
+        [MaxLength(500)]
+        [Display(Name = "Description")]
         public string Description { get; set; }
 
-        [MaxLength(40)]
+        public string DescriptionSanitaized
+        {
+            get
+            {
+                return this.sanitaizer.Sanitize(this.Description);
+            }
+        }
+
+        [MaxLength(100)]
+        [Display(Name = "Short Description")]
         public string ShortDecription { get; set; }
+
+        public string ShortDecriptionSanitaized
+        {
+            get
+            {
+                return this.sanitaizer.Sanitize(this.Description);
+            }
+        }
 
         public decimal Price { get; set; }
 
@@ -33,8 +64,10 @@
 
         public double Lenght { get; set; }
 
+        [Display(Name = "Manufacturer name")]
         public Manufacturer Manufacturer { get; set; }
 
+        [Display(Name = "Category name")]
         public string CategoryName { get; set; }
 
         public int CategoryId { get; set; }

@@ -3,10 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Bushido Administartion</title>
     @Styles.Render("~/Content/css", "~/Content/kendo")
     @Styles.Render("~/Content/admin")
-    @*@Scripts.Render("~/bundles/modernizr")*@
     @Scripts.Render("~/bundles/theme-modernizr")
 
     @Scripts.Render("~/bundles/jquery")
@@ -15,13 +14,16 @@
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
+            
             <div class="navbar-header">
+                <a class="logo" href=@Url.Action("Index", "Home", new { area = string.Empty }, null)><img src="~/Content/Theme/img/logo.png" alt="Bushido" /></a>
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Online shope", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+              @*  @Html.ActionLink("Online shope", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+               
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -35,10 +37,13 @@
                         @Html.ActionLink("Products", "Index", "Products", new { area = "Administration" }, null)
                     </li>
                     <li>
-                        @Html.ActionLink("KendoProducts", "Index", "KendoProducts", new { area = "Administration" }, null)
+                        @Html.ActionLink("Kendo Products", "Index", "KendoProducts", new { area = "Administration" }, null)
                     </li>
                     <li>
-                        @Html.ActionLink("KendoCategories", "Index", "KendoCategories", new { area = "Administration" }, null)
+                        @Html.ActionLink("Kendo Categories", "Index", "KendoCategories", new { area = "Administration" }, null)
+                    </li>
+                    <li>
+                        @Html.ActionLink("Kendo Manufacturers", "Index", "KendoManufacturers", new { area = "Administration" }, null)
                     </li>
 
                 </ul>

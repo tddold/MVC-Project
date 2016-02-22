@@ -6,9 +6,19 @@
     using App.Data.Models;
     using App.Web.Infrastructure.Mapping;
     using System.Collections.Generic;
+    using Services.Web.Contracts;
+    using Services.Web;
+
     [Bind(Exclude = "Id,ImagePath")]
     public class CategoryViewModel : IMapFrom<Category>, IMapTo<Category>
     {
+        private ISanitizer sanitaizer;
+
+        public CategoryViewModel()
+        {
+            this.sanitaizer = new HtmlSanitizerAdapter();
+        }
+
         [Display(Name = "Id")]
         public int Id { get; set; }
 
@@ -25,6 +35,14 @@
         [DataType(DataType.MultilineText)]
         public string Description { get; set; }
 
-        public ICollection<Manufacturer> Manufacturers{ get; set; }
+        public string DescriptionSanitaized
+        {
+            get
+            {
+                return this.sanitaizer.Sanitize(this.Description);
+            }
+        }
+
+        public ICollection<Manufacturer> Manufacturers { get; set; }
     }
 }
