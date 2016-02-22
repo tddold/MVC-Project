@@ -8,6 +8,7 @@
     using Data.Models;
     using Services.Web.Contracts;
     using Services.Web;
+    using System.Web.Mvc;
 
     public class ProductDetailsViewModel : IMapFrom<Product>, IHaveCustomMappings
     {
@@ -18,6 +19,8 @@
             this.sanitaizer = new HtmlSanitizerAdapter();
         }
 
+        [HiddenInput]
+        [Key]
         public int Id { get; set; }
 
         [Required]

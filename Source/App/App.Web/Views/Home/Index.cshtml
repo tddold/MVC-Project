@@ -6,16 +6,16 @@
 
 
         @*@foreach (var product in Model.TopProducts)
-            {
-            <div class="ms-slide" data-delay="7">
-                <div class="overlay"></div>
-                <img src="masterslider/blank.gif" data-src="@Url.Content("Images/SeedImages/promo/slide_1.jpg")" alt="@product.Name" />
-                <h2 style="width: 456px; left: 110px; top: 110px;" class="light-color ms-layer" data-effect="top(50,true)" data-duration="700" data-delay="250" data-ease="easeOutQuad">Nikon D4S</h2>
-                <p style="width: 456px; left: 110px; top: 210px;" class="light-color ms-layer" data-effect="back(500)" data-duration="700" data-delay="500" data-ease="easeOutQuad">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
-                <div style="left: 110px; top: 300px;" class="ms-layer button" data-effect="bottom(50,true)" data-duration="600" data-delay="950" data-ease="easeOutQuad"><a class="btn btn-primary" href="#"><span>1845$</span>Buy it now</a></div>
-            </div>
-        }*@
-               
+                {
+                <div class="ms-slide" data-delay="7">
+                    <div class="overlay"></div>
+                    <img src="masterslider/blank.gif" data-src="@Url.Content("Images/SeedImages/promo/slide_1.jpg")" alt="@product.Name" />
+                    <h2 style="width: 456px; left: 110px; top: 110px;" class="light-color ms-layer" data-effect="top(50,true)" data-duration="700" data-delay="250" data-ease="easeOutQuad">Nikon D4S</h2>
+                    <p style="width: 456px; left: 110px; top: 210px;" class="light-color ms-layer" data-effect="back(500)" data-duration="700" data-delay="500" data-ease="easeOutQuad">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
+                    <div style="left: 110px; top: 300px;" class="ms-layer button" data-effect="bottom(50,true)" data-duration="600" data-delay="950" data-ease="easeOutQuad"><a class="btn btn-primary" href="#"><span>1845$</span>Buy it now</a></div>
+                </div>
+            }*@
+
         <!--Slide 1-->
         <div class="ms-slide" data-delay="7">
             <div class="overlay"></div>
@@ -53,11 +53,11 @@
             <!--Category-->
             @foreach (var category in Model.Categories)
             {
-                <div class="category col-lg-2 col-md-2 col-sm-4 col-xs-6">          
+                <div class="category col-lg-2 col-md-2 col-sm-4 col-xs-6">
                     <a href='@Url.Action("Index", "Categories",new { @id = category.Id})'>
                         <img src="@category.ImagePath" alt="@category.Name" />
                         <p>@category.Name</p>
-                    </a>         
+                    </a>
                 </div>
             }
         </div>
@@ -101,10 +101,7 @@
                                     <i class="fa fa-share"></i>
                                 </div>
                                 <!--Add To Wishlist Button-->
-                                <a class="wishlist-btn" href="#">
-                                    <div class="hover-state">Wishlist</div>
-                                    <i class="fa fa-plus"></i>
-                                </a>
+                              @Html.Partial("_CreateWishListPartial")
                             </div>
                         </div>
                     </div>

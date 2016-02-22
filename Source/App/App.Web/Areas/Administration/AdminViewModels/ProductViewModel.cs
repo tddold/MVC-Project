@@ -4,12 +4,21 @@
     using System.ComponentModel.DataAnnotations;
     using System.Web.Mvc;
     using AutoMapper;
-    using Data.Models;
-
     using Infrastructure.Mapping;
+
+    using Data.Models;
+    using Services.Web.Contracts;
+    using Services.Web;
 
     public class ProductViewModel : IMapFrom<Product>, IMapTo<Product>
     {
+        private ISanitizer sanitaizer;
+
+        public ProductViewModel()
+        {
+            this.sanitaizer = new HtmlSanitizerAdapter();
+        }
+
         [HiddenInput]
         [Key]
         public int Id { get; set; }
@@ -25,10 +34,26 @@
         [DataType(DataType.MultilineText)]
         public string Description { get; set; }
 
+        public string DescriptionSanitaized
+        {
+            get
+            {
+                return this.sanitaizer.Sanitize(this.Description);
+            }
+        }
+
         [MaxLength(500)]
         [Display(Name = "Short Description")]
         [DataType(DataType.MultilineText)]
         public string ShortDecription { get; set; }
+
+        public string ShortDecriptionSanitaized
+        {
+            get
+            {
+                return this.sanitaizer.Sanitize(this.Description);
+            }
+        }
 
         [Display(Name = "Price")]
         public decimal Price { get; set; }

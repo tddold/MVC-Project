@@ -5,8 +5,8 @@
       .Columns(columns =>
       {
           columns.Bound(c => c.Name);
-          columns.Bound(c => c.Description);
-          columns.Bound(c => c.ShortDecription);
+          columns.Bound(c => c.DescriptionSanitaized).ClientTemplate("#=Description#");
+          columns.Bound(c => c.ShortDecriptionSanitaized).ClientTemplate("#=ShortDecription#");
           columns.Bound(c => c.Price);
           columns.Bound(c => c.Quantity);
           columns.Bound(c => c.ImagePath);

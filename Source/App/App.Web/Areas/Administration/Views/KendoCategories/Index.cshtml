@@ -4,7 +4,7 @@
       .Columns(columns =>
       {
           columns.Bound(c => c.Name);
-          columns.Bound(c => c.Description);
+          columns.Bound(c => c.DescriptionSanitaized).ClientTemplate("#=Description#");
           //columns.Bound(c => c.ManufacturerId);
           columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);
       })

@@ -219,7 +219,11 @@
     <Compile Include="Areas\Administration\Controllers\ProductsController.cs" />
     <Compile Include="Areas\Administration\Controllers\UsersController.cs" />
     <Compile Include="Areas\User\Controllers\WhishListController.cs" />
+    <Compile Include="Areas\User\Controllers\WishLIstInputController.cs" />
     <Compile Include="Areas\User\UserAreaRegistration.cs" />
+    <Compile Include="Areas\User\UserViewModels\WishListHomeViewModel.cs" />
+    <Compile Include="Areas\User\UserViewModels\WishListInputViewMode.cs" />
+    <Compile Include="Areas\User\UserViewModels\WishListViewModel.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\CategoriesController.cs" />
@@ -582,6 +586,9 @@
     <Content Include="Areas\Administration\Views\KendoManufacturers\Index.cshtml" />
     <Content Include="Areas\Administration\Views\Shared\EditorTemplates\DropDownListGategory.cshtml" />
     <Content Include="Areas\User\Views\web.config" />
+    <Content Include="Areas\User\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\User\Views\WhishList\Index.cshtml" />
+    <Content Include="Views\Shared\_CreateWishListPartial.cshtml" />
     <None Include="Scripts\jquery-2.2.0.intellisense.js" />
     <Content Include="Scripts\jquery-2.2.0.js" />
     <Content Include="Scripts\jquery-2.2.0.min.js" />
@@ -639,9 +646,8 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Administration\Views\Home\" />
     <Folder Include="Areas\Administration\Views\WishList\" />
-    <Folder Include="Areas\User\Models\" />
     <Folder Include="Areas\User\Views\Shared\" />
-    <Folder Include="Areas\User\Views\WhishList\" />
+    <Folder Include="Areas\User\Views\WishLIstInput\" />
     <Folder Include="Views\Base\" />
   </ItemGroup>
   <ItemGroup>

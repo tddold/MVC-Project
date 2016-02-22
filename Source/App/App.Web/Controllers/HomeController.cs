@@ -108,6 +108,7 @@
                 Categories = cacheCategories,
                 AllProducts = allProducts
             };
+
             return homeViewModel;
         }
     }

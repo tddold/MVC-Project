@@ -61,22 +61,22 @@
 
             <!--Language / Currency Switchers-->
             @*<ul class="switchers">
-                <li>
-                    $
-                    <ul class="dropdown">
-                        <li><a href="#">&euro;</a></li>
-                        <li><a href="#">$</a></li>
-                    </ul>
-                </li>
-                <li>
-                    En
-                    <ul class="dropdown">
-                        <li><a href="#">En</a></li>
-                        <li><a href="#">Fr</a></li>
-                        <li><a href="#">Gr</a></li>
-                    </ul>
-                </li>
-            </ul>*@
+                    <li>
+                        $
+                        <ul class="dropdown">
+                            <li><a href="#">&euro;</a></li>
+                            <li><a href="#">$</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        En
+                        <ul class="dropdown">
+                            <li><a href="#">En</a></li>
+                            <li><a href="#">Fr</a></li>
+                            <li><a href="#">Gr</a></li>
+                        </ul>
+                    </li>
+                </ul>*@
 
             <!--Mobile Menu Toggle-->
             <div class="menu-toggle"><i class="fa fa-list"></i></div>
@@ -205,7 +205,10 @@
             <div class="toolbar group">
                 <button class="search-btn btn-outlined-invert"><i class="icon-magnifier"></i></button>
                 <div class="middle-btns">
-                    <a class="btn-outlined-invert" href="wishlist.html"><i class="icon-heart"></i> <span>Wishlist</span></a>
+                    <a class="btn-outlined-invert" href="@Url.Action("Index", "WishLIstInput", new { area = "user" }, null)">
+                        <i class="icon-heart">
+                        </i><span>WishList</span>
+                    </a>
                     <a class="login-btn btn-outlined-invert" href="#" data-toggle="modal" data-target="#loginModal"><i class="icon-profile"></i> <span>Login</span></a>
                 </div>
                 <div class="cart-btn">
@@ -595,7 +598,10 @@
     @*<div>
             @Html.Partial("_CategoryPartial")
         </div>*@
-
+    @if (this.TempData["Notification"] != null)
+    {
+        <div class="alert alert-success" role="alert">@this.TempData["Notification"]</div>
+    }
     @RenderBody()
     <hr />
 

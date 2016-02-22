@@ -1,4 +1,6 @@
 ﻿using App.Data.Models;
+using App.Services.Web;
+using App.Services.Web.Contracts;
 using App.Web.Infrastructure.Mapping;
 using System;
 using System.Collections.Generic;
@@ -11,6 +13,13 @@ namespace App.Web.Areas.Administration.AdminViewModels
 {
     public class CategoryViewModel : IMapFrom<Category>, IMapTo<Category>
     {
+        private ISanitizer sanitaizer;
+
+        public CategoryViewModel()
+        {
+            this.sanitaizer = new HtmlSanitizerAdapter();
+        }
+
         [HiddenInput(DisplayValue = false)]
         public int Id { get; set; }
 
@@ -19,10 +28,22 @@ namespace App.Web.Areas.Administration.AdminViewModels
         [MaxLength(100)]
         public string Name { get; set; }
 
-        //public string ImagePath { get; set; }
+        [MaxLength(500)]
+        [Display(Name = "Image")]
+        public string ImagePath { get; set; }
 
         [MaxLength(500)]
+        [Display(Name = "Description")]
+        [HiddenInput(DisplayValue = false)]
         public string Description { get; set; }
+
+        public string DescriptionSanitaized
+        {
+            get
+            {
+                return this.sanitaizer.Sanitize(this.Description);
+            }
+        }
 
         [UIHint("DropDownListManufacturer")]
         public int SelectedManufacturers { get; set; }
