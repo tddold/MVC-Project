@@ -33,6 +33,8 @@
 
         public double Lenght { get; set; }
 
+        public Manufacturer Manufacturer { get; set; }
+
         public string CategoryName { get; set; }
 
         public int CategoryId { get; set; }

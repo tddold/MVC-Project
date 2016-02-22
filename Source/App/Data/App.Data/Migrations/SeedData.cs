@@ -17,37 +17,50 @@
         {
             this.users = users;
 
+            this.Manufacturers = new List<Manufacturer>();
+            this.Manufacturers.Add(new Manufacturer() { Name = "Sony" });
+            this.Manufacturers.Add(new Manufacturer() { Name = "Canon" });
+            this.Manufacturers.Add(new Manufacturer() { Name = "Nikon" });
+            this.Manufacturers.Add(new Manufacturer() { Name = "Apple" });
+            this.Manufacturers.Add(new Manufacturer() { Name = "Nokia" });
+            this.Manufacturers.Add(new Manufacturer() { Name = "Samsung" });
+
             // Categories --------------------------------
             this.categories = new List<Category>();
             this.categories.Add(new Category()
             {
                 Name = "Phones",
                 Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-                ImagePath = "/Images/SeedImages/category/1.png"
+                ImagePath = "/Images/SeedImages/category/1.png",
+                //Manufacturers = Manufacturers
             });
             this.categories.Add(new Category()
             {
                 Name = "Cameras",
                 Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-                ImagePath = "/Images/SeedImages/category/2.png"
+                ImagePath = "/Images/SeedImages/category/2.png",
+                //Manufacturers = Manufacturers
             });
             this.categories.Add(new Category()
             {
                 Name = "Personal computers",
                 Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-                ImagePath = "/Images/SeedImages/category/3.png"
+                ImagePath = "/Images/SeedImages/category/3.png",
+                //Manufacturers = Manufacturers
             });
             this.categories.Add(new Category()
             {
                 Name = "Gaming consoles",
                 Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-                ImagePath = "/Images/SeedImages/category/4.png"
+                ImagePath = "/Images/SeedImages/category/4.png",
+                //Manufacturers = Manufacturers
             });
             this.categories.Add(new Category()
             {
                 Name = "TV sets",
                 Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-                ImagePath = "/Images/SeedImages/category/5.png"
+                ImagePath = "/Images/SeedImages/category/5.png",
+                //Manufacturers = Manufacturers
             });
 
             // country -----------------------
@@ -132,7 +145,7 @@
                 // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[0],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
-                Manufacturer = "Samsung",
+                Manufacturer = this.Manufacturers[5],
                 Price = 1050,
                 Quantity = 5,
                 Whidth = 10,
@@ -156,7 +169,7 @@
                 // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[0],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
-                Manufacturer = "Samsung",
+                Manufacturer = this.Manufacturers[5],
                 Price = 1050,
                 Quantity = 5,
                 Whidth = 10,
@@ -181,7 +194,7 @@
                 // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[0],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
-                Manufacturer = "Sony",
+                Manufacturer = this.Manufacturers[0],
                 Price = 1020,
                 Quantity = 5,
                 Whidth = 10,
@@ -206,7 +219,7 @@
                 // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[0],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
-                Manufacturer = "Apple",
+                Manufacturer = this.Manufacturers[3],
                 Price = 1350,
                 Quantity = 5,
                 Whidth = 10,
@@ -231,7 +244,7 @@
                 // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[0],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
-                Manufacturer = "Nokia",
+                Manufacturer = this.Manufacturers[4],
                 Price = 1050,
                 Quantity = 5,
                 Whidth = 10,
@@ -254,7 +267,7 @@
                 // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[1],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
-                Manufacturer = "Nikon",
+                Manufacturer = this.Manufacturers[2],
                 Price = 1050,
                 Quantity = 5,
                 Whidth = 40,
@@ -279,7 +292,7 @@
                 // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[1],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
-                Manufacturer = "Nikon",
+                Manufacturer = this.Manufacturers[2],
                 Price = 1550,
                 Quantity = 5,
                 Whidth = 40,
@@ -304,7 +317,7 @@
                 // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[1],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
-                Manufacturer = "Nikon",
+                Manufacturer = this.Manufacturers[2],
                 Price = 1550,
                 Quantity = 5,
                 Whidth = 40,
@@ -329,7 +342,7 @@
                 // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[1],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
-                Manufacturer = "Canon",
+                Manufacturer = this.Manufacturers[1],
                 Price = 1550,
                 Quantity = 5,
                 Whidth = 40,
@@ -354,7 +367,7 @@
                 // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[1],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
-                Manufacturer = "Canon",
+                Manufacturer = this.Manufacturers[1],
                 Price = 1550,
                 Quantity = 5,
                 Whidth = 40,
@@ -379,7 +392,7 @@
                 // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[1],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
-                Manufacturer = "Canon",
+                Manufacturer = this.Manufacturers[1],
                 Price = 1550,
                 Quantity = 5,
                 Whidth = 40,
@@ -404,7 +417,7 @@
                 // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[1],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
-                Manufacturer = "Sony",
+                Manufacturer = this.Manufacturers[0],
                 Price = 1550,
                 Quantity = 5,
                 Whidth = 40,
@@ -429,7 +442,7 @@
                 // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[1],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
-                Manufacturer = "Sony",
+                Manufacturer = this.Manufacturers[0],
                 Price = 1550,
                 Quantity = 5,
                 Whidth = 40,
@@ -454,7 +467,7 @@
                 // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[4],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
-                Manufacturer = "Sony",
+                Manufacturer = this.Manufacturers[0],
                 Price = 1250,
                 Quantity = 5,
                 Whidth = 140,
@@ -479,7 +492,7 @@
                 // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[4],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
-                Manufacturer = "Sony",
+                Manufacturer = this.Manufacturers[0],
                 Price = 1250,
                 Quantity = 5,
                 Whidth = 140,
@@ -504,7 +517,7 @@
                 // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[4],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
-                Manufacturer = "Sony",
+                Manufacturer = this.Manufacturers[0],
                 Price = 1250,
                 Quantity = 5,
                 Whidth = 140,
@@ -528,7 +541,7 @@
                 // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[4],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
-                Manufacturer = "Sony",
+                Manufacturer = this.Manufacturers[0],
                 Price = 1250,
                 Quantity = 5,
                 Whidth = 140,
@@ -553,7 +566,7 @@
                 // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[4],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
-                Manufacturer = "Sony",
+                Manufacturer = this.Manufacturers[0],
                 Price = 1250,
                 Quantity = 5,
                 Whidth = 140,
@@ -578,7 +591,7 @@
                 // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[4],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
-                Manufacturer = "Sony",
+                Manufacturer = this.Manufacturers[0],
                 Price = 1250,
                 Quantity = 5,
                 Whidth = 140,
@@ -603,7 +616,7 @@
                 // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[4],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
-                Manufacturer = "Sony",
+                Manufacturer = this.Manufacturers[0],
                 Price = 1250,
                 Quantity = 5,
                 Whidth = 140,
@@ -628,7 +641,7 @@
                 // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[3],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
-                Manufacturer = "Sony",
+                Manufacturer = this.Manufacturers[0],
                 Price = 800,
                 Quantity = 5,
                 Whidth = 50,
@@ -653,7 +666,7 @@
                 // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[3],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
-                Manufacturer = "Sony",
+                Manufacturer = this.Manufacturers[0],
                 Price = 800,
                 Quantity = 5,
                 Whidth = 15,
@@ -678,7 +691,7 @@
                 // Category = this.categories[this.GetRandomNumber(0, this.categories.Count - 1)],
                 Category = this.categories[2],
                 CreatedOn = DateTime.Now.AddDays(rand.Next(-5, 5)),
-                Manufacturer = "Apple",
+                Manufacturer = this.Manufacturers[3],
                 Price = 800,
                 Quantity = 5,
                 Whidth = 15,
@@ -705,6 +718,8 @@
         public List<City> Cities { get; set; }
 
         public List<Address> Addresss { get; set; }
+
+        public List<Manufacturer> Manufacturers{ get; set; }
 
         public User Admin { get; set; }
 

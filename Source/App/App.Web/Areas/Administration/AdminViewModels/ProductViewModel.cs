@@ -48,7 +48,8 @@
         public double Weight { get; set; }
 
         [Required]
-        public string Manufacturer { get; set; }
+        [UIHint("DropDownList")]
+        public int ManufacturerId { get; set; }
 
         [Required]
         [UIHint("DropDownList")]

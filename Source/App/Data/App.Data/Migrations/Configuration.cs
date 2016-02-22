@@ -82,12 +82,16 @@ namespace App.Data.Migrations
 
             var seed = new SeedData(users);
 
+            seed.Manufacturers.ForEach(x => context.Manufacturers.Add(x));
             seed.Products.ForEach(x => context.Products.Add(x));
             seed.Promotions.ForEach(x => context.Promotions.Add(x));
             seed.Countries.ForEach(x => context.Countries.Add(x));
             seed.Cities.ForEach(x => context.Cities.Add(x));
             seed.Addresss.ForEach(x => context.Addresses.Add(x));
 
+            context.SaveChanges();
+
+            context.Categories.ToList().ForEach(c => c.Manufacturers = seed.Manufacturers);
             context.SaveChanges();
         }
     }

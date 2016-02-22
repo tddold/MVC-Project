@@ -19,11 +19,18 @@
             this.products = products;
         }
 
+        public IQueryable<Product> AllProducts(int count)
+        {
+            return this.products
+                .All()
+                .OrderBy(x => Guid.NewGuid());
+        }
+
         public IQueryable<Product> GetRandomProducts(int count)
         {
             return this.products
                 .All()
-                .OrderBy(x => Guid.NewGuid())
+                .OrderBy(x => x.Id)
                 .Take(count);
         }
 

@@ -1,0 +1,36 @@
+﻿
+@(Html.Kendo().Grid<App.Web.Areas.Administration.AdminViewModels.CategoryViewModel>()
+      .Name("grid")
+      .Columns(columns =>
+      {
+          columns.Bound(c => c.Name);
+          columns.Bound(c => c.Description);
+          //columns.Bound(c => c.ManufacturerId);
+          columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);
+      })
+      .ToolBar(toolbar => {
+          toolbar.Create();
+          toolbar.Excel();
+          toolbar.Pdf();
+      })
+      .ColumnMenu()
+      .Editable(editable => editable.Mode(GridEditMode.PopUp))
+      .Pageable()
+      .Selectable(selectable => {
+          selectable.Mode(GridSelectionMode.Single);
+          selectable.Type(GridSelectionType.Row);
+      })
+      .Sortable(sortable => {
+          sortable.SortMode(GridSortMode.SingleColumn);
+      })
+      .Filterable()
+      .Scrollable()
+      .DataSource(dataSource => dataSource
+          .Ajax()
+          .Model(model => model.Id(p => p.Id))
+          .Read(read => read.Action("CategoryViewModels_Read", "KendoCategories"))
+          .Create(create => create.Action("CategoryViewModels_Create", "KendoCategories"))
+          .Update(update => update.Action("CategoryViewModels_Update", "KendoCategories"))
+          .Destroy(destroy => destroy.Action("CategoryViewModels_Destroy", "KendoCategories"))
+      )
+)

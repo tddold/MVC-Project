@@ -58,26 +58,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDbContext.cs" />
-    <Compile Include="Migrations\201602130139588_InitialCreate.cs" />
-    <Compile Include="Migrations\201602130139588_InitialCreate.Designer.cs">
-      <DependentUpon>201602130139588_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201602132350583_AddModels.cs" />
-    <Compile Include="Migrations\201602132350583_AddModels.Designer.cs">
-      <DependentUpon>201602132350583_AddModels.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201602140010116_ModifyModels.cs" />
-    <Compile Include="Migrations\201602140010116_ModifyModels.Designer.cs">
-      <DependentUpon>201602140010116_ModifyModels.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201602142212157_EditModels.cs" />
-    <Compile Include="Migrations\201602142212157_EditModels.Designer.cs">
-      <DependentUpon>201602142212157_EditModels.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201602171748370_InserPictures.cs" />
-    <Compile Include="Migrations\201602171748370_InserPictures.Designer.cs">
-      <DependentUpon>201602171748370_InserPictures.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\SeedData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -99,23 +79,6 @@
       <Project>{0e9f676c-75ab-4c63-a774-2ba954e5fa10}</Project>
       <Name>App.Data.Models</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201602130139588_InitialCreate.resx">
-      <DependentUpon>201602130139588_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201602132350583_AddModels.resx">
-      <DependentUpon>201602132350583_AddModels.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201602140010116_ModifyModels.resx">
-      <DependentUpon>201602140010116_ModifyModels.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201602142212157_EditModels.resx">
-      <DependentUpon>201602142212157_EditModels.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201602171748370_InserPictures.resx">
-      <DependentUpon>201602171748370_InserPictures.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\..\packages\StyleCop.Analyzers.1.0.0\analyzers\dotnet\cs\Newtonsoft.Json.dll" />

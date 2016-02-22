@@ -67,6 +67,7 @@
     <Compile Include="Contracts\ICitiesService.cs" />
     <Compile Include="Contracts\ICountriesService.cs" />
     <Compile Include="Contracts\IImagesService.cs" />
+    <Compile Include="Contracts\IManufacturerService.cs" />
     <Compile Include="Contracts\IOrderService.cs" />
     <Compile Include="Contracts\IAddressService.cs" />
     <Compile Include="Contracts\IProductService.cs" />
@@ -80,6 +81,7 @@
     <Compile Include="Contracts\IUserService.cs" />
     <Compile Include="ImagesService.cs" />
     <Compile Include="OrderService.cs" />
+    <Compile Include="ManufacturerService.cs" />
     <Compile Include="ProductService.cs" />
     <Compile Include="PromotionService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

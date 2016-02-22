@@ -39,7 +39,9 @@
 
         public double Weight { get; set; }
 
-        public string Manufacturer { get; set; }
+        public virtual Manufacturer Manufacturer { get; set; }
+
+        public int? ManufacturerId { get; set; }
 
         public int CategoryId { get; set; }
 

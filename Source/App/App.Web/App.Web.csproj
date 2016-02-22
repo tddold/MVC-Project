@@ -206,10 +206,13 @@
     <Compile Include="App_Start\SmsService.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Administration\AdministrationAreaRegistration.cs" />
+    <Compile Include="Areas\Administration\AdminViewModels\CategoryViewModel.cs" />
+    <Compile Include="Areas\Administration\AdminViewModels\ManufacturerSelectViewModel.cs" />
     <Compile Include="Areas\Administration\AdminViewModels\ProductInputViewModel.cs" />
     <Compile Include="Areas\Administration\AdminViewModels\ProductViewModel.cs" />
     <Compile Include="Areas\Administration\Controllers\CategoryController.cs" />
     <Compile Include="Areas\Administration\Controllers\AdministrationController.cs" />
+    <Compile Include="Areas\Administration\Controllers\KendoCategoriesController.cs" />
     <Compile Include="Areas\Administration\Controllers\KendoProductController.cs" />
     <Compile Include="Areas\Administration\Controllers\KendoProductsController.cs" />
     <Compile Include="Areas\Administration\Controllers\ProductsController.cs" />
@@ -569,6 +572,8 @@
     <Content Include="Areas\Administration\Views\Shared\EditorTemplates\String.cshtml" />
     <Content Include="Areas\Administration\Views\Shared\EditorTemplates\Time.cshtml" />
     <Content Include="Areas\Administration\Views\Shared\EditorTemplates\Url.cshtml" />
+    <Content Include="Areas\Administration\Views\Shared\EditorTemplates\DropDownListManufacturer.cshtml" />
+    <Content Include="Areas\Administration\Views\KendoCategories\Index.cshtml" />
     <None Include="Scripts\jquery-2.2.0.intellisense.js" />
     <Content Include="Scripts\jquery-2.2.0.js" />
     <Content Include="Scripts\jquery-2.2.0.min.js" />
@@ -619,11 +624,13 @@
     <Content Include="stylecop1.json" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Categories\Index.cshtml" />
+    <Content Include="Views\Shared\_CategoryPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Administration\Views\Home\" />
     <Folder Include="Views\Base\" />
+    <Folder Include="Views\KendoCategories\" />
     <Folder Include="Views\KendoProducts\" />
     <Folder Include="Views\KendoProduct\" />
   </ItemGroup>

@@ -1,15 +1,11 @@
-﻿using App.Data.Models;
-using App.Web.Infrastructure.Mapping;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using AutoMapper;
-
-namespace App.Web.ViewModels.Categories
+﻿namespace App.Web.ViewModels.Categories
 {
+    using System.ComponentModel.DataAnnotations;
+    using System.Web.Mvc;
+
+    using App.Data.Models;
+    using App.Web.Infrastructure.Mapping;
+    using System.Collections.Generic;
     [Bind(Exclude = "Id,ImagePath")]
     public class CategoryViewModel : IMapFrom<Category>, IMapTo<Category>
     {
@@ -28,5 +24,7 @@ namespace App.Web.ViewModels.Categories
         [Display(Name = "Description")]
         [DataType(DataType.MultilineText)]
         public string Description { get; set; }
+
+        public ICollection<Manufacturer> Manufacturers{ get; set; }
     }
 }

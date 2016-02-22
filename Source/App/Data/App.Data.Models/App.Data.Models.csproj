@@ -63,6 +63,7 @@
     <Compile Include="Country.cs" />
     <Compile Include="DeliveryAdress.cs" />
     <Compile Include="Image.cs" />
+    <Compile Include="Manufacturer.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="OrderItem.cs" />
     <Compile Include="Page.cs" />

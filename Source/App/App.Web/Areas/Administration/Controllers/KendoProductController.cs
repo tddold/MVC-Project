@@ -70,7 +70,7 @@
                 dbProduct.Name = productViewModel.Name;
                 dbProduct.Description = productViewModel.Description;
                 dbProduct.Depht = productViewModel.Depht;
-                dbProduct.Manufacturer = productViewModel.Manufacturer;
+                dbProduct.ManufacturerId = productViewModel.ManufacturerId;
                 dbProduct.Price = productViewModel.Price;
                 dbProduct.Quantity = productViewModel.Quantity;
                 dbProduct.ShortDecription = productViewModel.ShortDecription;

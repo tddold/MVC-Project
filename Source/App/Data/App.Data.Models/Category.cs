@@ -9,11 +9,13 @@
     {
         private ICollection<Category> categories;
         private ICollection<Product> products;
+        private ICollection<Manufacturer> manufacturers;
 
         public Category()
         {
             this.categories = new HashSet<Category>();
             this.products = new HashSet<Product>();
+            this.manufacturers = new HashSet<Manufacturer>();
         }
 
         [Required]
@@ -26,15 +28,11 @@
         [MaxLength(500)]
         public string Description { get; set; }
 
-        public int? ParentCategoryId { get; set; }
-
-        public virtual Category ParentCategory { get; set; }
-
-        public virtual ICollection<Category> Categories
+        public virtual ICollection<Manufacturer> Manufacturers
         {
-            get { return this.categories; }
-            set { this.categories = value; }
-        }
+            get { return this.manufacturers; }
+            set { this.manufacturers = value; }
+        }   
 
         public virtual ICollection<Product> Products
         {

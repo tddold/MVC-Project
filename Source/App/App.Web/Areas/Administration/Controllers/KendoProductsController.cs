@@ -84,7 +84,7 @@
                     Heigth = product.Heigth,
                     Depht = product.Depht,
                     Weight = product.Weight,
-                    Manufacturer = product.Manufacturer,
+                    ManufacturerId = product.ManufacturerId,
                     CategoryId = product.Id
                 };
 

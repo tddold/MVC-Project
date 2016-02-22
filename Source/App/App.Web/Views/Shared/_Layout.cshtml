@@ -85,44 +85,24 @@
             <nav class="menu">
                 <ul class="main">
                     <li class="has-submenu">
-                        @Html.ActionLink("Home", "Index", "Home", new { area = string.Empty }, null)
+                       @Html.ActionLink("Home", "Index", "Home", new { area = string.Empty }, null)
                         @*<a href="index.html">Home<i class="fa fa-chevron-down"></i></a><!--Class "has-submenu" for proper highlighting and dropdown-->*@
-                        <ul class="submenu">
-                            
-                            <li><a href="index.html">Home - Slideshow</a></li>
-                            <li><a href="home-fullscreen.html">Home - Fullscreen Slider</a></li>
-                            <li><a href="home-showcase.html">Home - Product Showcase</a></li>
-                            <li><a href="home-categories.html">Home - Categories Slider</a></li>
-                            <li><a href="home-offers.html">Home - Special Offers</a></li>
-                        </ul>
+                        @*<ul class="menu">
+                                <li>@Html.ActionLink("Home", "Index", "Home", new { area = string.Empty }, null)</li>
+                                @*<li><a href="index.html">Home - Slideshow</a></li>
+                                <li><a href="home-fullscreen.html">Home - Fullscreen Slider</a></li>
+                                <li><a href="home-showcase.html">Home - Product Showcase</a></li>
+                                <li><a href="home-categories.html">Home - Categories Slider</a></li>
+                                <li><a href="home-offers.html">Home - Special Offers</a></li>
+                            </ul>*@
                     </li>
                     <li class="has-submenu">
-                        <a href="shop-filters-left-3cols.html">Shop<i class="fa fa-chevron-down"></i></a>
-                        <ul class="submenu">
-                            <li><a href="shop-filters-left-3cols.html">Shop - Filters Left 3 Cols</a></li>
-                            <li><a href="shop-filters-left-2cols.html">Shop - Filters Left 2 Cols</a></li>
-                            <li><a href="shop-filters-right-3cols.html">Shop - Filters Right 3 Cols</a></li>
-                            <li><a href="shop-filters-right-2cols.html">Shop - Filters Right 2 Cols</a></li>
-                            <li><a href="shop-no-filters-4cols.html">Shop - No Filters 4 Cols</a></li>
-                            <li><a href="shop-no-filters-3cols.html">Shop - No Filters 3 Cols</a></li>
-                            <li><a href="shop-single-item-v1.html">Shop - Single Item Vers 1</a></li>
-                            <li><a href="shop-single-item-v2.html">Shop - Single Item Vers 2</a></li>
-                            <li><a href="shopping-cart.html">Shopping Cart</a></li>
-                            <li><a href="checkout.html">Checkout Page</a></li>
-                            <li><a href="wishlist.html">Wishlist</a></li>
-                        </ul>
+                        @Html.ActionLink("Shop", "Index", "Shop", new { area = string.Empty }, null)
                     </li>
-                    <li class="has-submenu">
-                        <a href="blog-sidebar-right.html">Blog<i class="fa fa-chevron-down"></i></a>
-                        <ul class="submenu">
-                            <li><a href="blog-sidebar-left.html">Blog - Sidebar Left</a></li>
-                            <li><a href="blog-sidebar-right.html">Blog - Sidebar Right</a></li>
-                            <li><a href="blog-single.html">Blog - Single Post</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-submenu">
-                        <a href="#">Pages<span class="label">NEW</span><i class="fa fa-chevron-down"></i></a>
-                        <ul class="submenu">
+                    @*<li class="has-submenu">
+                        @Html.ActionLink("Pages", "Index", "Blog", new { area = string.Empty }, null)
+                        <span class="label">NEW</span><i class="fa fa-chevron-down"></i>
+                        @*<ul class="submenu">
                             <li><a href="register.html">Login / Registration</a></li>
                             <li><a href="account-personal-info.html">Account: Personal Info<span class="label">NEW</span></a></li>
                             <li><a href="account-addresses.html">Account: Addresses<span class="label">NEW</span></a></li>
@@ -136,51 +116,109 @@
                             <li><a href="support.html">Support Page</a></li>
                             <li><a href="cs-page.html">Components &amp; Styles</a></li>
                         </ul>
-                    </li>
-                    <li class="hide-sm"><a href="support.html">Support</a></li>
-                </ul>
-                <ul class="catalog">
-                    <li class="has-submenu">
-                        <a href="shop-filters-left-3cols.html">Phones<i class="fa fa-chevron-down"></i></a>
-                        <ul class="submenu">
-                            <li><a href="#">Nokia</a></li>
-                            <li class="has-submenu">
-                                <a href="#">iPhone</a><!--Class "has-submenu" for adding carret and dropdown-->
-                                <ul class="sub-submenu">
-                                    <li><a href="#">iPhone 4</a></li>
-                                    <li><a href="#">iPhone 4s</a></li>
-                                    <li><a href="#">iPhone 5c</a></li>
-                                    <li><a href="#">iPhone 5s</a></li>
+                    </li>*@
+
+                    @if (this.User.IsInRole("Administrator"))
+                    {
+                        <li class="hide-sm">
+                            @Html.ActionLink("Administration", "Index", "Category", new { area = "Administration" }, null)
+                        </li>
+                    }
+
+
+
+
+
+                    @*<li class="has-submenu">
+                                <a href="shop-filters-left-3cols.html">Shop<i class="fa fa-chevron-down"></i></a>
+                                <ul class="submenu">
+                                    <li><a href="shop-filters-left-3cols.html">Shop - Filters Left 3 Cols</a></li>
+                                    <li><a href="shop-filters-left-2cols.html">Shop - Filters Left 2 Cols</a></li>
+                                    <li><a href="shop-filters-right-3cols.html">Shop - Filters Right 3 Cols</a></li>
+                                    <li><a href="shop-filters-right-2cols.html">Shop - Filters Right 2 Cols</a></li>
+                                    <li><a href="shop-no-filters-4cols.html">Shop - No Filters 4 Cols</a></li>
+                                    <li><a href="shop-no-filters-3cols.html">Shop - No Filters 3 Cols</a></li>
+                                    <li><a href="shop-single-item-v1.html">Shop - Single Item Vers 1</a></li>
+                                    <li><a href="shop-single-item-v2.html">Shop - Single Item Vers 2</a></li>
+                                    <li><a href="shopping-cart.html">Shopping Cart</a></li>
+                                    <li><a href="checkout.html">Checkout Page</a></li>
+                                    <li><a href="wishlist.html">Wishlist</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">HTC</a></li>
                             <li class="has-submenu">
-                                <a href="#">Samsung</a>
-                                <ul class="sub-submenu">
-                                    <li><a href="#">Galaxy Note 3</a></li>
-                                    <li><a href="#">Galaxy S5</a></li>
-                                    <li><a href="#">Galaxy S3 Neo</a></li>
-                                    <li><a href="#">Galaxy Gear</a></li>
-                                    <li><a href="#">Galaxy S Duos 2</a></li>
+                                <a href="blog-sidebar-right.html">Blog<i class="fa fa-chevron-down"></i></a>
+                                <ul class="submenu">
+                                    <li><a href="blog-sidebar-left.html">Blog - Sidebar Left</a></li>
+                                    <li><a href="blog-sidebar-right.html">Blog - Sidebar Right</a></li>
+                                    <li><a href="blog-single.html">Blog - Single Post</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">BlackBerry</a></li>
-                            <li class="offer">
-                                <div class="col-1">
-                                    <p class="p-style2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                </div>
-                                <div class="col-2">
-                                    <img src="~/Content/Theme/img/offers/menu-drodown-offer.jpg" alt="Special Offer" />
-                                    <a class="btn btn-block" href="#"><span>584$</span>Special offer</a>
-                                </div>
+                            <li class="has-submenu">
+                                <a href="#">Pages<span class="label">NEW</span><i class="fa fa-chevron-down"></i></a>
+                                <ul class="submenu">
+                                    <li><a href="register.html">Login / Registration</a></li>
+                                    <li><a href="account-personal-info.html">Account: Personal Info<span class="label">NEW</span></a></li>
+                                    <li><a href="account-addresses.html">Account: Addresses<span class="label">NEW</span></a></li>
+                                    <li><a href="order-history.html">Orders History<span class="label">NEW</span></a></li>
+                                    <li><a href="order-tracking.html">Order Tracking<span class="label">NEW</span></a></li>
+                                    <li><a href="delivery-info.html">Delivery Info<span class="label">NEW</span></a></li>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="contacts.html">Contacts</a></li>
+                                    <li><a href="coming-soon.html">Coming Soon</a></li>
+                                    <li><a href="404.html">404 Page</a></li>
+                                    <li><a href="support.html">Support Page</a></li>
+                                    <li><a href="cs-page.html">Components &amp; Styles</a></li>
+                                </ul>
                             </li>
+                            <li class="hide-sm"><a href="support.html">Support</a></li>*@
                         </ul>
-                    </li>
-                    <li><a href="shop-filters-left-3cols.html">Cameras</a></li>
-                    <li><a href="shop-filters-left-3cols.html">Personal computers</a></li>
-                    <li><a href="shop-filters-left-3cols.html">Gaming consoles</a></li>
-                    <li><a href="shop-filters-left-3cols.html">TV sets</a></li>
-                </ul>
+
+                    @*<ul class="catalog">*@
+                        @Html.Action("_CategoryPartial", "Home");
+                        @*@Html.Partial("_CategoryPartial")*@
+
+
+                            @*<li class="has-submenu">
+                                <a href="shop-filters-left-3cols.html">Phones<i class="fa fa-chevron-down"></i></a>
+                                <ul class="submenu">
+                                    <li><a href="#">Nokia</a></li>
+                                    <li class="has-submenu">
+                                        <a href="#">iPhone</a><!--Class "has-submenu" for adding carret and dropdown-->
+                                        <ul class="sub-submenu">
+                                            <li><a href="#">iPhone 4</a></li>
+                                            <li><a href="#">iPhone 4s</a></li>
+                                            <li><a href="#">iPhone 5c</a></li>
+                                            <li><a href="#">iPhone 5s</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">HTC</a></li>
+                                    <li class="has-submenu">
+                                        <a href="#">Samsung</a>
+                                        <ul class="sub-submenu">
+                                            <li><a href="#">Galaxy Note 3</a></li>
+                                            <li><a href="#">Galaxy S5</a></li>
+                                            <li><a href="#">Galaxy S3 Neo</a></li>
+                                            <li><a href="#">Galaxy Gear</a></li>
+                                            <li><a href="#">Galaxy S Duos 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">BlackBerry</a></li>
+                                    <li class="offer">
+                                        <div class="col-1">
+                                            <p class="p-style2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        </div>
+                                        <div class="col-2">
+                                            <img src="~/Content/Theme/img/offers/menu-drodown-offer.jpg" alt="Special Offer" />
+                                            <a class="btn btn-block" href="#"><span>584$</span>Special offer</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="shop-filters-left-3cols.html">Cameras</a></li>
+                            <li><a href="shop-filters-left-3cols.html">Personal computers</a></li>
+                            <li><a href="shop-filters-left-3cols.html">Gaming consoles</a></li>
+                            <li><a href="shop-filters-left-3cols.html">TV sets</a></li>*@
+                        @*</ul>*@
             </nav>
 
             <!--Toolbar-->
@@ -233,43 +271,42 @@
         </div>
     </header><!--Header Close-->
     <!--Page Content-->
-
     @*<div class="page-content">
 
-        <!--Hero Slider-->
-        <section class="hero-slider">
-            <div class="master-slider" id="hero-slider">
+            <!--Hero Slider-->
+            <section class="hero-slider">
+                <div class="master-slider" id="hero-slider">
 
-                <!--Slide 1-->
-                <div class="ms-slide" data-delay="7">
-                    <div class="overlay"></div>
-                    <img src="masterslider/blank.gif" data-src="Content/Theme/img/hero/slideshow/slide_1.jpg" alt="Nikon D4S" />
-                    <h2 style="width: 456px; left: 110px; top: 110px;" class="light-color ms-layer" data-effect="top(50,true)" data-duration="700" data-delay="250" data-ease="easeOutQuad">Nikon D4S</h2>
-                    <p style="width: 456px; left: 110px; top: 210px;" class="light-color ms-layer" data-effect="back(500)" data-duration="700" data-delay="500" data-ease="easeOutQuad">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
-                    <div style="left: 110px; top: 300px;" class="ms-layer button" data-effect="bottom(50,true)" data-duration="600" data-delay="950" data-ease="easeOutQuad"><a class="btn btn-primary" href="#"><span>1845$</span>Buy it now</a></div>
+                    <!--Slide 1-->
+                    <div class="ms-slide" data-delay="7">
+                        <div class="overlay"></div>
+                        <img src="masterslider/blank.gif" data-src="Content/Theme/img/hero/slideshow/slide_1.jpg" alt="Nikon D4S" />
+                        <h2 style="width: 456px; left: 110px; top: 110px;" class="light-color ms-layer" data-effect="top(50,true)" data-duration="700" data-delay="250" data-ease="easeOutQuad">Nikon D4S</h2>
+                        <p style="width: 456px; left: 110px; top: 210px;" class="light-color ms-layer" data-effect="back(500)" data-duration="700" data-delay="500" data-ease="easeOutQuad">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
+                        <div style="left: 110px; top: 300px;" class="ms-layer button" data-effect="bottom(50,true)" data-duration="600" data-delay="950" data-ease="easeOutQuad"><a class="btn btn-primary" href="#"><span>1845$</span>Buy it now</a></div>
+                    </div>
+
+                    <!--Slide 2-->
+                    <div class="ms-slide" data-delay="7">
+                        <span class="overlay"></span>
+                        <img src="masterslider/blank.gif" data-src="Content/Theme/img/hero/slideshow/slide_2.jpg" alt="Nest" />
+                        <h2 style="width: 456px; left: 110px; top: 110px;" class="light-color ms-layer" data-effect="bottom(50,true)" data-duration="700" data-delay="250" data-ease="easeOutQuad">Nest</h2>
+                        <p style="width: 456px; left: 110px; top: 210px;" class="light-color ms-layer" data-effect="bottom(50,true)" data-duration="700" data-delay="500" data-ease="easeOutQuad">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
+                        <div style="left: 110px; top: 300px;" class="ms-layer button" data-effect="rotatebottom(30|90,long,br,true)" data-duration="600" data-delay="950" data-ease="easeOutQuad"><a class="btn btn-primary" href="#"><span>1640$</span>Buy it now</a></div>
+                    </div>
+
+                    <!--Slide 3-->
+                    <div class="ms-slide" data-delay="7">
+                        <div class="overlay"></div>
+                        <img src="masterslider/blank.gif" data-src="Content/Theme/img/hero/slideshow/slide_1.jpg" alt="3D Printer" />
+                        <h2 style="width: 456px; left: 110px; top: 110px;" class="light-color ms-layer" data-effect="left(50,true)" data-duration="700" data-delay="250" data-ease="easeOutQuad">3D Printer</h2>
+                        <p style="width: 456px; left: 110px; top: 210px;" class="light-color ms-layer" data-effect="left(50,true)" data-duration="700" data-delay="500" data-ease="easeOutQuad">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
+                        <div style="left: 110px; top: 300px;" class="ms-layer button" data-effect="left(50,true)" data-duration="600" data-delay="950" data-ease="easeOutQuad"><a class="btn btn-primary" href="#"><span>2500$</span>Buy it now</a></div>
+                    </div>
+
                 </div>
-
-                <!--Slide 2-->
-                <div class="ms-slide" data-delay="7">
-                    <span class="overlay"></span>
-                    <img src="masterslider/blank.gif" data-src="Content/Theme/img/hero/slideshow/slide_2.jpg" alt="Nest" />
-                    <h2 style="width: 456px; left: 110px; top: 110px;" class="light-color ms-layer" data-effect="bottom(50,true)" data-duration="700" data-delay="250" data-ease="easeOutQuad">Nest</h2>
-                    <p style="width: 456px; left: 110px; top: 210px;" class="light-color ms-layer" data-effect="bottom(50,true)" data-duration="700" data-delay="500" data-ease="easeOutQuad">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
-                    <div style="left: 110px; top: 300px;" class="ms-layer button" data-effect="rotatebottom(30|90,long,br,true)" data-duration="600" data-delay="950" data-ease="easeOutQuad"><a class="btn btn-primary" href="#"><span>1640$</span>Buy it now</a></div>
-                </div>
-
-                <!--Slide 3-->
-                <div class="ms-slide" data-delay="7">
-                    <div class="overlay"></div>
-                    <img src="masterslider/blank.gif" data-src="Content/Theme/img/hero/slideshow/slide_1.jpg" alt="3D Printer" />
-                    <h2 style="width: 456px; left: 110px; top: 110px;" class="light-color ms-layer" data-effect="left(50,true)" data-duration="700" data-delay="250" data-ease="easeOutQuad">3D Printer</h2>
-                    <p style="width: 456px; left: 110px; top: 210px;" class="light-color ms-layer" data-effect="left(50,true)" data-duration="700" data-delay="500" data-ease="easeOutQuad">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
-                    <div style="left: 110px; top: 300px;" class="ms-layer button" data-effect="left(50,true)" data-duration="600" data-delay="950" data-ease="easeOutQuad"><a class="btn btn-primary" href="#"><span>2500$</span>Buy it now</a></div>
-                </div>
-
-            </div>
-        </section><!--Hero Slider Close-->
-    </div>*@
+            </section><!--Hero Slider Close-->
+        </div>*@
 
     <!--Catalog Grid Close-->
     <!--Tabs Widget-->
@@ -575,6 +612,10 @@
                 </div>
             </div>
         </section><!--Subscription Widget Close-->*@
+    @*<div>
+            @Html.Partial("_CategoryPartial")
+        </div>*@
+
     @RenderBody()
     <hr />
 
@@ -653,7 +694,7 @@
         <script src="scripts/scripts.js"></script>*@
 
 
-   
+
     @Scripts.Render("~/bundles/bootstrap")
 
     @Scripts.Render("~/bundles/theme")

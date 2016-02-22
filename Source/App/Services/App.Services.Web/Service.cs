@@ -18,6 +18,7 @@ namespace App.Services.Web
         {
             this.repository = repositories;
         }
+
         public void Add(T model)
         {
             repository.Add(model);

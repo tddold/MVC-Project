@@ -3,31 +3,43 @@
 <!--Hero Slider-->
 <section class="hero-slider">
     <div class="master-slider" id="hero-slider">
+
+
+        @*@foreach (var product in Model.TopProducts)
+            {
+            <div class="ms-slide" data-delay="7">
+                <div class="overlay"></div>
+                <img src="masterslider/blank.gif" data-src="@Url.Content("Images/SeedImages/promo/slide_1.jpg")" alt="@product.Name" />
+                <h2 style="width: 456px; left: 110px; top: 110px;" class="light-color ms-layer" data-effect="top(50,true)" data-duration="700" data-delay="250" data-ease="easeOutQuad">Nikon D4S</h2>
+                <p style="width: 456px; left: 110px; top: 210px;" class="light-color ms-layer" data-effect="back(500)" data-duration="700" data-delay="500" data-ease="easeOutQuad">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
+                <div style="left: 110px; top: 300px;" class="ms-layer button" data-effect="bottom(50,true)" data-duration="600" data-delay="950" data-ease="easeOutQuad"><a class="btn btn-primary" href="#"><span>1845$</span>Buy it now</a></div>
+            </div>
+        }*@
                
         <!--Slide 1-->
         <div class="ms-slide" data-delay="7">
             <div class="overlay"></div>
-            <img src="masterslider/blank.gif" data-src="Content/Theme/img/hero/slideshow/slide_1.jpg" alt="Nikon D4S" />
+            <img src="masterslider/blank.gif" data-src="/Images/SeedImages/promo/slide_1.jpg" alt="Nikon D4S" />
             <h2 style="width: 456px; left: 110px; top: 110px;" class="light-color ms-layer" data-effect="top(50,true)" data-duration="700" data-delay="250" data-ease="easeOutQuad">Nikon D4S</h2>
-            <p style="width: 456px; left: 110px; top: 210px;" class="light-color ms-layer" data-effect="back(500)" data-duration="700" data-delay="500" data-ease="easeOutQuad">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
+            <p style="width: 456px; left: 110px; top: 210px;" class="light-color ms-layer" data-effect="back(500)" data-duration="700" data-delay="500" data-ease="easeOutQuad">Бърз, универсален и пъргав. 24,3MP, сензор с формат FX, скорост при серия от снимки до 6,5 кадъра/сек,записване на Full HD филми с 1080/60p, накланящ се дисплей, вградена Wi-Fi функция, впечатляващи снимки.</p>
             <div style="left: 110px; top: 300px;" class="ms-layer button" data-effect="bottom(50,true)" data-duration="600" data-delay="950" data-ease="easeOutQuad"><a class="btn btn-primary" href="#"><span>1845$</span>Buy it now</a></div>
         </div>
 
         <!--Slide 2-->
         <div class="ms-slide" data-delay="7">
             <span class="overlay"></span>
-            <img src="masterslider/blank.gif" data-src="Content/Theme/img/hero/slideshow/slide_2.jpg" alt="Nest" />
-            <h2 style="width: 456px; left: 110px; top: 110px;" class="light-color ms-layer" data-effect="bottom(50,true)" data-duration="700" data-delay="250" data-ease="easeOutQuad">Nest</h2>
-            <p style="width: 456px; left: 110px; top: 210px;" class="light-color ms-layer" data-effect="bottom(50,true)" data-duration="700" data-delay="500" data-ease="easeOutQuad">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
+            <img src="masterslider/blank.gif" data-src="Images/SeedImages/promo/slide_2.jpg" alt="HDR-AS50" />
+            <h2 style="width: 456px; left: 110px; top: 110px;" class="light-color ms-layer" data-effect="bottom(50,true)" data-duration="700" data-delay="250" data-ease="easeOutQuad">HDR-AS50</h2>
+            <p style="width: 456px; left: 110px; top: 210px;" class="light-color ms-layer" data-effect="bottom(50,true)" data-duration="700" data-delay="500" data-ease="easeOutQuad">HDR-AS50 - Излезте и се забавлявайте! Снимайте навсякъде и по всяко време с Action Cam.</p>
             <div style="left: 110px; top: 300px;" class="ms-layer button" data-effect="rotatebottom(30|90,long,br,true)" data-duration="600" data-delay="950" data-ease="easeOutQuad"><a class="btn btn-primary" href="#"><span>1640$</span>Buy it now</a></div>
         </div>
 
         <!--Slide 3-->
         <div class="ms-slide" data-delay="7">
             <div class="overlay"></div>
-            <img src="masterslider/blank.gif" data-src="Content/Theme/img/hero/slideshow/slide_1.jpg" alt="3D Printer" />
-            <h2 style="width: 456px; left: 110px; top: 110px;" class="light-color ms-layer" data-effect="left(50,true)" data-duration="700" data-delay="250" data-ease="easeOutQuad">3D Printer</h2>
-            <p style="width: 456px; left: 110px; top: 210px;" class="light-color ms-layer" data-effect="left(50,true)" data-duration="700" data-delay="500" data-ease="easeOutQuad">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
+            <img src="masterslider/blank.gif" data-src="Images/SeedImages/promo/slide_3.jpg" alt="H.EAR GO" />
+            <h2 style="width: 456px; left: 110px; top: 110px;" class="light-color ms-layer" data-effect="left(50,true)" data-duration="700" data-delay="250" data-ease="easeOutQuad">H.EAR GO</h2>
+            <p style="width: 456px; left: 110px; top: 210px;" class="light-color ms-layer" data-effect="left(50,true)" data-duration="700" data-delay="500" data-ease="easeOutQuad"> H.EAR GO - Навсякъде с вас Безжична свобода, превъзходен звук и преносим стил. Уловете момента с h.ear go.</p>
             <div style="left: 110px; top: 300px;" class="ms-layer button" data-effect="left(50,true)" data-duration="600" data-delay="950" data-ease="easeOutQuad"><a class="btn btn-primary" href="#"><span>2500$</span>Buy it now</a></div>
         </div>
 
