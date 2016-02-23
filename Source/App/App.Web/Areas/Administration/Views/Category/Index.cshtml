@@ -39,7 +39,7 @@
                 <img class="img-responsive" src="@category.ImagePath" alt="@category">
             </td>
             <td>
-                @Html.EditorFor(modelItem => category.Description, new { @class = "form-control" })
+                @Html.TextAreaFor(modelItem => category.Description, new { @class = "whatever-class", @cols = 60, @rows = 6 })
             </td>
             <td>
                 <div class="btn btn-default">

@@ -9,7 +9,7 @@
     using Data.Models;
     using Services.Web.Contracts;
     using Services.Web;
-
+    using System.Collections.Generic;
     public class ProductViewModel : IHaveCustomMappings
     {
         private ISanitizer sanitaizer;
