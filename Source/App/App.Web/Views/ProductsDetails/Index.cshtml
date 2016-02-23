@@ -10,79 +10,6 @@
 <br />
 <br />
 
-@*<section class="cat-tiles">
-        <div class="container">
-
-
-            <h2><strong>@Model.Name</strong></h2>
-
-            <div><h2>@Model.ShortDecription</h2></div>
-            <div class="row">
-                <!--Products by category-->
-
-                    <div class="category col-lg-2 col-md-2 col-sm-4 col-xs-6">
-                        <a href='@Url.Action("Index", "ProductsDetails",new { @id = Model.Id})'>
-                            <img src="@Model.ImagePath" alt="@Model.Name" />
-                            <p>@Model.Name</p>
-                        </a>
-                    </div>
-
-            </div>
-
-            <!--Tabs-->
-            <div class="col-lg-6 col-md-6 col-sm-6">
-                <h3 class="cs-heading">Tabs</h3>
-                <div class="tabs-widget">
-                    <!-- Nav tabs -->
-                    <ul class="nav nav-tabs">
-                        <li class="active"><a href="#tab01" data-toggle="tab">Description</a></li>
-                        <li><a href="#tab02" data-toggle="tab">Specification</a></li>
-                    </ul>
-                    <div class="tab-content">
-                        <div class="tab-pane fade in active" id="tab01">
-                            <p>@Model.Description</p>
-                        </div>
-                        <div class="tab-pane fade" id="tab02">
-                            <div class="form-group">
-                                @Html.LabelFor(m => m.Manufacturer.Name, new { @class = "col-md-2 control-label" })
-                                <div class="col-md-10">
-                                    @Html.TextBoxFor(m => m.Manufacturer.Name, new { @class = "form-control" })
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                @Html.LabelFor(m => m.Name, new { @class = "col-md-2 control-label" })
-                                <div class="col-md-10">
-                                    @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                @Html.LabelFor(m => m.Whidth, new { @class = "col-md-2 control-label" })
-                                <div class="col-md-10">
-                                    @Html.TextBoxFor(m => m.Whidth, new { @class = "form-control" })
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                @Html.LabelFor(m => m.Lenght, new { @class = "col-md-2 control-label" })
-                                <div class="col-md-10">
-                                    @Html.TextBoxFor(m => m.Lenght, new { @class = "form-control" })
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                @Html.LabelFor(m => m.Depht, new { @class = "col-md-2 control-label" })
-                                <div class="col-md-10">
-                                    @Html.TextBoxFor(m => m.Depht, new { @class = "form-control" })
-                                </div>
-                            </div>
-                           <div class="form-group col-sm-6">
-                          <label for="api_first_name">First name</label>
-                          <input type="text" class="form-control" name="api_first_name" id="api_first_name" placeholder="First name" required="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section><!--Products by category Close-->*@
-
 <!--Catalog Single Item-->
 <section class="catalog-single">
     <div class="container">
@@ -93,30 +20,30 @@
                 <div class="prod-gal master-slider" id="prod-gal">
                     <!--Slide1-->
                     <div class="ms-slide">
-                       
-                            <img src="@Model.ImagePath" data-src="@Model.ImagePath" alt="@Model.Name" />
-                            <img class="ms-thumb" src="@Model.ImagePath" alt="thumb" />
+
+                        <img src="@Model.ImagePath" data-src="@Model.ImagePath" alt="@Model.Name" />
+                        <img class="ms-thumb" src="@Model.ImagePath" alt="thumb" />
                     </div>
                     @*<!--Slide2-->
-                    <div class="ms-slide">
-                        <img src="~/Content/Theme/masterslider/blank.gif" data-src="~/Content/Theme/img/catalog/product-gallery/1.jpg" alt="Lorem ipsum" />
-                        <img class="ms-thumb" src="~/Content/Theme/img/catalog/product-gallery/th_1.jpg" alt="thumb" />
-                    </div>
-                    <!--Slide3-->
-                    <div class="ms-slide">
-                        <img src="~/Content/Theme/masterslider/blank.gif" data-src="~/Content/Theme/img/catalog/product-gallery/1.jpg" alt="Lorem ipsum" />
-                        <img class="ms-thumb" src="~/Content/Theme/img/catalog/product-gallery/th_1.jpg" alt="thumb" />
-                    </div>
-                    <!--Slide4-->
-                    <div class="ms-slide">
-                        <img src="~/Content/Theme/masterslider/blank.gif" data-src="~/Content/Theme/img/catalog/product-gallery/1.jpg" alt="Lorem ipsum" />
-                        <img class="ms-thumb" src="~/Content/Theme/img/catalog/product-gallery/th_1.jpg" alt="thumb" />
-                    </div>
-                    <!--Slide5-->
-                    <div class="ms-slide">
-                        <img src="~/Content/Theme/masterslider/blank.gif" data-src="~/Content/Theme/img/catalog/product-gallery/1.jpg" alt="Lorem ipsum" />
-                        <img class="ms-thumb" src="~/Content/Theme/img/catalog/product-gallery/th_1.jpg" alt="thumb" />
-                    </div>*@
+                        <div class="ms-slide">
+                            <img src="~/Content/Theme/masterslider/blank.gif" data-src="~/Content/Theme/img/catalog/product-gallery/1.jpg" alt="Lorem ipsum" />
+                            <img class="ms-thumb" src="~/Content/Theme/img/catalog/product-gallery/th_1.jpg" alt="thumb" />
+                        </div>
+                        <!--Slide3-->
+                        <div class="ms-slide">
+                            <img src="~/Content/Theme/masterslider/blank.gif" data-src="~/Content/Theme/img/catalog/product-gallery/1.jpg" alt="Lorem ipsum" />
+                            <img class="ms-thumb" src="~/Content/Theme/img/catalog/product-gallery/th_1.jpg" alt="thumb" />
+                        </div>
+                        <!--Slide4-->
+                        <div class="ms-slide">
+                            <img src="~/Content/Theme/masterslider/blank.gif" data-src="~/Content/Theme/img/catalog/product-gallery/1.jpg" alt="Lorem ipsum" />
+                            <img class="ms-thumb" src="~/Content/Theme/img/catalog/product-gallery/th_1.jpg" alt="thumb" />
+                        </div>
+                        <!--Slide5-->
+                        <div class="ms-slide">
+                            <img src="~/Content/Theme/masterslider/blank.gif" data-src="~/Content/Theme/img/catalog/product-gallery/1.jpg" alt="Lorem ipsum" />
+                            <img class="ms-thumb" src="~/Content/Theme/img/catalog/product-gallery/th_1.jpg" alt="thumb" />
+                        </div>*@
                 </div>
             </div>
 
@@ -140,7 +67,7 @@
                         <a class="incr-btn" href="#">+</a>
                     </div>
                     <a class="btn btn-primary btn-sm" id="addItemToCart" href="#"><i class="icon-shopping-cart"></i>Add to cart</a>
-                    <a class="btn btn-success btn-sm" href="#"><i class="icon-heart"></i>Add to wishlist</a>
+                    <a class="btn btn-success btn-sm" href='@Url.Action("Create", "WishList", new { area = "user" }, null)'><i class="icon-heart"></i>Add to wishlist</a>
                 </div>
                 <p class="p-style2">@Model.ShortDecription</p>
                 <div class="row">
@@ -170,7 +97,7 @@
 
             <!--Tabs-->
             <div class="col-lg-6 col-md-6 col-sm-6">
-                <h3 class="cs-heading">Tabs</h3>
+                @*<h3 class="cs-heading">Tabs</h3>*@
                 <div class="tabs-widget">
                     <!-- Nav tabs -->
                     <ul class="nav nav-tabs">
@@ -183,39 +110,52 @@
                         </div>
                         <div class="tab-pane fade" id="tab02">
                             <div class="form-group">
-                                @Html.LabelFor(m => m.Manufacturer.Name, new { @class = "col-md-2 control-label" })
+                                <h3> @Html.LabelFor(m => m.Manufacturer.Name, new { @class = "col-md-2 control-label" })</h3>
                                 <div class="col-md-10">
                                     @Html.TextBoxFor(m => m.Manufacturer.Name, new { @class = "form-control" })
                                 </div>
                             </div>
+                            <br />
+                            <br />
+                            <br />
                             <div class="form-group">
-                                @Html.LabelFor(m => m.Name, new { @class = "col-md-2 control-label" })
+                                <h3>
+                                    @Html.LabelFor(m => m.Name, new { @class = "col-md-2 control-label" })
+                                </h3>
                                 <div class="col-md-10">
                                     @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
                                 </div>
-                            </div>
+</div>
+                            <br />
+                            <br />
                             <div class="form-group">
-                                @Html.LabelFor(m => m.Whidth, new { @class = "col-md-2 control-label" })
-                                <div class="col-md-10">
-                                    @Html.TextBoxFor(m => m.Whidth, new { @class = "form-control" })
-                                </div>
-                            </div>
+                                <h3>
+                                    @Html.LabelFor(m => m.Whidth, new { @class = "col-md-2 control-label" })
+                                </h3>
+                                    <div class="col-md-10">
+                                        @Html.TextBoxFor(m => m.Whidth, new { @class = "form-control" })
+                                    </div>
+</div>
+                            <br />
+                            <br />
                             <div class="form-group">
-                                @Html.LabelFor(m => m.Lenght, new { @class = "col-md-2 control-label" })
-                                <div class="col-md-10">
-                                    @Html.TextBoxFor(m => m.Lenght, new { @class = "form-control" })
-                                </div>
-                            </div>
+                                <h3>
+                                    @Html.LabelFor(m => m.Lenght, new { @class = "col-md-2 control-label" })
+                                </h3>
+                                    <div class="col-md-10">
+                                        @Html.TextBoxFor(m => m.Lenght, new { @class = "form-control" })
+                                    </div>
+</div>
+                            <br />
+                            <br />
                             <div class="form-group">
-                                @Html.LabelFor(m => m.Depht, new { @class = "col-md-2 control-label" })
+                                <h3>
+                                    @Html.LabelFor(m => m.Depht, new { @class = "col-md-2 control-label" })
+                                </h3>
                                 <div class="col-md-10">
                                     @Html.TextBoxFor(m => m.Depht, new { @class = "form-control" })
                                 </div>
-                            </div>
-                            <div class="form-group col-sm-6">
-                                <label for="api_first_name">First name</label>
-                                <input type="text" class="form-control" name="api_first_name" id="api_first_name" placeholder="First name" required="">
-                            </div>
+</div>
                         </div>
                     </div>
                 </div>

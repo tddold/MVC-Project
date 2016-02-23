@@ -17,18 +17,19 @@
                             {
                                 if (product.CategoryId == category.Id && product.Manufacturer.Id == manufacturer.Id)
                                 {
-                                    <li><a href="#">@product.Name</a></li><!--Class "has-submenu" for adding carret and dropdown-->
+                                    <li><a href='@Url.Action("Index", "ProductsDetails", new { @id = product.Id})'>@product.Name</a></li><!--Class "has-submenu" for adding carret and dropdown-->
                                 }
                             }
                         </ul>
                     </li>
+                  
                     <li class="offer">
                         <div class="col-1">
-                            <p class="p-style2">Това са нашите продукти!</p>
+                            <p class="p-style2">Специално предложение!</p>
                         </div>
                         <div class="col-2">
-                            <img src="~/Content/Theme/img/offers/menu-drodown-offer.jpg" alt="Special Offer" />
-                            <a class="btn btn-block" href="#"><span>584$</span>Special offer</a>
+                            <img src="~/Content/Theme/img/offers/menu-drodown-offer.png" alt="Special Offer" />
+                            <a class="btn btn-block" href="/ProductsDetails/Index/4"><span>584$</span>Special offer</a>
                         </div>
                     </li>
                 }

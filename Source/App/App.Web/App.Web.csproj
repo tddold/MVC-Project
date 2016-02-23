@@ -218,7 +218,7 @@
     <Compile Include="Areas\Administration\Controllers\KendoProductsController.cs" />
     <Compile Include="Areas\Administration\Controllers\ProductsController.cs" />
     <Compile Include="Areas\Administration\Controllers\UsersController.cs" />
-    <Compile Include="Areas\User\Controllers\WhishListController.cs" />
+    <Compile Include="Areas\User\Controllers\WishListController.cs" />
     <Compile Include="Areas\User\Controllers\WishLIstInputController.cs" />
     <Compile Include="Areas\User\UserAreaRegistration.cs" />
     <Compile Include="Areas\User\UserViewModels\WishListHomeViewModel.cs" />
@@ -587,7 +587,7 @@
     <Content Include="Areas\Administration\Views\Shared\EditorTemplates\DropDownListGategory.cshtml" />
     <Content Include="Areas\User\Views\web.config" />
     <Content Include="Areas\User\Views\_ViewStart.cshtml" />
-    <Content Include="Areas\User\Views\WhishList\Index.cshtml" />
+    <Content Include="Areas\User\Views\WishList\Index.cshtml" />
     <Content Include="Views\Shared\_CreateWishListPartial.cshtml" />
     <None Include="Scripts\jquery-2.2.0.intellisense.js" />
     <Content Include="Scripts\jquery-2.2.0.js" />
