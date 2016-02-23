@@ -29,7 +29,7 @@
         [Display(Name ="Name")]
         public string Name { get; set; }
 
-        [MaxLength(2000)]
+        [MaxLength(10000)]
         [Display(Name = "Description")]
         [DataType(DataType.MultilineText)]
         public string Description { get; set; }
@@ -42,7 +42,7 @@
             }
         }
 
-        [MaxLength(500)]
+        [MaxLength(2000)]
         [Display(Name = "Short Description")]
         [DataType(DataType.MultilineText)]
         public string ShortDecription { get; set; }

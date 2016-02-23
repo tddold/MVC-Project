@@ -8,7 +8,7 @@
     {
 
         [Required]
-        [MaxLength(100)]
+        [MaxLength(500)]
         public string ImagePath { get; set; }
 
         [MaxLength(100)]

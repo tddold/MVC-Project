@@ -30,7 +30,7 @@
 
         public string ImagePath { get; set; }
 
-        [MaxLength(500)]
+        [MaxLength(5000)]
         [Display(Name = "Description")]
         [DataType(DataType.MultilineText)]
         public string Description { get; set; }

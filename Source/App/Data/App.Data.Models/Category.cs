@@ -25,14 +25,14 @@
 
         public string ImagePath { get; set; }
 
-        [MaxLength(500)]
+        [MaxLength(5000)]
         public string Description { get; set; }
 
         public virtual ICollection<Manufacturer> Manufacturers
         {
             get { return this.manufacturers; }
             set { this.manufacturers = value; }
-        }   
+        }
 
         public virtual ICollection<Product> Products
         {

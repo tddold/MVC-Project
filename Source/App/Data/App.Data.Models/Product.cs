@@ -19,10 +19,10 @@
         [MaxLength(100)]
         public string Name { get; set; }
 
-        [MaxLength(2000)]
+        [MaxLength(10000)]
         public string Description { get; set; }
 
-        [MaxLength(500)]
+        [MaxLength(2000)]
         public string ShortDecription { get; set; }
 
         public decimal Price { get; set; }

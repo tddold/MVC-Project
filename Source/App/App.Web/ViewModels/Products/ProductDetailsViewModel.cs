@@ -29,7 +29,7 @@
         [Display(Name = "Model")]
         public string Name { get; set; }
 
-        [MaxLength(500)]
+        [MaxLength(10000)]
         [Display(Name = "Description")]
         public string Description { get; set; }
 
@@ -41,7 +41,7 @@
             }
         }
 
-        [MaxLength(100)]
+        [MaxLength(2000)]
         [Display(Name = "Short Description")]
         public string ShortDecription { get; set; }
 

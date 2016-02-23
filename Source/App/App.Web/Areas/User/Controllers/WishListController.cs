@@ -48,9 +48,6 @@
             return this.View(homeViewModel);
         }
 
-        [HttpPost]
-        [Route("Create")]
-        [ValidateAntiForgeryToken]
         public ActionResult Create(ProductDetailsViewModel model)
         {
             return this.View();
