@@ -34,14 +34,18 @@ namespace App.Web.Areas.Administration.AdminViewModels
 
         [MaxLength(500)]
         [Display(Name = "Description")]
-        [HiddenInput(DisplayValue = false)]
         public string Description { get; set; }
 
+        [Display(Name = "Description")]
         public string DescriptionSanitaized
         {
             get
             {
                 return this.sanitaizer.Sanitize(this.Description);
+            }
+            set
+            {
+                this.Description = this.sanitaizer.Sanitize(value);
             }
         }
 

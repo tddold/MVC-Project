@@ -10,7 +10,7 @@
     using Services.Web.Contracts;
     using Services.Web;
 
-    public class ProductViewModel : IMapFrom<Product>, IMapTo<Product>
+    public class ProductViewModel : IHaveCustomMappings
     {
         private ISanitizer sanitaizer;
 
@@ -34,26 +34,31 @@
         [DataType(DataType.MultilineText)]
         public string Description { get; set; }
 
-        public string DescriptionSanitaized
-        {
-            get
-            {
-                return this.sanitaizer.Sanitize(this.Description);
-            }
-        }
+        //[Display(Name = "Description")]
+        //public string DescriptionSanitaized
+        //{
+        //    get
+        //    {
+        //        return this.sanitaizer.Sanitize(this.Description);
+        //    }
+        //    set
+        //    {
+        //        this.Description = this.sanitaizer.Sanitize(value);
+        //    }
+        //}
 
         [MaxLength(2000)]
         [Display(Name = "Short Description")]
         [DataType(DataType.MultilineText)]
         public string ShortDecription { get; set; }
 
-        public string ShortDecriptionSanitaized
-        {
-            get
-            {
-                return this.sanitaizer.Sanitize(this.Description);
-            }
-        }
+        //public string ShortDecriptionSanitaized
+        //{
+        //    get
+        //    {
+        //        return this.sanitaizer.Sanitize(this.Description);
+        //    }
+        //}
 
         [Display(Name = "Price")]
         public decimal Price { get; set; }
@@ -73,11 +78,18 @@
         public double Weight { get; set; }
 
         [Required]
-        [UIHint("DropDownList")]
+        [UIHint("DropDownListManufacturer")]
         public int ManufacturerId { get; set; }
 
         [Required]
-        [UIHint("DropDownList")]
+        [UIHint("DropDownListCategory")]
         public int CategoryId { get; set; }
+
+        public void CreateMappings(IMapperConfiguration configuration)
+        {
+            configuration.CreateMap<Product, ProductViewModel>()
+                .ForMember(x => x.ManufacturerId, opt => opt.MapFrom(x => (x.ManufacturerId == null && !x.ManufacturerId.HasValue) ? 0 : x.ManufacturerId.Value))
+                .ReverseMap();
+        }
     }
 }

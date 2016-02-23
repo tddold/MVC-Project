@@ -2,6 +2,7 @@
 {
     using System.Collections.Generic;
     using System.Web.Mvc;
+    using System.Linq;
 
     using App.Web.Areas.Administration.AdminViewModels;
     using App.Data.Models;
@@ -16,26 +17,35 @@
     {
         private ICategoriesService categoriesService;
         private IProductService productsService;
+        private IManufacturerService manufacturerService;
 
         public KendoProductController(
            ICategoriesService categoriesService,
-            IProductService productsService)
+            IProductService productsService,
+            IManufacturerService manufacturerService)
         {
             this.categoriesService = categoriesService;
             this.productsService = productsService;
+            this.manufacturerService = manufacturerService;
         }
 
         public ActionResult Index()
         {
-            var categories = this.categoriesService.GetAll();
+            var categories = this.categoriesService.GetAll().ToList();
+            var manufacturers = this.manufacturerService.GetAll().ToList();
 
-            this.ViewBag.ListItem = new List<SelectListItem>()
+            this.ViewBag.CategoryListItem = new List<SelectListItem>();
+            this.ViewBag.ManufacturerListItems = new List<SelectListItem>();
+
+            for (int i = 0; i < categories.Count; i++)
             {
-                new SelectListItem() { Text = "pesho", Value = "1" },
-                new SelectListItem() { Text = "gosho", Value = "2" },
-                new SelectListItem() { Text = "dasda", Value = "3" },
-                new SelectListItem() { Text = "test", Value = "4" },
-            };
+                this.ViewBag.CategoryListItem.Add(new SelectListItem() { Text=categories[i].Name,Value=categories[i].Id.ToString()});
+            }
+
+            for (int i = 0; i < manufacturers.Count; i++)
+            {
+                this.ViewBag.ManufacturerListItems.Add(new SelectListItem() { Text = manufacturers[i].Name, Value = manufacturers[i].Id.ToString() });
+            }
 
             return this.View();
         }
@@ -56,6 +66,10 @@
 
                 this.productsService.Add(dbProduct);
                 productViewModel.Id = dbProduct.Id;
+            }
+            else
+            {
+                return this.Json(ModelState.ToDataSourceResult());
             }
 
             return this.Json(new[] { productViewModel }.ToDataSourceResult(request, this.ModelState));

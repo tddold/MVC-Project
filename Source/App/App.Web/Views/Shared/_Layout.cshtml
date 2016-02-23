@@ -13,7 +13,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-   <!--Master Slider Styles-->
+    <!--Master Slider Styles-->
     @Styles.Render("~/Content/kendo")
     @Styles.Render("~/styleBundles/theme")
     @Styles.Render("~/Content/css")
@@ -57,7 +57,6 @@
             <a class="logo" href=@Url.Action("Index", "Home", new { area = string.Empty }, null)><img src="~/Content/Theme/img/logo.png" alt="Bushido" /></a>
 
             <!--Language / Currency Switchers-->
-           
             <!--Mobile Menu Toggle-->
             <div class="menu-toggle"><i class="fa fa-list"></i></div>
             <div class="mobile-border"><span></span></div>
@@ -99,7 +98,23 @@
                         <i class="icon-heart">
                         </i><span>WishList</span>
                     </a>
-                    <a class="login-btn btn-outlined-invert" href="#" data-toggle="modal" data-target="#loginModal"><i class="icon-profile"></i> <span>Login</span></a>
+                    @if (!this.User.Identity.IsAuthenticated)
+                    {
+                        <a class="login-btn btn-outlined-invert" href="#" data-toggle="modal" data-target="#loginModal">
+                            <i class="icon-profile"></i> <span>Login</span>
+                        </a>
+                    }
+                    else
+                    {
+                        using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { @id = "log-off-form" }))
+                        {
+                            @Html.AntiForgeryToken()
+                            <a class="login-btn btn-outlined-invert" onclick="document.getElementById('log-off-form').submit();">
+                                <i class="icon-profile"></i> <span>Logout</span>
+                            </a>
+                        }
+                    }
+
                 </div>
                 <div class="cart-btn">
                     <a class="btn btn-outlined-invert" href="shopping-cart.html"><i class="icon-shopping-cart-content"></i><span>3</span></a>
@@ -144,7 +159,6 @@
         </div>
     </header><!--Header Close-->
     <!--Page Content-->
-   
     <!--Notification Messages-->
     @if (this.TempData["Notification"] != null)
     {
@@ -152,7 +166,9 @@
     }
 
     <!--Render body-->
-    @RenderBody()
+    <div class="page-content">
+        @RenderBody()
+    </div>
     <hr />
 
     <!--Footer-->
@@ -211,7 +227,6 @@
             </div>
         </div>
     </footer><!--Footer Close-->
-
     <!--Javascript (jQuery) Libraries and Plugins-->
     @Scripts.Render("~/bundles/bootstrap")
 

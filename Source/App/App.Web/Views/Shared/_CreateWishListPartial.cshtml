@@ -1,21 +1,58 @@
-﻿@*@model App.Web.ViewModels.Home.HomeViewModel*@
+﻿@model App.Web.ViewModels.Home.HomeViewModel
 
 @using Microsoft.AspNet.Identity
 @if (Request.IsAuthenticated)
 {
-    using (Html.BeginForm("Create", "WishList", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    foreach (var product in Model.TopProducts)
     {
-        @Html.AntiForgeryToken()
-        @Html.ValidationSummary()
-
-        <a class="wishlist-btn" href="@Url.Action("Create", "WishList", new { area = "user" }, null)">
-            <div class="hover-state">Wishlist</div>
-            <i class="fa fa-plus"></i>
-        </a>
+        using (Html.BeginForm())
+        {
+            @Html.HiddenFor(m => product.Id)
+            <a class="wishlist-btn saveButton" onclick="return false" data-id="@product.Id" href='@Url.Action("Create", "WishList", new { area = "user" }, null) '>
+                <div class="hover-state">
+                    Wishlist
+                </div>
+                <i class="fa fa-plus"></i>
+            </a>
+        }
     }
+}
 
-}
-}
 @section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('.saveButton').click(function () {
+                $(this).closest('form')[0].submit();
+            });
+        });
+
+       
+
+        ////$(".saveButton").click(function () {
+        ////    var id = $(this).attr("data-id");
+        ////    wishListAdd(id, 1)
+        ////    $(this).closest('form')[0].submit();
+        ////});
+
+        //function wishListAdd(id, count) {
+        //    $.post("/User/WishList/Create", { productId: id, count: count }),
+        //    function (data) {
+        //        var newWishListCount = data.Counnt;
+        //        $("div[data-action='wishListCount'][data-id='" + id + "']").html(newWishListCount);
+        //    }
+        //}
+
+    </script>
+
     @Scripts.Render("~/bundles/jqueryval")
 }
+
+
+
+
+@*using (Html.BeginForm("Create", "WishList", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary("", new { @class = "text-danger" })
+
+    }*@

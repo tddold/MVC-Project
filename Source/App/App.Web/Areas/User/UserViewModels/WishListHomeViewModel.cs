@@ -6,6 +6,9 @@
     public class WishListHomeViewModel
     {
         public ICollection<ProductDetailsViewModel> TopProducts { get; set; }
+
         public ICollection<ProductDetailsViewModel> OtherProducts { get; set; }
+
+        public ICollection<WishListInputViewModel> WishLists { get; set; }
     }
 }

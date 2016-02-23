@@ -1,40 +1,150 @@
-﻿@model App.Web.Models.RegisterViewModel
+﻿@model App.Web.ViewModels.Account.RegisterViewModel
 @{
     ViewBag.Title = "Register";
 }
 
-<h2>@ViewBag.Title.</h2>
+<section class="log-reg container">
+    <h2>Login/ register</h2>
+    <p class="large">Use social accounts</p>
+    <div class="social-login">
+        <a class="facebook" href="#"><i class="fa fa-facebook-square"></i></a>
+        <a class="google" href="#"><i class="fa fa-google-plus-square"></i></a>
+        <a class="twitter" href="#"><i class="fa fa-twitter-square"></i></a>
+    </div>
+    <div class="row">
+        <!--Login-->
+        <div class="col-lg-5 col-md-5 col-sm-5">
+            @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "registr-form", role = "form" }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary("", new { @class = "text-danger" })
+                <div class="form-group group">
+                    @Html.LabelFor(m => m.Email, new { @placeholder = "Email" })
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                </div>
+                <div class="form-group group">
+                    @Html.LabelFor(m => m.Password, new { @placeholder = "Password" })
+                    @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                </div>
 
-@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-{
-    @Html.AntiForgeryToken()
-    <h4>Create a new account.</h4>
-    <hr />
-    @Html.ValidationSummary("", new { @class = "text-danger" })
-    <div class="form-group">
-        @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                <input class="btn btn-success" type="submit" value="Login">
+            }
+        </div>
+        <!--Registration-->
+        <div class="col-lg-7 col-md-7 col-sm-7">
+            @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "registr-form", role = "form" }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary("", new { @class = "text-danger" })
+                <div class="form-group group">
+                    @Html.LabelFor(m => m.Email, new { @placeholder = "Email" })
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                </div>
+                <div class="form-group group">
+                    @Html.LabelFor(m => m.Password, new { @placeholder = "Password" })
+                    @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                </div>
+                <div class="form-group group">
+                    @Html.LabelFor(m => m.ConfirmPassword, new { @placeholder = "Confirm password" })
+                    @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+                </div>
+
+                <input class="btn btn-success" type="submit" value="Register">
+            }
         </div>
     </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+</section><!--Login / Register Close-->
+<!--Brands Carousel Widget-->
+<section class="brand-carousel">
+    <div class="container">
+        <h2>Brands in our shop</h2>
+        <div class="inner">
+            <a class="item" href="#"><img src="img/brands/1.png" alt="1" /></a>
+            <a class="item" href="#"><img src="img/brands/1.png" alt="1" /></a>
+            <a class="item" href="#"><img src="img/brands/1.png" alt="1" /></a>
+            <a class="item" href="#"><img src="img/brands/1.png" alt="1" /></a>
+            <a class="item" href="#"><img src="img/brands/1.png" alt="1" /></a>
+            <a class="item" href="#"><img src="img/brands/1.png" alt="1" /></a>
+            <a class="item" href="#"><img src="img/brands/1.png" alt="1" /></a>
         </div>
     </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+</section><!--Brands Carousel Close-->
+@*<section class="log-reg container">
+        <h2>Login/ register</h2>
+        <p class="large">Use social accounts</p>
+        <div class="social-login">
+            <a class="facebook" href="#"><i class="fa fa-facebook-square"></i></a>
+            <a class="google" href="#"><i class="fa fa-google-plus-square"></i></a>
+            <a class="twitter" href="#"><i class="fa fa-twitter-square"></i></a>
         </div>
-    </div>
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" class="btn btn-default" value="Register" />
+        <div class="row">
+
+            <div class="col-lg-7 col-md-7 col-sm-7">
+                @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "registr-form", role = "form" }))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary("", new { @class = "text-danger" })
+
+                    <div class="form-group group">
+                        @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Enter email" })
+                        </div>
+                    </div>
+
+                    <div class="form-group group">
+                        @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+                        <div class="col-md-10">
+                            @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Enter password" })
+                        </div>
+                    </div>
+                    <div class="form-group group">
+                        @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
+
+                        @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control", placeholder = "Repeat password" })
+
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="remember"> I have read and agree with the terms</label>
+                    </div>
+                    <input class="btn btn-success" type="submit" value="Register">
+                }
+            </div>
         </div>
-    </div>
-}
+    </section>*@<!--Login / Register Close-->
+@*<h2>@ViewBag.Title.</h2>
+
+    @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "registr-form", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        <h4>Create a new account.</h4>
+        <hr />
+        @Html.ValidationSummary("", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+            </div>
+        </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" class="btn btn-default" value="Register" />
+                    </div>
+                </div>
+    }
+        </div>*@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

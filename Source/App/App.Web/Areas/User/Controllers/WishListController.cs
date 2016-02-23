@@ -12,18 +12,21 @@
     using UserViewModels;
     using ViewModels.Products;
     using Web.Controllers;
-
+    using Data.Common;
     public class WishListController : BaseController
     {
         private IService<Product> productsService;
         private IProductService products;
+        private IDbRepository<Wishlist> wishLists;
 
         public WishListController(
               IProductService products,
+              IDbRepository<Wishlist> wishLists,
               IService<Product> productsService)
         {
             this.productsService = productsService;
             this.products = products;
+            this.wishLists = wishLists;
         }
 
         [HttpGet]
@@ -48,9 +51,33 @@
             return this.View(homeViewModel);
         }
 
-        public ActionResult Create(ProductDetailsViewModel model)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(WishListInputViewModel model)
         {
-            return this.View();
+            var userId = this.User.Identity.GetUserId();
+            //var wishList = this.wishLists
+            //    .All()
+            //    .FirstOrDefault(x => x.UserId == userId && x.ProductId == productId);
+
+            //wishList = new Wishlist
+            //{
+            //    UserId = userId,
+            //    Id = wishListId,
+            //    ProductId = productId
+            //};
+
+            //this.wishLists.Add(wishList);
+            //this.wishLists.Save();
+
+            //var wishListCount = this.wishLists
+            //    .All()
+            //    .Where(x => x.Id == wishListId)
+            //    .Count();
+
+            //return this.Json(new { Count = wishListCount });
+
+            return RedirectToAction("/");
         }
 
         private List<ProductDetailsViewModel> GetRandomProducts(int count)
