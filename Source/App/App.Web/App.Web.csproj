@@ -218,7 +218,6 @@
     <Compile Include="Areas\Administration\Controllers\ProductsController.cs" />
     <Compile Include="Areas\Administration\Controllers\UsersController.cs" />
     <Compile Include="Areas\User\Controllers\WishListController.cs" />
-    <Compile Include="Areas\User\Controllers\WishLIstInputController.cs" />
     <Compile Include="Areas\User\UserAreaRegistration.cs" />
     <Compile Include="Areas\User\UserViewModels\WishListHomeViewModel.cs" />
     <Compile Include="Areas\User\UserViewModels\WishListInputViewModel.cs" />
@@ -647,7 +646,6 @@
     <Folder Include="Areas\Administration\Views\Home\" />
     <Folder Include="Areas\Administration\Views\WishList\" />
     <Folder Include="Areas\User\Views\Shared\" />
-    <Folder Include="Areas\User\Views\WishLIstInput\" />
     <Folder Include="Views\Base\" />
   </ItemGroup>
   <ItemGroup>

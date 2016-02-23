@@ -32,7 +32,7 @@
 <!--Body-->
 <body>
     <!--Login Modal-->
-    @{ Html.RenderAction("_LoginPartial", "Account"); }
+    @{ Html.RenderAction("_LoginPartial", "Account", new { area=""}); }
 
     <!--Header-->
     <header data-offset-top="500" data-stuck="600">
@@ -87,14 +87,14 @@
                 </ul>
 
                 <!--Category Menu-->
-                @Html.Action("_CategoryPartial", "Home")
+                @Html.Action("_CategoryPartial", "Home", new { area=""})
             </nav>
 
             <!--Toolbar-->
             <div class="toolbar group">
                 <button class="search-btn btn-outlined-invert"><i class="icon-magnifier"></i></button>
                 <div class="middle-btns">
-                    <a class="btn-outlined-invert" href="@Url.Action("Index", "WishLIstInput", new { area = "user" }, null)">
+                    <a class="btn-outlined-invert" href="@Url.Action("Index", "WishList", new { area = "user" }, null)">
                         <i class="icon-heart">
                         </i><span>WishList</span>
                     </a>
@@ -106,7 +106,7 @@
                     }
                     else
                     {
-                        using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { @id = "log-off-form" }))
+                        using (Html.BeginForm("LogOff", "Account", new { area = "" }, FormMethod.Post, new { @id = "log-off-form"}))
                         {
                             @Html.AntiForgeryToken()
                             <a class="login-btn btn-outlined-invert" onclick="document.getElementById('log-off-form').submit();">

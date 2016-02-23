@@ -81,16 +81,16 @@
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult ProductViewModels_Destroy([DataSourceRequest]DataSourceRequest request, ProductViewModel productViewModel)
+        public ActionResult CategoryViewModels_Destroy([DataSourceRequest]DataSourceRequest request, CategoryViewModel categoryViewModel)
         {
             if (this.ModelState.IsValid)
             {
-                var dbProduct = this.productsService.Find(productViewModel.Id);
+                var dbCategory = this.categoriesService.Find(categoryViewModel.Id);
 
-                this.productsService.Delete(dbProduct);
+                this.categoriesService.Delete(dbCategory);
             }
 
-            return this.Json(new[] { productViewModel }.ToDataSourceResult(request, this.ModelState));
+            return this.Json(new[] { categoryViewModel }.ToDataSourceResult(request, this.ModelState));
         }
     }
 }

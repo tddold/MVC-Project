@@ -13,6 +13,8 @@
     using ViewModels.Products;
     using Web.Controllers;
     using Data.Common;
+
+    [Authorize]
     public class WishListController : BaseController
     {
         private IService<Product> productsService;
@@ -30,25 +32,13 @@
         }
 
         [HttpGet]
-        public ActionResult Index(int? id, string userId)
+        public ActionResult Index()
         {
-            var currentUser = this.User.Identity.GetUserId();
-            var topProducts = new List<ProductDetailsViewModel>();
-            var otherProducts = new List<ProductDetailsViewModel>();
+            var currentUserId = this.User.Identity.GetUserId();
 
-            if (currentUser == userId)
-            {
-                topProducts = this.GetRandomProducts(2);
-                otherProducts = this.GetRandomProducts(4);
-            }
+            var wishLists = this.wishLists.All().Where(w => w.UserId == currentUserId).To<WishListViewModel>().ToList();
 
-            var homeViewModel = new WishListHomeViewModel
-            {
-                TopProducts = topProducts,
-                OtherProducts = otherProducts
-            };
-
-            return this.View(homeViewModel);
+            return this.View(wishLists);
         }
 
         [HttpPost]
@@ -56,28 +46,37 @@
         public ActionResult Create(WishListInputViewModel model)
         {
             var userId = this.User.Identity.GetUserId();
-            //var wishList = this.wishLists
-            //    .All()
-            //    .FirstOrDefault(x => x.UserId == userId && x.ProductId == productId);
+            var product = this.productsService.Find(model.ProductId);
+            if (this.wishLists.All().Any(w => w.ProductId == product.Id && w.UserId == userId))
+            {
+                return RedirectToAction("Index", "Home", new { area = string.Empty });
 
-            //wishList = new Wishlist
-            //{
-            //    UserId = userId,
-            //    Id = wishListId,
-            //    ProductId = productId
-            //};
+            }
+            this.wishLists.Add(new Wishlist()
+            {
+                UserId = userId,
+                Product = product,
+                ProductId = product.Id
+            });
 
-            //this.wishLists.Add(wishList);
-            //this.wishLists.Save();
+            this.wishLists.Save();
 
-            //var wishListCount = this.wishLists
-            //    .All()
-            //    .Where(x => x.Id == wishListId)
-            //    .Count();
+            return RedirectToAction("Index", "Home", new { area = string.Empty });
+        }
 
-            //return this.Json(new { Count = wishListCount });
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Delete(int id)
+        {
+            var wishList = this.wishLists.GetById(id);
+            if (wishList != null)
+            {
+                this.wishLists.Delete(wishList);
+                this.wishLists.Save();
+            }
 
-            return RedirectToAction("/");
+
+            return RedirectToAction("Index", "WishList");
         }
 
         private List<ProductDetailsViewModel> GetRandomProducts(int count)

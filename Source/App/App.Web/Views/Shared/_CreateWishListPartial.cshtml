@@ -1,20 +1,18 @@
-﻿@model App.Web.ViewModels.Home.HomeViewModel
+﻿@model App.Web.ViewModels.Products.ProductDetailsViewModel
 
 @using Microsoft.AspNet.Identity
 @if (Request.IsAuthenticated)
 {
-    foreach (var product in Model.TopProducts)
+    using (Ajax.BeginForm("Create", "Wishlist", new { @id = Model.Id, area = "User" }, null, new { target = "_self", @id = "wish-list-form-" + Model.Id }))
     {
-        using (Html.BeginForm())
-        {
-            @Html.HiddenFor(m => product.Id)
-            <a class="wishlist-btn saveButton" onclick="return false" data-id="@product.Id" href='@Url.Action("Create", "WishList", new { area = "user" }, null) '>
+        @Html.AntiForgeryToken();
+        <input type="hidden" name="ProductId" value="@Model.Id" />
+            <a class="wishlist-btn" onclick="document.getElementById('wish-list-form-' + @(Model.Id)).submit();" )>
                 <div class="hover-state">
                     Wishlist
                 </div>
                 <i class="fa fa-plus"></i>
             </a>
-        }
     }
 }
 
@@ -26,7 +24,7 @@
             });
         });
 
-       
+
 
         ////$(".saveButton").click(function () {
         ////    var id = $(this).attr("data-id");
