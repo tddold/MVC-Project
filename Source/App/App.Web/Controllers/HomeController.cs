@@ -12,6 +12,8 @@
     using Data.Models;
     public class HomeController : BaseController
     {
+        private int cashTime = 30 * 60;
+
         private IProductService products;
         private IService<Category> categories;
 
@@ -25,12 +27,12 @@
 
         public ActionResult Index()
         {
-            //var topProducts = this.products
+            // var topProducts = this.products
             //    .GetRandomProducts(10)
             //    .To<ProductDetailsViewModel>()
             //    .ToList();
 
-            //var allProducts = this.products
+            // var allProducts = this.products
             //   .GetAll()
             //   .To<ProductDetailsViewModel>()
             //   .ToList();
@@ -40,19 +42,18 @@
             ////          .GetAll().
             ////          To<CategoryViewModel>()
             ////          .ToList();
-            //var cacheCategories = this.Cache
+            // var cacheCategories = this.Cache
             //    .Get("categories", () => this.categories
             //            .GetAll().
             //            To<CategoryViewModel>()
             //            .ToList(), 30 * 60);
 
-            //var homeViewModel = new HomeViewModel
-            //{
+            // var homeViewModel = new HomeViewModel
+            // {
             //        TopProducts = topProducts,
             //        Categories = cacheCategories,
             //        AllProducts =allProducts
-            //};
-
+            // };
             HomeViewModel homeViewModel = this.GetHomeViewModel();
 
             return this.View(homeViewModel);
@@ -97,10 +98,13 @@
             //          To<CategoryViewModel>()
             //          .ToList();
             var cacheCategories = this.Cache
-                .Get("categories", () => this.categories
+                .Get(
+                "categories",
+                () => this.categories
                         .GetAll().
                         To<CategoryViewModel>()
-                        .ToList(), 30 * 60);
+                        .ToList(),
+                        this.cashTime);
 
             var homeViewModel = new HomeViewModel
             {

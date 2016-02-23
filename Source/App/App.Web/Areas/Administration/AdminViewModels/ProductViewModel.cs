@@ -1,8 +1,8 @@
 ﻿namespace App.Web.Areas.Administration.AdminViewModels
 {
-    using System;
     using System.ComponentModel.DataAnnotations;
     using System.Web.Mvc;
+
     using AutoMapper;
     using Infrastructure.Mapping;
 
@@ -34,9 +34,9 @@
         [DataType(DataType.MultilineText)]
         public string Description { get; set; }
 
-        //[Display(Name = "Description")]
-        //public string DescriptionSanitaized
-        //{
+        // [Display(Name = "Description")]
+        // public string DescriptionSanitaized
+        // {
         //    get
         //    {
         //        return this.sanitaizer.Sanitize(this.Description);
@@ -45,21 +45,19 @@
         //    {
         //        this.Description = this.sanitaizer.Sanitize(value);
         //    }
-        //}
-
+        // }
         [MaxLength(2000)]
         [Display(Name = "Short Description")]
         [DataType(DataType.MultilineText)]
         public string ShortDecription { get; set; }
 
-        //public string ShortDecriptionSanitaized
-        //{
+        // public string ShortDecriptionSanitaized
+        // {
         //    get
         //    {
         //        return this.sanitaizer.Sanitize(this.Description);
         //    }
-        //}
-
+        // }
         [Display(Name = "Price")]
         public decimal Price { get; set; }
 

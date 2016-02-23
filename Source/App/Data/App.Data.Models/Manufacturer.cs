@@ -1,23 +1,22 @@
-﻿using App.Data.Common.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace App.Data.Models
+﻿namespace App.Data.Models
 {
+    using App.Data.Common.Models;
+    using System.Collections.Generic;
+
     public class Manufacturer : BaseModel<int>
     {
+        private HashSet<Category> categories;
+        private HashSet<Product> products;
+
         public Manufacturer()
         {
-            this.Categories = new HashSet<Category>();
-            this.Products = new HashSet<Product>();
+            this.categories = new HashSet<Category>();
+            this.products = new HashSet<Product>();
         }
 
         public string Name { get; set; }
 
-        public virtual ICollection<Category> Categories{ get; set; }
+        public virtual ICollection<Category> Categories { get; set; }
 
         public virtual ICollection<Product> Products { get; set; }
     }

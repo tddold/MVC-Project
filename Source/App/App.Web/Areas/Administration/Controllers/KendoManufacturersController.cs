@@ -37,7 +37,6 @@
             foreach (var item in manufacturers)
             {
                 this.ViewBag.ManufacturerListItems.Add(new SelectListItem() { Text = item.Name, Value = item.Id.ToString() });
-
             }
 
             return this.View();

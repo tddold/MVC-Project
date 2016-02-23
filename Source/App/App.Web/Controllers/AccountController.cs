@@ -55,6 +55,8 @@
             }
         }
 
+        private IAuthenticationManager AuthenticationManager => this.HttpContext.GetOwinContext().Authentication;
+
         // GET: /Account/Login
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)
@@ -424,8 +426,6 @@ this.Url.Action("ExternalLoginCallback", "Account", new { ReturnUrl = returnUrl 
 
             base.Dispose(disposing);
         }
-
-        private IAuthenticationManager AuthenticationManager => this.HttpContext.GetOwinContext().Authentication;
 
         private void AddErrors(IdentityResult result)
         {

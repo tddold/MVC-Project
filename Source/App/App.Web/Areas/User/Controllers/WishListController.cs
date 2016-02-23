@@ -4,15 +4,16 @@
     using System.Linq;
     using System.Web.Mvc;
 
+    using Data.Common;
+    using Data.Models;
+
+    using Infrastructure.Mapping;
     using Microsoft.AspNet.Identity;
 
-    using Data.Models;
-    using Infrastructure.Mapping;
     using Services.Web.Contracts;
     using UserViewModels;
     using ViewModels.Products;
     using Web.Controllers;
-    using Data.Common;
 
     [Authorize]
     public class WishListController : BaseController
@@ -49,9 +50,9 @@
             var product = this.productsService.Find(model.ProductId);
             if (this.wishLists.All().Any(w => w.ProductId == product.Id && w.UserId == userId))
             {
-                return RedirectToAction("Index", "Home", new { area = string.Empty });
-
+                return this.RedirectToAction("Index", "Home", new { area = string.Empty });
             }
+
             this.wishLists.Add(new Wishlist()
             {
                 UserId = userId,
@@ -61,7 +62,7 @@
 
             this.wishLists.Save();
 
-            return RedirectToAction("Index", "Home", new { area = string.Empty });
+            return this.RedirectToAction("Index", "Home", new { area = string.Empty });
         }
 
         [HttpPost]
@@ -75,8 +76,7 @@
                 this.wishLists.Save();
             }
 
-
-            return RedirectToAction("Index", "WishList");
+            return this.RedirectToAction("Index", "WishList");
         }
 
         private List<ProductDetailsViewModel> GetRandomProducts(int count)

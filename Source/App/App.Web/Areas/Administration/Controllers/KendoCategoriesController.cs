@@ -37,8 +37,7 @@
             foreach (var item in manufacturers)
             {
                 this.ViewBag.ManufacturerListItems.Add(new SelectListItem() { Text = item.Name, Value = item.Id.ToString() });
-
-            }         
+            }
 
             return this.View();
         }
@@ -71,7 +70,7 @@
             {
                 var dbCategory = this.categoriesService.Find(categoryViewModel.Id);
                 dbCategory.Name = categoryViewModel.Name;
-                dbCategory.Description = categoryViewModel.Description; 
+                dbCategory.Description = categoryViewModel.Description;
 
                 this.categoriesService.Update(dbCategory);
                 categoryViewModel = this.Mapper.Map<CategoryViewModel>(dbCategory);

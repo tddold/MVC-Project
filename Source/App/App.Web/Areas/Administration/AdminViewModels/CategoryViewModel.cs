@@ -43,6 +43,7 @@ namespace App.Web.Areas.Administration.AdminViewModels
             {
                 return this.sanitaizer.Sanitize(this.Description);
             }
+
             set
             {
                 this.Description = this.sanitaizer.Sanitize(value);

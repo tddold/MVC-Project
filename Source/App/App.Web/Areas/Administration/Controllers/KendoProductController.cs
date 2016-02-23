@@ -39,7 +39,7 @@
 
             for (int i = 0; i < categories.Count; i++)
             {
-                this.ViewBag.CategoryListItem.Add(new SelectListItem() { Text=categories[i].Name,Value=categories[i].Id.ToString()});
+                this.ViewBag.CategoryListItem.Add(new SelectListItem() { Text = categories[i].Name, Value = categories[i].Id.ToString() });
             }
 
             for (int i = 0; i < manufacturers.Count; i++)
@@ -69,7 +69,7 @@
             }
             else
             {
-                return this.Json(ModelState.ToDataSourceResult());
+                return this.Json(this.ModelState.ToDataSourceResult());
             }
 
             return this.Json(new[] { productViewModel }.ToDataSourceResult(request, this.ModelState));

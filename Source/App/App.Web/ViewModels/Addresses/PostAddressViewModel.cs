@@ -7,7 +7,7 @@
     using App.Data.Models;
     using Infrastructure.Mapping;
 
-    public class PostAddressViewModel:IMapFrom<Address>
+    public class PostAddressViewModel : IMapFrom<Address>
     {
         [Display(Name = "Country")]
         public int CountryId { get; set; }

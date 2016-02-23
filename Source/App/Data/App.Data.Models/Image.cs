@@ -6,7 +6,6 @@
 
     public class Image : BaseModel<int>
     {
-
         [Required]
         [MaxLength(500)]
         public string ImagePath { get; set; }

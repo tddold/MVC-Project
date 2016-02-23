@@ -6,7 +6,6 @@
 
     using Infrastructure.Mapping;
 
-    using ViewModels.Categories;
     using ViewModels.Products;
 
     public class ProductsDetailsController : BaseController
@@ -24,29 +23,26 @@
 
         public ActionResult Index(int id, string url, int page = 1)
         {
-
             var productViewModel = this.products
                .GetAll()
                .Where(x => x.Id == id)
                .To<ProductDetailsViewModel>()
                .FirstOrDefault();
 
-            //var allProducts = this.products
+            // var allProducts = this.products
             //    .GetAll()
             //    .Where(x => x.CategoryId == id)
             //    .To<ProductDetailsViewModel>()
             //    .ToList();
-
             if (productViewModel == null)
             {
                 return this.HttpNotFound("No such category");
             }
 
-            //var viewModel = new ProductViewModel
-            //{
+            // var viewModel = new ProductViewModel
+            // {
             //    Products = productViewModel
-            //};
-
+            // };
             return this.View(productViewModel);
         }
     }

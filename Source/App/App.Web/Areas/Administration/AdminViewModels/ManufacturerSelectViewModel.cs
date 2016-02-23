@@ -6,7 +6,7 @@
     using System.ComponentModel.DataAnnotations;
     using System.Web.Mvc;
 
-    public class ManufacturerSelectViewModel: IMapFrom<Manufacturer>, IMapTo<Manufacturer>
+    public class ManufacturerSelectViewModel : IMapFrom<Manufacturer>, IMapTo<Manufacturer>
     {
         [HiddenInput(DisplayValue = false)]
         public int Id { get; set; }
@@ -16,6 +16,6 @@
         [MaxLength(100)]
         public string Name { get; set; }
 
-        public List<string> SelectedManufacturers{ get; set; }
+        public List<string> SelectedManufacturers { get; set; }
     }
 }

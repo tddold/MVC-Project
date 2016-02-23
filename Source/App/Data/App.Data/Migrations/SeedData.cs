@@ -32,35 +32,30 @@
                 Name = "Phones",
                 Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
                 ImagePath = "/Images/SeedImages/category/1.png",
-                //Manufacturers = Manufacturers
             });
             this.categories.Add(new Category()
             {
                 Name = "Cameras",
                 Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
                 ImagePath = "/Images/SeedImages/category/2.png",
-                //Manufacturers = Manufacturers
             });
             this.categories.Add(new Category()
             {
                 Name = "Personal computers",
                 Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
                 ImagePath = "/Images/SeedImages/category/3.png",
-                //Manufacturers = Manufacturers
             });
             this.categories.Add(new Category()
             {
                 Name = "Gaming consoles",
                 Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
                 ImagePath = "/Images/SeedImages/category/4.png",
-                //Manufacturers = Manufacturers
             });
             this.categories.Add(new Category()
             {
                 Name = "TV sets",
                 Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;amp;amp;#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
                 ImagePath = "/Images/SeedImages/category/5.png",
-                //Manufacturers = Manufacturers
             });
 
             // country -----------------------

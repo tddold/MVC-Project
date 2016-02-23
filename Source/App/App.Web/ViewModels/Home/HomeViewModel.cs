@@ -14,6 +14,5 @@
         public ICollection<CategoryViewModel> Categories { get; set; }
 
         public ICollection<WishListInputViewModel> WishLists { get; set; }
-
     }
 }
