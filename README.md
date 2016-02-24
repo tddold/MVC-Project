@@ -1,5 +1,16 @@
 # ASP.NET MVC Final Project
 
+# Planex
+#### Telerik Academy 2015/2016 Final Project
+
+### Description
+Planex is a web based project planning system developed in ASP MVC5 using C#
+
+### [User manual](doc/UserManual.md)
+
+### [Technical Description](doc/Tech Description.md)
+
+
 This document describes the **final project assignment** for the **ASP.NET MVC** course at Telerik Academy.
 
 ## Project Description
