@@ -1,7 +1,8 @@
 ﻿namespace App.Data.Models
 {
-    using App.Data.Common.Models;
     using System.Collections.Generic;
+
+    using App.Data.Common.Models;
 
     public class Manufacturer : BaseModel<int>
     {
