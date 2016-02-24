@@ -1,16 +1,12 @@
-﻿using App.Data.Models;
-using App.Services.Web;
-using App.Services.Web.Contracts;
-using App.Web.Infrastructure.Mapping;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-
-namespace App.Web.Areas.Administration.AdminViewModels
+﻿namespace App.Web.Areas.Administration.AdminViewModels
 {
+    using App.Data.Models;
+    using App.Services.Web;
+    using App.Services.Web.Contracts;
+    using App.Web.Infrastructure.Mapping;
+    using System.ComponentModel.DataAnnotations;
+    using System.Web.Mvc;
+
     public class CategoryViewModel : IMapFrom<Category>, IMapTo<Category>
     {
         private ISanitizer sanitaizer;
