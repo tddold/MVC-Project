@@ -6,9 +6,9 @@
 Списък с детайли на началната стараница - HomeController - Index view,
  _Projects partial view - CategoryHomeView 
 ##Част с оторизация
-ProfileController,
- UsertController
- UserViewModel
+ -ProfileController,
+ -UsertController
+ - UserViewModel
 AdminController
 ##Анонимни потребители
 
