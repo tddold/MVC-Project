@@ -39,10 +39,6 @@
                 Categories = cacheCategories
             };
 
-            // var categories = this.categoriesService.GetAll();
-            // var viewModel = this.Mapper.Map<CategoryViewModel>(categories);
-
-            // var categories = categoriesService.GetAll().ToList();
             return this.View(viewModel);
         }
 
@@ -101,42 +97,4 @@
             return this.RedirectToAction("Index");
         }
     }
-
-    // GET: Administration/Category/Edit/5
-    // [HttpPost]
-    //    public ActionResult Edit(int? id)
-    // {
-    //    if (id == null)
-    //    {
-    //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-    //    }
-
-    // var editCategories
-
-    // CategoryViewModel categoryViewModel = this.CategoryViewModels.Find(id);
-    //    if (categoryViewModel == null)
-    //    {
-    //        return HttpNotFound();
-    //    }
-    //    return View(categoryViewModel);
-    // }
-
-    // POST: Administration/Category/Edit/5
-    // [HttpPost]
-    // [ValidateAntiForgeryToken]
-    // public ActionResult Edit(CategoryViewModel categoryViewModel)
-    // {
-    //    if (ModelState.IsValid)
-    //    {
-    //        db.Entry(categoryViewModel).State = EntityState.Modified;
-    //        db.SaveChanges();
-    //        return RedirectToAction("Index");
-    //    }
-    //    return View(categoryViewModel);
-    // }
-
-    // GET: Administration/Category/Delete/5
-
-    //// POST: Administration/Category/Delete/5
-
 }

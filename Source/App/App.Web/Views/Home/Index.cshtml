@@ -90,7 +90,7 @@
                                     <span></span>
                                 </div>
                                 <!--Add To Cart Button-->
-                                <a class="add-cart-btn" href="#"><span>To cart</span><i class="icon-shopping-cart"></i></a>
+                                @Html.Partial("_CreateShoppingCartPartial", product)
                                 <!--Share Button-->
                                 <div class="share-btn">
                                     <div class="hover-state">
@@ -101,7 +101,7 @@
                                     <i class="fa fa-share"></i>
                                 </div>
                                 <!--Add To Wishlist Button-->
-                              @Html.Partial("_CreateWishListPartial",product)
+                                @Html.Partial("_CreateWishListPartial", product)
                             </div>
                         </div>
                     </div>

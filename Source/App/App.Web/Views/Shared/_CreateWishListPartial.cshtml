@@ -17,40 +17,14 @@
 }
 
 @section Scripts {
-    <script>
+    @*<script>
         $(document).ready(function () {
             $('.saveButton').click(function () {
                 $(this).closest('form')[0].submit();
             });
         });
 
-
-
-        ////$(".saveButton").click(function () {
-        ////    var id = $(this).attr("data-id");
-        ////    wishListAdd(id, 1)
-        ////    $(this).closest('form')[0].submit();
-        ////});
-
-        //function wishListAdd(id, count) {
-        //    $.post("/User/WishList/Create", { productId: id, count: count }),
-        //    function (data) {
-        //        var newWishListCount = data.Counnt;
-        //        $("div[data-action='wishListCount'][data-id='" + id + "']").html(newWishListCount);
-        //    }
-        //}
-
-    </script>
+    </script>*@
 
     @Scripts.Render("~/bundles/jqueryval")
 }
-
-
-
-
-@*using (Html.BeginForm("Create", "WishList", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-    {
-        @Html.AntiForgeryToken()
-        @Html.ValidationSummary("", new { @class = "text-danger" })
-
-    }*@

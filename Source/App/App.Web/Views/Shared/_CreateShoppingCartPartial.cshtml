@@ -1,0 +1,18 @@
+﻿@model App.Web.ViewModels.Products.ProductDetailsViewModel
+
+@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+{
+    using (Ajax.BeginForm("Create", "ShoppingCart", new { @id = Model.Id, area = "User" }, null, new { target = "_self", @id = "shopping-cart-form-" + Model.Id }))
+    {
+        @Html.AntiForgeryToken();
+        <input type="hidden" name="ProductId" value="@Model.Id" />
+        <a class="add-cart-btn" onclick="document.getElementById('shopping-cart-form-' + @(Model.Id)).submit();" )>
+            <span>To cart</span><i class="icon-shopping-cart"></i>
+        </a>
+    }
+}
+@section Scripts {   
+
+    @Scripts.Render("~/bundles/jqueryval")
+}

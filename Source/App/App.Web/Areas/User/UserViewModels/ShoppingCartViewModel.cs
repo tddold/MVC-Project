@@ -4,7 +4,7 @@
     using Infrastructure.Mapping;
     using ViewModels.Products;
 
-    public class WishListViewModel : IMapFrom<Wishlist>, IMapTo<Wishlist>
+    public class ShoppingCartViewModel : IMapFrom<ShoppingCart>, IMapTo<ShoppingCart>
     {
         public int Id { get; set; }
 

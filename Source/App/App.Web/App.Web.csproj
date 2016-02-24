@@ -217,8 +217,11 @@
     <Compile Include="Areas\Administration\Controllers\KendoProductController.cs" />
     <Compile Include="Areas\Administration\Controllers\ProductsController.cs" />
     <Compile Include="Areas\Administration\Controllers\UsersController.cs" />
+    <Compile Include="Areas\User\Controllers\ShoppingCartController.cs" />
     <Compile Include="Areas\User\Controllers\WishListController.cs" />
     <Compile Include="Areas\User\UserAreaRegistration.cs" />
+    <Compile Include="Areas\User\UserViewModels\ShoppingCartInputViewModel.cs" />
+    <Compile Include="Areas\User\UserViewModels\ShoppingCartViewModel.cs" />
     <Compile Include="Areas\User\UserViewModels\WishListHomeViewModel.cs" />
     <Compile Include="Areas\User\UserViewModels\WishListInputViewModel.cs" />
     <Compile Include="Areas\User\UserViewModels\WishListViewModel.cs" />
@@ -587,6 +590,7 @@
     <Content Include="Areas\User\Views\_ViewStart.cshtml" />
     <Content Include="Areas\User\Views\WishList\Index.cshtml" />
     <Content Include="Views\Shared\_CreateWishListPartial.cshtml" />
+    <Content Include="Areas\User\Views\ShoppingCart\index.cshtml" />
     <None Include="Scripts\jquery-2.2.0.intellisense.js" />
     <Content Include="Scripts\jquery-2.2.0.js" />
     <Content Include="Scripts\jquery-2.2.0.min.js" />
@@ -640,6 +644,7 @@
     <Content Include="Views\Shared\_CategoryPartial.cshtml" />
     <Content Include="Views\ProductsDetails\Index.cshtml" />
     <Content Include="Views\Account\_RegisterPartial.cshtml" />
+    <Content Include="Views\Shared\_CreateShoppingCartPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

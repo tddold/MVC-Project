@@ -67,14 +67,11 @@
                     <li class="has-submenu">
                         @Html.ActionLink("Home", "Index", "Home", new { area = string.Empty }, null)
                     </li>
-                    <li class="has-submenu">
-                        @Html.ActionLink("Shop", "Index", "Shop", new { area = string.Empty }, null)
-                    </li>
-
+                  
                     @if (this.User.Identity.IsAuthenticated)
                     {
                         <li class="hide-sm">
-                            @Html.ActionLink("My Shop", "Index", "MyShop", new { area = string.Empty }, null)
+                            @Html.ActionLink("My Shop", "Index", "ShoppingCart", new { area = "User" }, null)
                         </li>
                     }
 
@@ -117,7 +114,7 @@
 
                 </div>
                 <div class="cart-btn">
-                    <a class="btn btn-outlined-invert" href="shopping-cart.html"><i class="icon-shopping-cart-content"></i><span>3</span></a>
+                    <a class="btn btn-outlined-invert" href="@Url.Action("Index", "ShoppingCart", new { area = "user" }, null)"><i class="icon-shopping-cart-content"></i><span>3</span></a>
 
                     <!--Cart Dropdown-->
                     <div class="cart-dropdown">
@@ -130,7 +127,7 @@
                                     <th>Price</th>
                                 </tr>
                                 <tr class="item">
-                                    <td><div class="delete"></div><a href="#">Good Joo-Joo Surfb</a></td>
+                                    <td><div class="delete"></div><a href="#"> Good Joo-Joo Surfb</a></td>
                                     <td><input type="text" value="1"></td>
                                     <td class="price">89 005 $</td>
                                 </tr>

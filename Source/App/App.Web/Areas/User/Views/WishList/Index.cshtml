@@ -20,8 +20,8 @@
                     @foreach (var wishList in Model)
                     {
                         <tr class="item first">
-                            <td class="thumb"><a href="ProductsDetails/Index/@wishList.Product.Id"><img src="@wishList.Product.ImagePath" alt="Lorem ipsum" /></a></td>
-                            <td class="name"><a href="shop-single-item-v1.html">@wishList.Product.Name</a></td>
+                            <td class="thumb"><a href="/ProductsDetails/Index/@wishList.Product.Id"><img src="@wishList.Product.ImagePath" alt="@wishList.Product.Name" /></a></td>
+                            <td class="name"><a href="/ProductsDetails/Index/@wishList.Product.Id">@wishList.Product.Name</a></td>
                             <td class="price">@wishList.Product.Price $</td>
                             <td class="button"><a class="btn btn-primary btn-sm" href="#"><i class="icon-shopping-cart"></i>Add to cart</a></td>
                             @using (Ajax.BeginForm("Delete", "Wishlist", new { @id = wishList.Id, area = "User" }, null, new { target = "_self", @id = "wish-list-form-delete-" + wishList.Id }))
