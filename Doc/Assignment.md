@@ -1,14 +1,5 @@
 # ASP.NET MVC Final Project
 
-# Planex
-#### Telerik Academy 2015/2016 Final Project
-
-### Description
-Planex is a web based project planning system developed in ASP MVC5 using C#
-
-### [User manual](doc/UserManual.md)
-
-### [Technical Description](doc/Tech Description.md)
 
 
 This document describes the **final project assignment** for the **ASP.NET MVC** course at Telerik Academy.
@@ -92,7 +83,3 @@ Each student will have to make a **public defense** of its work to the trainers 
 * Live **demonstration** of the developed web application (please prepare sample data).
 * Explain application structure and its **source code**: ASPX pages, C# code, data-bindings, ASCX controls, etc.
 * Show the **commit logs** in the source control repository to prove a contribution from all team members.
-
-
-## Build status
-[![Build status](https://ci.appveyor.com/api/projects/status/jixyimnbxqi5d6ys?svg=true)](https://ci.appveyor.com/project/TodorDakov/mvc-project)
