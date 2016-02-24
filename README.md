@@ -6,8 +6,8 @@
 ### Description
 Planex is a web based project planning system developed in ASP MVC5 using C#
 
-### [User manual](doc/UserManual.md)
-###[User manua](https://github.com/tddold/MVC-Project/tree/master/Doc) - ([conditions]https://github.com/tddold/MVC-Project/blob/master/Doc/UserManual.md)) - 10.01.2015
+### [User manual](Doc/UserManual.md)
+###[User manua](https://github.com/tddold/MVC-Project/tree/master/Doc) - ([conditions]https://github.com/tddold/MVC-Project/blob/master/Doc/UserManual.md))
 
 ### [Technical Description](doc/Tech Description.md)
 
