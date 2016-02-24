@@ -1,16 +1,16 @@
 ###Описание
 Проектът е разработен в ASP.NET в C #.
 
-###Project areas
-##Публична 	част
+###Areas
+###Публична 	част
  - Списък с детайли на началната стараница - HomeController - Index view,
  - _Projects partial view - CategoryHomeView 
-##Част с оторизация
+###Част с оторизация
  - ProfileController,
  - UsertController
  - UserViewModel
  - AdminController
-##Анонимни потребители
+###Анонимни потребители
 
 ###General Requirements Covered
  - 15 controllers
