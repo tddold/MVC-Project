@@ -1,6 +1,6 @@
 # ASP.NET MVC Final Project
 
-# Planex
+# BUSHIDO Online Shope
 #### Telerik Academy 2015/2016 Final Project
 
 ### Description
